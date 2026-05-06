@@ -196,7 +196,7 @@ body {
 /* ===== HOME VIEW ===== */
 .home-view {
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 40px 20px;
   overflow-y: auto;
 }
@@ -805,3 +805,11 @@ textarea.input {
 
 /* ===== Hidden ===== */
 .hidden { display: none !important; }
+
+.settings-section {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}

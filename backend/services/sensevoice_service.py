@@ -12,6 +12,13 @@ _instance = None
 _lock = threading.Lock()
 
 
+def reset_sensevoice():
+    """Reset the loaded model instance so it will reload with new settings."""
+    global _instance
+    with _lock:
+        _instance = None
+
+
 def get_sensevoice():
     """Lazy singleton: model loads only on first call (~30s), then stays in memory."""
     global _instance
@@ -27,6 +34,7 @@ def get_sensevoice():
                     vad_model="fsmn-vad",
                     vad_kwargs={"max_single_segment_time": 30000},
                     device=settings.SENSEVOICE_DEVICE,
+                    ncpu=settings.SENSEVOICE_NCPU,
                 )
                 logger.info("SenseVoice model loaded successfully.")
     return _instance

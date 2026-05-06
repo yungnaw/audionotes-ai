@@ -64,6 +64,10 @@ def health():
 
 
 # Serve frontend static files (must be last)
+dist_dir = Path(__file__).parent.parent / "dist"
 frontend_dir = Path(__file__).parent.parent / "frontend"
-if frontend_dir.exists():
+
+if dist_dir.exists():
+    app.mount("/", StaticFiles(directory=str(dist_dir), html=True), name="frontend")
+elif frontend_dir.exists():
     app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")

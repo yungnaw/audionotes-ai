@@ -624,6 +624,134 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Detail back
   document.getElementById('detail-back-btn')?.addEventListener('click', () => navigate('workspace'));
 
+  // ===== Local Transcription Settings (SenseVoice) Initialization =====
+  const devCpuBtn = document.getElementById('device-cpu');
+  const devCudaBtn = document.getElementById('device-cuda');
+  const cudaWarning = document.getElementById('cuda-warning');
+  const threadsInput = document.getElementById('threads-input');
+  const threadsVal = document.getElementById('threads-val');
+
+  let currentDevice = 'cpu';
+  let currentNcpu = 8;
+  let isCudaAvailable = false;
+
+  async function initSystemConfig() {
+    if (!devCpuBtn || !devCudaBtn) return;
+    try {
+      const config = await API.getSystemConfig();
+      currentDevice = config.device || 'cpu';
+      currentNcpu = config.ncpu || 8;
+      isCudaAvailable = config.cuda_available || false;
+
+      // Update UI
+      updateDeviceUI(currentDevice);
+      if (threadsInput) {
+        threadsInput.value = currentNcpu;
+        threadsVal.textContent = currentNcpu;
+      }
+      if (!isCudaAvailable && cudaWarning) {
+        cudaWarning.style.display = 'block';
+      }
+    } catch (e) {
+      console.error('Failed to initialize system config:', e);
+    }
+  }
+
+  function updateDeviceUI(device) {
+    if (device === 'cpu') {
+      devCpuBtn.classList.add('active');
+      devCudaBtn.classList.remove('active');
+    } else {
+      devCudaBtn.classList.add('active');
+      devCpuBtn.classList.remove('active');
+    }
+  }
+
+  async function handleUpdateSystem(device, ncpu) {
+    try {
+      await API.updateSystemConfig(device, ncpu);
+      currentDevice = device;
+      currentNcpu = ncpu;
+      updateDeviceUI(device);
+      showToast('系统配置已更新并应用', 'success');
+    } catch (e) {
+      showToast('系统配置更新失败', 'error');
+    }
+  }
+
+  if (devCpuBtn && devCudaBtn) {
+    devCpuBtn.addEventListener('click', () => {
+      handleUpdateSystem('cpu', currentNcpu);
+    });
+
+    devCudaBtn.addEventListener('click', () => {
+      if (!isCudaAvailable) {
+        alert("检测到当前 Python 环境尚未正确安装 CUDA 支持库，或您的设备没有 NVIDIA 显卡。若要使用 GPU，请在当前环境运行清华加速源安装：\nuv pip install torch torchaudio -f https://mirrors.tuna.tsinghua.edu.cn/pytorch-wheels/cu121/ --force-reinstall");
+      }
+      handleUpdateSystem('cuda', currentNcpu);
+    });
+  }
+
+  if (threadsInput) {
+    threadsInput.addEventListener('input', e => {
+      if (threadsVal) threadsVal.textContent = e.target.value;
+    });
+
+    threadsInput.addEventListener('change', e => {
+      handleUpdateSystem(currentDevice, parseInt(e.target.value));
+    });
+  }
+
+  initSystemConfig();
+
+  // ===== Global Pause/Resume Processing =====
+  let isPaused = false;
+
+  async function syncPauseStatus() {
+    try {
+      const res = await API.getPauseStatus();
+      isPaused = res.paused;
+      updatePauseButtonUI();
+    } catch (e) {
+      console.error('Failed to sync pause status:', e);
+    }
+  }
+
+  function updatePauseButtonUI() {
+    const pauseBtn = document.getElementById('global-pause-btn');
+    const pauseText = document.getElementById('pause-btn-text');
+    if (!pauseBtn || !pauseText) return;
+
+    if (isPaused) {
+      pauseBtn.style.background = '#059669'; // 绿色
+      pauseBtn.style.borderColor = '#059669';
+      pauseBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="6 3 20 12 6 21 6 3"/></svg> <span id="pause-btn-text">恢复处理</span>`;
+    } else {
+      pauseBtn.style.background = '#e11d48'; // 红色
+      pauseBtn.style.borderColor = '#e11d48';
+      pauseBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg> <span id="pause-btn-text">暂停处理</span>`;
+    }
+  }
+
+  document.getElementById('global-pause-btn')?.addEventListener('click', async () => {
+    try {
+      if (isPaused) {
+        await API.resumeProcessing();
+        isPaused = false;
+        showToast('转录与处理流程已恢复执行', 'success');
+      } else {
+        await API.pauseProcessing();
+        isPaused = true;
+        showToast('流程已暂停（正在进行中的步骤结束后将自动挂起）', 'warning');
+      }
+      updatePauseButtonUI();
+    } catch (e) {
+      showToast('控制暂停状态失败', 'error');
+    }
+  });
+
+  syncPauseStatus();
+
   // Initial render
   navigate('home');
 });

@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     # SenseVoice 本地转录配置
     SENSEVOICE_MODEL: str = "iic/SenseVoiceSmall"
     SENSEVOICE_DEVICE: str = "cpu"
+    SENSEVOICE_NCPU: int = 8
 
     # 存储
     DATABASE_URL: str = "sqlite:///./audionotes.db"
@@ -20,7 +21,18 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 3000
 
-    model_config = {"env_file": str(Path(__file__).parent / ".env"), "env_file_encoding": "utf-8"}
+    model_config = {"env_file": str(Path(__file__).parent.parent.parent / ".env"), "env_file_encoding": "utf-8"}
+
+    def __init__(self, **values):
+        super().__init__(**values)
+        # 动态检测 NVIDIA GPU
+        if not self.SENSEVOICE_DEVICE or self.SENSEVOICE_DEVICE == "cpu":
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    self.SENSEVOICE_DEVICE = "cuda"
+            except ImportError:
+                pass
 
 
 settings = Settings()

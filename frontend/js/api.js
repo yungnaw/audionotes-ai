@@ -77,6 +77,42 @@ const API = {
     return res.json();
   },
 
+  // ===== System Config =====
+  async getSystemConfig() {
+    const res = await fetch('/api/models/system');
+    if (!res.ok) throw new Error('获取系统配置失败');
+    return res.json();
+  },
+
+  async updateSystemConfig(device, ncpu) {
+    const res = await fetch('/api/models/system', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ device, ncpu }),
+    });
+    if (!res.ok) throw new Error('更新系统配置失败');
+    return res.json();
+  },
+
+  // ===== Process Pause/Resume =====
+  async pauseProcessing() {
+    const res = await fetch('/api/process/pause', { method: 'POST' });
+    if (!res.ok) throw new Error('暂停处理失败');
+    return res.json();
+  },
+
+  async resumeProcessing() {
+    const res = await fetch('/api/process/resume', { method: 'POST' });
+    if (!res.ok) throw new Error('恢复处理失败');
+    return res.json();
+  },
+
+  async getPauseStatus() {
+    const res = await fetch('/api/process/status');
+    if (!res.ok) throw new Error('获取暂停状态失败');
+    return res.json();
+  },
+
   // ===== Bilibili =====
   async importBilibili(url, cid = null) {
     const res = await fetch('/api/bilibili/import', {

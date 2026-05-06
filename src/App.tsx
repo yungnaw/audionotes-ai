@@ -81,6 +81,41 @@ export default function App() {
   const [customPrompt, setCustomPrompt] = useState<string>('');
   const [showPromptSettings, setShowPromptSettings] = useState(false);
   const [biliMultiP, setBiliMultiP] = useState<{ title: string, bvid: string, pages: any[] } | null>(null);
+  const [selectedCids, setSelectedCids] = useState<number[]>([]);
+  const [device, setDevice] = useState<'cpu' | 'cuda'>('cpu');
+  const [ncpu, setNcpu] = useState<number>(8);
+  const [cudaAvailable, setCudaAvailable] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetch('/api/models/system')
+      .then(res => res.json())
+      .then(data => {
+        setDevice(data.device || 'cpu');
+        setNcpu(data.ncpu || 8);
+        setCudaAvailable(data.cuda_available || false);
+      })
+      .catch(err => console.error("Failed to load system config:", err));
+  }, []);
+
+  const handleUpdateSystemConfig = (newDevice: 'cpu' | 'cuda', newNcpu: number) => {
+    setDevice(newDevice);
+    setNcpu(newNcpu);
+    fetch('/api/models/system', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ device: newDevice, ncpu: newNcpu })
+    })
+      .then(res => res.json())
+      .catch(err => console.error("Failed to update system config:", err));
+  };
+
+  useEffect(() => {
+    if (biliMultiP) {
+      setSelectedCids(biliMultiP.pages.map(p => p.cid));
+    } else {
+      setSelectedCids([]);
+    }
+  }, [biliMultiP]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const selectedFile = files.find(f => f.id === selectedFileId);
@@ -384,7 +419,7 @@ export default function App() {
             }`}
           >
             <MessageSquareText size={16} />
-            <span className="text-xs font-bold">笔记偏好设置</span>
+            <span className="text-xs font-bold">系统与偏好设置</span>
             {showPromptSettings ? <ChevronRight size={14} /> : <ChevronLeft size={14} />}
           </button>
           
@@ -679,8 +714,8 @@ export default function App() {
             <div className="flex items-center gap-2">
               <Sparkles size={18} className="text-zinc-400" />
               <div>
-                <h3 className="text-sm font-bold text-zinc-100">指令调优</h3>
-                <p className="text-[10px] text-zinc-500 uppercase tracking-widest mt-0.5 font-bold">AI CONFIGURATION</p>
+                <h3 className="text-sm font-bold text-zinc-100">系统偏好与设置</h3>
+                <p className="text-[10px] text-zinc-500 uppercase tracking-widest mt-0.5 font-bold">PREFERENCES & CONFIG</p>
               </div>
             </div>
             <button 
@@ -694,8 +729,77 @@ export default function App() {
           <div className="flex-1 overflow-y-auto p-6 space-y-8">
             <div className="bg-zinc-950/50 rounded-xl p-4 border border-zinc-800/50">
               <p className="text-xs text-zinc-500 leading-relaxed italic">
-                "在此输入特殊指令（Prompt），例如要求 AI 使用特定的语气或侧重点。设置后点击文件的“开始处理”生效。"
+                "在此输入特殊指令（Prompt）调整笔记，或在下方管理本地 SenseVoice 转录引擎的运行硬件和并行数量。"
               </p>
+            </div>
+
+            {/* 本地转录引擎设置 */}
+            <div className="space-y-4 p-4 rounded-xl border border-zinc-800 bg-[#0c0c0c] shadow-inner">
+              <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">
+                本地转录引擎设置 (SenseVoice)
+              </label>
+              
+              {/* CPU/GPU Toggle */}
+              <div className="space-y-2">
+                <span className="text-xs text-zinc-400 block font-medium">运行设备 (Device):</span>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => handleUpdateSystemConfig('cpu', ncpu)}
+                    className={`px-3 py-2 text-xs font-bold rounded-lg border transition-all ${
+                      device === 'cpu'
+                        ? 'bg-zinc-100 text-zinc-900 border-zinc-100 shadow-[0_2px_8px_rgba(255,255,255,0.1)]'
+                        : 'bg-zinc-900 text-zinc-400 border-zinc-800 hover:text-zinc-100 hover:border-zinc-700'
+                    }`}
+                  >
+                    CPU 模式
+                  </button>
+                  <button
+                    onClick={() => {
+                      if (!cudaAvailable) {
+                        alert("检测到当前 Python 环境尚未正确安装 CUDA 支持库，或您的设备没有 NVIDIA 显卡。若要使用 GPU，请在当前环境运行清华加速源安装：\nuv pip install torch torchaudio -f https://mirrors.tuna.tsinghua.edu.cn/pytorch-wheels/cu121/ --force-reinstall");
+                      }
+                      handleUpdateSystemConfig('cuda', ncpu);
+                    }}
+                    className={`px-3 py-2 text-xs font-bold rounded-lg border transition-all flex items-center justify-center gap-1.5 ${
+                      device === 'cuda'
+                        ? 'bg-zinc-100 text-zinc-900 border-zinc-100 shadow-[0_2px_8px_rgba(255,255,255,0.1)]'
+                        : 'bg-zinc-900 text-zinc-400 border-zinc-800 hover:text-zinc-100 hover:border-zinc-700'
+                    }`}
+                  >
+                    GPU (CUDA) 模式
+                    {cudaAvailable && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    )}
+                  </button>
+                </div>
+                {!cudaAvailable && (
+                  <p className="text-[9px] text-zinc-600 italic">
+                    ⚠️ 系统未检测到可用的 NVIDIA CUDA 环境（请参照提示安装）
+                  </p>
+                )}
+              </div>
+
+              {/* Thread Count Setting */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <span className="text-xs text-zinc-400 font-medium">最大并行个数 (Threads):</span>
+                  <span className="text-xs font-mono font-bold text-zinc-300">{ncpu}</span>
+                </div>
+                <input
+                  type="range"
+                  min="1"
+                  max="16"
+                  step="1"
+                  value={ncpu}
+                  onChange={(e) => handleUpdateSystemConfig(device, parseInt(e.target.value))}
+                  className="w-full accent-zinc-100 bg-zinc-800 h-1 rounded-lg cursor-pointer"
+                />
+                <div className="flex justify-between text-[9px] text-zinc-600 font-mono">
+                  <span>1 线程</span>
+                  <span>推荐: 8 线程</span>
+                  <span>16 线程</span>
+                </div>
+              </div>
             </div>
 
             <div className="space-y-3">
@@ -783,23 +887,54 @@ export default function App() {
                   <X size={20} />
                 </button>
               </div>
-              <div className="max-h-[400px] overflow-y-auto p-2">
-                <div className="grid gap-1">
-                  {biliMultiP.pages.map((p) => (
-                    <button
+
+              {/* Select All Toggle */}
+              <div className="px-6 py-2.5 bg-zinc-900/30 border-b border-zinc-800/50 flex items-center justify-between">
+                <span className="text-xs text-zinc-500">选择要导入的分 P 视频</span>
+                <button
+                  onClick={() => {
+                    if (selectedCids.length === biliMultiP.pages.length) {
+                      setSelectedCids([]);
+                    } else {
+                      setSelectedCids(biliMultiP.pages.map(p => p.cid));
+                    }
+                  }}
+                  className="text-xs text-zinc-400 hover:text-white transition-colors font-medium"
+                >
+                  {selectedCids.length === biliMultiP.pages.length ? "取消全选" : "全选"}
+                </button>
+              </div>
+
+              <div className="max-h-[350px] overflow-y-auto p-4 space-y-1">
+                {biliMultiP.pages.map((p) => {
+                  const isSelected = selectedCids.includes(p.cid);
+                  return (
+                    <div
                       key={p.cid}
-                      onClick={() => importSpecificPages([p])}
-                      className="flex items-center gap-4 p-3 hover:bg-zinc-800 rounded-lg transition-colors text-left group"
+                      onClick={() => {
+                        setSelectedCids(prev => 
+                          prev.includes(p.cid) 
+                            ? prev.filter(id => id !== p.cid) 
+                            : [...prev, p.cid]
+                        );
+                      }}
+                      className="flex items-center gap-4 p-3 hover:bg-zinc-800/60 rounded-xl transition-colors text-left group cursor-pointer border border-transparent hover:border-zinc-800"
                     >
+                      <input
+                        type="checkbox"
+                        checked={isSelected}
+                        onChange={() => {}} // Handled by div onClick
+                        className="w-4 h-4 rounded border-zinc-700 bg-zinc-950 text-zinc-100 focus:ring-0 cursor-pointer"
+                      />
                       <div className="w-8 h-8 rounded bg-zinc-800 flex items-center justify-center text-[10px] font-bold text-zinc-500 group-hover:bg-zinc-700 transition-colors">
                         P{p.page}
                       </div>
                       <span className="text-sm text-zinc-300 flex-1 truncate">{p.part}</span>
-                      <Download size={14} className="text-zinc-600 group-hover:text-zinc-400" />
-                    </button>
-                  ))}
-                </div>
+                    </div>
+                  );
+                })}
               </div>
+
               <div className="p-4 bg-zinc-900/80 border-t border-zinc-800 flex justify-between gap-3">
                 <button 
                   onClick={() => setBiliMultiP(null)}
@@ -808,10 +943,18 @@ export default function App() {
                   取消
                 </button>
                 <button 
-                  onClick={() => importSpecificPages(biliMultiP.pages)}
-                  className="px-6 py-2 bg-zinc-100 text-black text-sm font-bold rounded-lg hover:bg-white transition-colors"
+                  onClick={() => {
+                    const selected = biliMultiP.pages.filter(p => selectedCids.includes(p.cid));
+                    if (selected.length === 0) {
+                      alert("请选择至少一个分 P 视频导入");
+                      return;
+                    }
+                    importSpecificPages(selected);
+                  }}
+                  disabled={selectedCids.length === 0}
+                  className="px-6 py-2 bg-zinc-100 text-black text-sm font-bold rounded-lg hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  全部导入 ({biliMultiP.pages.length} 个分 P)
+                  导入已选 ({selectedCids.length} 个分 P)
                 </button>
               </div>
             </motion.div>

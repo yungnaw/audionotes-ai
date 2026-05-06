@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AudioSense AI - 智能音频学习助手。本地转录 + AI笔记生成，支持B站视频导入。">
   <title>AudioSense AI - 智能音频学习助手</title>
-  <link rel="stylesheet" href="/css/styles.css?v=2">
+  <link rel="stylesheet" href="/css/styles.css?v=3">
 </head>
 <body>
 
@@ -88,6 +88,29 @@
           </div>
           <textarea class="input" id="custom-prompt" style="height: 200px; font-family: monospace; line-height: 1.5;"></textarea>
         </div>
+        <!-- Local Transcription Settings -->
+        <div class="settings-section" style="margin-top: 24px;">
+          <h3>🎙️ 本地转录引擎设置 (SenseVoice)</h3>
+          <div style="display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-end; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 200px;">
+              <label style="display:block; margin-bottom:8px; font-size:14px; color:var(--text-muted)">运行设备 (Device)</label>
+              <div style="display: flex; gap: 8px;">
+                <button class="template-btn active" id="device-cpu" style="flex: 1; padding: 10px; text-align: center; border-radius: 6px;">CPU 模式</button>
+                <button class="template-btn" id="device-cuda" style="flex: 1; padding: 10px; text-align: center; border-radius: 6px;">GPU (CUDA) 模式</button>
+              </div>
+              <p id="cuda-warning" style="display:none; font-size:11px; color:#f43f5e; margin-top: 8px; font-style: italic; line-height: 1.4;">
+                ⚠️ 系统未检测到可用的 NVIDIA CUDA 环境（请参照提示安装）
+              </p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom:8px;">
+                <label style="font-size:14px; color:var(--text-muted)">最大并行个数 (Threads)</label>
+                <span id="threads-val" style="font-size:14px; font-weight:bold; color:var(--text-main)">8</span>
+              </div>
+              <input type="range" id="threads-input" min="1" max="16" step="1" value="8" style="width: 100%; accent-color: var(--primary);">
+            </div>
+          </div>
+        </div>
 
         <!-- Recent Files -->
         <div class="recent-section">
@@ -119,6 +142,10 @@
         <button class="btn btn-primary" id="batch-process-btn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="6 3 20 12 6 21 6 3"/></svg>
           开始处理
+        </button>
+        <button class="btn btn-secondary" id="global-pause-btn" style="background: #e11d48; border-color: #e11d48; color: white;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+          <span id="pause-btn-text">暂停处理</span>
         </button>
         <button class="btn btn-secondary" id="batch-export-btn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -179,7 +206,7 @@
 <!-- Toast container -->
 <div id="toast-container" class="toast-container"></div>
 
-<script src="/js/api.js?v=7"></script>
-<script src="/js/app.js?v=7"></script>
+<script src="/js/api.js?v=8"></script>
+<script src="/js/app.js?v=8"></script>
 </body>
 </html>

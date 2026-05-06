@@ -16,7 +16,7 @@ backend/audionotes.db
 # Environment
 backend/.env
 .env.local
-
+.env
 # Node (old project files)
 node_modules/
 
@@ -31,3 +31,7 @@ Thumbs.db
 
 # Models cache
 .cache/
+
+.mp4
+.mp3
+.wav
