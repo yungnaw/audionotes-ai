@@ -1,0 +1,11 @@
+{
+  "name": "AudioNotes AI",
+  "description": "Convert batch audio files into detailed, well-structured study notes using Gemini AI. Record, transcribe, and summarize automatically.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "audio_processing",
+    "summarization"
+  ]
+}

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Data
+backend/uploads/
+backend/*.db
+backend/audionotes.db
+
+# Environment
+backend/.env
+.env.local
+
+# Node (old project files)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models cache
+.cache/

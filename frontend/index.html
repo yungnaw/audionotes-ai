@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AudioSense AI - 智能音频学习助手。本地转录 + AI笔记生成，支持B站视频导入。">
+  <title>AudioSense AI - 智能音频学习助手</title>
+  <link rel="stylesheet" href="/css/styles.css?v=2">
+</head>
+<body>
+
+<div id="app">
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="header-brand" id="nav-home">
+      <div class="header-logo">A</div>
+      <div>
+        <div class="header-title">AudioSense</div>
+        <div class="header-subtitle">智能音频学习助手</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" id="nav-workspace">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        工作台
+      </button>
+      <button class="btn btn-secondary" id="header-upload-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        上传
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <div class="main-content">
+
+    <!-- ===== HOME VIEW ===== -->
+    <div id="view-home" class="view home-view active">
+      <div class="home-container">
+        <div class="home-hero-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+        </div>
+        <div class="home-hero">
+          <h2>智能音频学习助手</h2>
+          <p>上传讲座、会议录音或导入 B站视频，<br>本地极速转录 + AI 自动生成结构化学习笔记</p>
+        </div>
+
+        <!-- Upload Zone -->
+        <div class="upload-zone" id="upload-zone">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <p>拖拽音频文件到此处，或点击上传</p>
+          <p class="hint">支持 MP3 / WAV / M4A / FLAC / OGG</p>
+        </div>
+
+        <!-- Bilibili Import -->
+        <div class="bili-section">
+          <h3>🔗 Bilibili 视频导入</h3>
+          <div class="bili-input-row">
+            <input type="text" class="input" id="bili-url-input" placeholder="输入B站视频链接或 BV 号...">
+            <button class="btn btn-primary" id="bili-import-btn">导入</button>
+          </div>
+        </div>
+
+        <!-- Model Settings -->
+        <div class="settings-section" style="margin-top: 32px;">
+          <h3>⚙️ 模型与参数设置</h3>
+          
+          <div style="display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-end;">
+            <div style="flex: 1;">
+              <label style="display:block; margin-bottom:8px; font-size:14px; color:var(--text-muted)">API Key (默认使用服务端配置)</label>
+              <input type="password" class="input" id="api-key-input" placeholder="输入你自己的 Gemini API Key (可选)">
+            </div>
+            <div style="flex: 1;">
+              <label style="display:block; margin-bottom:8px; font-size:14px; color:var(--text-muted)">模型选择</label>
+              <select class="input" id="model-select">
+                <option value="gemini-2.5-flash">Gemini 2.5 Flash (快速/免费)</option>
+                <option value="gemini-2.5-pro">Gemini 2.5 Pro (强大/付费)</option>
+                <option value="gemini-2.0-flash-exp">Gemini 2.0 Flash Exp</option>
+              </select>
+            </div>
+          </div>
+
+          <label style="display:block; margin-bottom:8px; font-size:14px; color:var(--text-muted)">自定义提示词模板（请确保包含 <code>{text}</code> 作为转录内容的占位符）</label>
+          <div class="prompt-templates" style="margin-bottom: 8px;">
+            <button class="template-btn active" id="tmpl-default">默认模板</button>
+            <button class="template-btn" id="tmpl-academic">学术风格</button>
+            <button class="template-btn" id="tmpl-business">商业分析</button>
+          </div>
+          <textarea class="input" id="custom-prompt" style="height: 200px; font-family: monospace; line-height: 1.5;"></textarea>
+        </div>
+
+        <!-- Recent Files -->
+        <div class="recent-section">
+          <h3>📄 最近处理</h3>
+          <div class="recent-list" id="recent-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== WORKSPACE VIEW ===== -->
+    <div id="view-workspace" class="view workspace-view">
+      <div class="workspace-toolbar">
+        <div class="search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="workspace-search" placeholder="搜索文件名...">
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">全部</button>
+          <button class="filter-tab" data-filter="idle">待处理</button>
+          <button class="filter-tab" data-filter="processing">处理中</button>
+          <button class="filter-tab" data-filter="completed">已完成</button>
+          <button class="filter-tab" data-filter="failed">失败</button>
+        </div>
+        <div style="flex:1"></div>
+        <button class="btn btn-secondary" id="select-all-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          全选
+        </button>
+        <button class="btn btn-primary" id="batch-process-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          开始处理
+        </button>
+        <button class="btn btn-secondary" id="batch-export-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          批量导出
+        </button>
+        <button class="btn btn-danger" id="clear-all-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+          清空
+        </button>
+      </div>
+      <div class="workspace-list" id="workspace-list"></div>
+    </div>
+
+    <!-- ===== DETAIL VIEW ===== -->
+    <div id="view-detail" class="view detail-view">
+      <div class="detail-header">
+        <button class="btn btn-ghost" id="detail-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          返回列表
+        </button>
+        <span class="file-title" id="detail-file-title"></span>
+        <button class="btn btn-secondary hidden" id="detail-export-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          导出笔记
+        </button>
+      </div>
+      <div class="detail-body">
+        <div class="detail-pane" style="flex:3">
+          <div class="pane-header">
+            <span class="label">📝 AI 学习笔记</span>
+          </div>
+          <div class="pane-body" id="notes-content">
+            <div class="status-message">
+              <h3>等待处理</h3>
+            </div>
+          </div>
+        </div>
+        <div class="detail-pane" style="flex:2">
+          <div class="pane-header">
+            <span class="label">📃 原始转录文本</span>
+          </div>
+          <div class="pane-body">
+            <div class="transcription-text" id="trans-content">暂无转录文本</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /main-content -->
+</div><!-- /app -->
+
+<!-- Hidden file input -->
+<input type="file" id="file-input" class="hidden" multiple accept=".mp3,.wav,.m4a,.mp4,.ogg,.aac,.flac">
+
+<!-- Modal overlay -->
+<div id="modal-overlay" class="modal-overlay hidden"></div>
+
+<!-- Toast container -->
+<div id="toast-container" class="toast-container"></div>
+
+<script src="/js/api.js?v=7"></script>
+<script src="/js/app.js?v=7"></script>
+</body>
+</html>
