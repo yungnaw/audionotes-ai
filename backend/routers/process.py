@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from ..models.database import get_db, SessionLocal
 from ..models.orm import AudioFile, ProcessStatus
 from ..models.schemas import ProcessRequest
-from ..services import sensevoice_service, gemini_service
+from ..services import sensevoice_service, llm_service
 from ..config import settings
 
 logger = logging.getLogger(__name__)
@@ -108,9 +108,10 @@ async def process_task(file_id: str, request: ProcessRequest):
             f.progress = 60
             db.commit()
 
-            notes = await gemini_service.generate_notes(
+            notes = await llm_service.generate_notes(
                 text=transcription_text,
                 prompt_template=request.prompt_template,
+                provider=request.provider,
                 api_key=request.api_key,
                 model_name=request.model_name,
             )

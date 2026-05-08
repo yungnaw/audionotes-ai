@@ -102,7 +102,7 @@ async def extract_video_info(url: str, cid: int | None = None) -> dict:
             (p["part"] for p in pages if p["cid"] == target_cid), ""
         )
         display_title = (
-            f"{title} (P{next((p['page'] for p in pages if p['cid'] == target_cid), 1)} - {current_part})"
+            current_part
             if len(pages) > 1
             else title
         )

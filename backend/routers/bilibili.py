@@ -43,6 +43,7 @@ async def import_bilibili(
             source_type="bili_text",
             status=ProcessStatus.IDLE,
             transcription=data["content"],
+            task_id=request.task_id,
         )
         db.add(db_file)
         db.commit()
@@ -63,6 +64,7 @@ async def import_bilibili(
             mime_type=data.get("mime_type", "audio/mp4"),
             source_type="bili_audio",
             status=ProcessStatus.IDLE,
+            task_id=request.task_id,
         )
         db.add(db_file)
         db.commit()

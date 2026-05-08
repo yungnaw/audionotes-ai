@@ -8,6 +8,21 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: str = ""
     GEMINI_MODEL: str = "gemini-2.5-flash"
 
+    # DeepSeek 云端配置
+    DEEPSEEK_API_KEY: str = ""
+    DEEPSEEK_BASE_URL: str = "https://api.deepseek.com"
+    DEEPSEEK_MODEL: str = "deepseek-chat"
+
+    # Qwen 云端配置
+    QWEN_API_KEY: str = ""
+    QWEN_BASE_URL: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    QWEN_MODEL: str = "qwen-plus"
+
+    # GLM 云端配置
+    GLM_API_KEY: str = ""
+    GLM_BASE_URL: str = "https://open.bigmodel.cn/api/paas/v4"
+    GLM_MODEL: str = "glm-4-flash"
+
     # SenseVoice 本地转录配置
     SENSEVOICE_MODEL: str = "iic/SenseVoiceSmall"
     SENSEVOICE_DEVICE: str = "cpu"

@@ -1,4 +1,4 @@
-"""AudioSense AI - FastAPI application entry point.
+"""AudioNotes AI - FastAPI application entry point.
 
 Architecture:
 - Local: SenseVoice (speech-to-text) + SQLite (persistence)
@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 # Create app
 app = FastAPI(
-    title="AudioSense AI",
+    title="AudioNotes AI",
     description="智能音频学习助手 - 本地转录 + 云端笔记生成",
     version="2.0.0",
 )
@@ -50,6 +50,21 @@ app.include_router(models.router)
 def on_startup():
     """Initialize database on startup."""
     init_db()
+    # Create default TaskGroup if it doesn't exist
+    from .models.database import SessionLocal
+    from .models.orm import TaskGroup
+    db = SessionLocal()
+    try:
+        default_group = db.query(TaskGroup).filter(TaskGroup.id == "default").first()
+        if not default_group:
+            default_group = TaskGroup(id="default", name="默认任务")
+            db.add(default_group)
+            db.commit()
+    except Exception as e:
+        logger.error(f"Failed to create default task group: {e}")
+    finally:
+        db.close()
+
     logger.info(f"Database initialized: {settings.DATABASE_URL}")
     logger.info(f"Upload directory: {Path(settings.UPLOAD_DIR).resolve()}")
     logger.info(f"Gemini model: {settings.GEMINI_MODEL}")

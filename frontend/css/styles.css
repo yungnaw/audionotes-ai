@@ -202,8 +202,8 @@ body {
 }
 
 .home-container {
-  max-width: 640px;
-  width: 100%;
+  max-width: 860px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -302,6 +302,11 @@ body {
 }
 .input:focus { border-color: var(--accent); }
 .input::placeholder { color: var(--text-muted); }
+
+select.input option {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
 
 /* Prompt section */
 .prompt-section {

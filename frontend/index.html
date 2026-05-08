@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AudioSense AI - 智能音频学习助手。本地转录 + AI笔记生成，支持B站视频导入。">
-  <title>AudioSense AI - 智能音频学习助手</title>
+  <meta name="description" content="AudioNotes AI - 智能音频学习助手。本地转录 + AI笔记生成，支持B站视频导入。">
+  <title>AudioNotes AI - 智能音频学习助手</title>
   <link rel="stylesheet" href="/css/styles.css?v=3">
 </head>
 <body>
 
 <div id="app">
   <!-- ===== Header ===== -->
-  <header class="header">
+  <header class="header" style="height: 64px;">
     <div class="header-brand" id="nav-home">
       <div class="header-logo">A</div>
       <div>
-        <div class="header-title">AudioSense</div>
+        <div class="header-title">AudioNotes</div>
         <div class="header-subtitle">智能音频学习助手</div>
       </div>
     </div>
     <div class="header-actions">
-      <button class="btn btn-secondary" id="nav-workspace">
+      <!-- Task Selection in Header -->
+      <div style="display: flex; gap: 8px; align-items: center; background: rgba(255,255,255,0.03); padding: 4px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); margin-right: 8px;">
+        <select class="input" id="active-task-select" style="width: auto; height: 32px; padding: 2px 8px; font-size: 13px; background: transparent; border: none; color: var(--text-primary); font-weight: bold; cursor: pointer;">
+          <option value="default" style="background: #1e1e2e;">默认任务</option>
+        </select>
+        <button class="btn-icon" id="create-task-btn" title="新建任务" style="width: 28px; height: 28px; padding: 0; background: var(--bg-tertiary); border-radius: 6px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-primary);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+      </div>
+
+      <button class="btn btn-secondary" id="nav-workspace" style="height: 32px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         工作台
-      </button>
-      <button class="btn btn-secondary" id="header-upload-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-        上传
       </button>
     </div>
   </header>
@@ -46,7 +52,7 @@
         </div>
 
         <!-- Upload Zone -->
-        <div class="upload-zone" id="upload-zone">
+        <div class="upload-zone" id="upload-zone" style="width: 100%;">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           <p>拖拽音频文件到此处，或点击上传</p>
           <p class="hint">支持 MP3 / WAV / M4A / FLAC / OGG</p>
@@ -62,26 +68,44 @@
         </div>
 
         <!-- Model Settings -->
-        <div class="settings-section" style="margin-top: 32px;">
+        <div class="settings-section" style="margin-top: 32px; width: 100%;">
           <h3>⚙️ 模型与参数设置</h3>
           
-          <div style="display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-end;">
-            <div style="flex: 1;">
-              <label style="display:block; margin-bottom:8px; font-size:14px; color:var(--text-muted)">API Key (默认使用服务端配置)</label>
-              <input type="password" class="input" id="api-key-input" placeholder="输入你自己的 Gemini API Key (可选)">
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+            <div>
+              <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">AI 服务商</label>
+              <select class="input" id="provider-select" style="width: 100%;">
+                <option value="gemini">Gemini (谷歌)</option>
+                <option value="openai">OpenAI</option>
+                <option value="anthropic">Anthropic (Claude)</option>
+                <option value="deepseek">DeepSeek (深度求索)</option>
+                <option value="qwen">Qwen (通义千问)</option>
+                <option value="glm">GLM (智谱清言)</option>
+              </select>
             </div>
-            <div style="flex: 1;">
-              <label style="display:block; margin-bottom:8px; font-size:14px; color:var(--text-muted)">模型选择</label>
-              <select class="input" id="model-select">
-                <option value="gemini-2.5-flash">Gemini 2.5 Flash (快速/免费)</option>
-                <option value="gemini-2.5-pro">Gemini 2.5 Pro (强大/付费)</option>
-                <option value="gemini-2.0-flash-exp">Gemini 2.0 Flash Exp</option>
+            <div>
+              <label id="api-key-label" style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">Gemini API Key (默认使用服务端配置)</label>
+              <input type="password" class="input" id="api-key-input" style="width: 100%;" placeholder="输入你自己的 Gemini API Key (可选)">
+            </div>
+            <div>
+              <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">模型选择</label>
+              <select class="input" id="model-select" style="width: 100%;">
+                <!-- Will be dynamically populated or fall back -->
               </select>
             </div>
           </div>
 
-          <label style="display:block; margin-bottom:8px; font-size:14px; color:var(--text-muted)">自定义提示词模板（请确保包含 <code>{text}</code> 作为转录内容的占位符）</label>
-          <div class="prompt-templates" style="margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <label style="font-size:14px; color:var(--text-muted)">📝 提示词模板选单 (支持 <code>{text}</code> 占位符)</label>
+            <select class="input" id="template-select" style="width: auto; padding: 4px 8px; font-size: 13px; height: 32px;">
+              <option value="default">默认核心学习笔记 (通用结构)</option>
+              <option value="academic">学术论文与科研重难点梳理</option>
+              <option value="business">商业模式与落地可行性分析</option>
+              <option value="meeting">会议/访谈摘要与行动任务清单</option>
+              <option value="concept">核心概念与关键术语深度拆解</option>
+            </select>
+          </div>
+          <div class="prompt-templates" style="margin-bottom: 8px; display: none;">
             <button class="template-btn active" id="tmpl-default">默认模板</button>
             <button class="template-btn" id="tmpl-academic">学术风格</button>
             <button class="template-btn" id="tmpl-business">商业分析</button>
@@ -127,6 +151,13 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           <input type="text" id="workspace-search" placeholder="搜索文件名...">
         </div>
+        <div style="display: flex; gap: 8px; align-items: center; background: rgba(255,255,255,0.02); padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+          <span style="font-size:13px; color:var(--text-muted); white-space:nowrap;">任务场景:</span>
+          <select class="input" id="workspace-task-filter" style="width: auto; height: 28px; padding: 2px 8px; font-size: 13px; background: transparent; border: none; color: var(--text-main); font-weight: bold; cursor: pointer;">
+            <option value="all" style="background: #1e1e2e;">全部场景</option>
+            <option value="default" style="background: #1e1e2e;">默认任务</option>
+          </select>
+        </div>
         <div class="filter-tabs">
           <button class="filter-tab active" data-filter="all">全部</button>
           <button class="filter-tab" data-filter="idle">待处理</button>
@@ -157,6 +188,24 @@
         </button>
       </div>
       <div class="workspace-list" id="workspace-list"></div>
+
+      <!-- Workspace Pagination -->
+      <div class="pagination-container" style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding: 12px 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size:13px; color:var(--text-muted);">每页显示:</span>
+          <select class="input" id="page-size-select" style="width: auto; height: 32px; padding: 2px 8px; font-size: 13px; background: var(--bg-card); border-color: rgba(255,255,255,0.1);">
+            <option value="10">10 条</option>
+            <option value="20">20 条</option>
+            <option value="50">50 条</option>
+            <option value="100">100 条</option>
+          </select>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="btn btn-secondary" id="page-prev-btn" style="padding: 6px 12px; font-size: 13px; height: 32px;">上一页</button>
+          <span id="page-info" style="font-size:13px; color:var(--text-main); font-weight: bold; margin: 0 8px;">第 1 / 1 页</span>
+          <button class="btn btn-secondary" id="page-next-btn" style="padding: 6px 12px; font-size: 13px; height: 32px;">下一页</button>
+        </div>
+      </div>
     </div>
 
     <!-- ===== DETAIL VIEW ===== -->

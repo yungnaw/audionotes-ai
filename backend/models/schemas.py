@@ -5,6 +5,7 @@ from typing import Optional
 
 class ProcessRequest(BaseModel):
     prompt_template: str = ""
+    provider: str = "gemini"
     api_key: Optional[str] = None
     model_name: Optional[str] = None
 
@@ -12,6 +13,7 @@ class ProcessRequest(BaseModel):
 class BilibiliImportRequest(BaseModel):
     url: str
     cid: Optional[int] = None
+    task_id: str = "default"
 
 
 class AudioFileResponse(BaseModel):

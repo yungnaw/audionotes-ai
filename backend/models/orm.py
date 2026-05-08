@@ -32,6 +32,7 @@ class AudioFile(Base):
     error_message = Column(Text, default="")
     duration = Column(Float, default=0.0)
     language = Column(String, default="")
+    task_id = Column(String, default="default")
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
@@ -51,6 +52,23 @@ class AudioFile(Base):
             "error_message": self.error_message or "",
             "duration": self.duration,
             "language": self.language,
+            "task_id": self.task_id,
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "updated_at": self.updated_at.isoformat() if self.updated_at else None,
         }
+
+
+class TaskGroup(Base):
+    __tablename__ = "task_groups"
+
+    id = Column(String, primary_key=True, default=lambda: uuid.uuid4().hex[:12])
+    name = Column(String, unique=True, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+        }
+
