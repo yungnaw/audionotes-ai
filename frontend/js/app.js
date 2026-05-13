@@ -7,16 +7,26 @@
 const state = {
   files: [],
   tasks: [],
+  currentUser: null,
   activeTaskId: 'default',
   workspaceTaskFilterId: 'all',
   currentPage: 1,
-  pageSize: parseInt(localStorage.getItem('page_size') || '10'),
+  pageSize: parseInt(localStorage.getItem('page_size') || '20'),
   currentView: 'home',      // 'home' | 'workspace' | 'detail'
   selectedFileId: null,
   searchQuery: '',
   filterStatus: 'all',      // 'all' | 'idle' | 'processing' | 'completed' | 'failed'
   customPrompt: '',
   isProcessing: false,
+};
+
+// ===== Preset Prompt Templates =====
+const TEMPLATES = {
+  default: '你是一位专业的学术助理。请根据以下转录文本，整理出一份极其详实、结构清晰的学习笔记。\n\n笔记必须使用中文编写，包含以下部分：\n- # [主题名称]（根据内容自动提取）\n- ## 核心摘要（用3-5句话概括全部内容）\n- ## 详细知识点（分章节深入细节，不要遗漏要点，使用 bullet points）\n- ## 关键概念解析（解释专业术语和核心概念）\n- ## 行动建议或结论\n\n转录文本：\n{text}',
+  academic: '你是一位资深的学术研究员。请用严谨、客观的学术风格对以下转录内容进行精深整理。\n\n要求：\n1. 重点提炼核心论点、研究方法、实验数据或实证支撑。\n2. 使用学术规范术语，保持中立客观的第三方叙述视角。\n3. 梳理其理论脉络、对前人研究的继承或突破。\n4. 指出其在学术界或行业研究中的应用价值。\n\n转录文本：\n{text}',
+  business: '你是一位世界顶尖的商业咨询顾问。请从商业可行性、市场竞争和商业模式创新的角度分析以下内容。\n\n请整理出：\n1. **核心商业价值**：该内容解决的痛点和独特卖点。\n2. **落地可行性路径**：具体的商业执行、技术落地或运营步骤。\n3. **潜在商业风险**：财务、竞争和市场层面的关键风险点及应对措施。\n4. **商业落地建议**：给决策者的关键行动建议。\n\n转录文本：\n{text}',
+  meeting: '你是一位极其高效的会议秘书。请将以下对话/会议转录文本整理成专业的会议纪要。\n\n请包含以下清晰板块：\n1. **会议主题与背景概述**：简明扼要介绍讨论核心背景。\n2. **核心议题与决策结论**：逐条记录讨论过的关键议题，以及达成共识的决策（注明谁同意了什么）。\n3. **任务清单与负责人 (Action Items)**：清晰列出待办任务、对应执行人以及预计完成时限。\n4. **遗留未决议题**：记录本次会议未达成共识、需会后跟进或下次讨论的要点。\n\n转录文本：\n{text}',
+  concept: '你是一位擅长将复杂技术简单化的金牌科普导师。请对以下转录内容进行细粒度的概念拆解 and 术语普及。\n\n要求：\n1. **核心思维导图概览**：用文本层级结构（Markdown 树状图）勾勒出整体知识框架。\n2. **关键术语深度拆解**：列出文本中出现的所有专业词汇、前沿概念，用极其白话（并配以生活中的类比）解释其含义。\n3. **底层原理透视**：说明这些概念是如何配合运行的，背后的工作原理是什么。\n4. **一句话金句总结**：用一句话精辟概括该主题最精髓的内涵。\n\n转录文本：\n{text}'
 };
 
 // ===== SVG Icons (inline) =====
@@ -31,6 +41,7 @@ const ICONS = {
   play: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>`,
   eye: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`,
   files: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>`,
+  folder: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>`,
   list: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>`,
 };
 
@@ -102,7 +113,423 @@ function renderMarkdown(md) {
   return `<p>${html}</p>`;
 }
 
-// ===== Navigation =====
+// ===== Auth =====
+function getToken() {
+  return localStorage.getItem('auth_token');
+}
+
+function saveAuth(token, user) {
+  localStorage.setItem('auth_token', token);
+  localStorage.setItem('auth_user', JSON.stringify(user));
+  state.currentUser = user;
+}
+
+function clearAuth() {
+  localStorage.removeItem('auth_token');
+  localStorage.removeItem('auth_user');
+  state.currentUser = null;
+}
+
+function renderUserHeader(user) {
+  const el = document.getElementById('user-header-info');
+  if (!el) return;
+  const initial = (user.username || '?')[0].toUpperCase();
+  el.innerHTML = `
+    <div class="user-avatar" onclick="showUserMenu()" title="${user.username}">
+      ${user.avatar_url ? `<img src="${user.avatar_url}" alt="avatar">` : initial}
+    </div>
+    <div class="user-dropdown hidden" id="user-dropdown">
+      <div class="user-dropdown-header">
+        <div class="user-avatar-lg">${user.avatar_url ? `<img src="${user.avatar_url}">` : initial}</div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);font-size:14px;">${user.username}</div>
+          <div style="font-size:11px;color:var(--text-muted);">${user.role === 'admin' ? '管理员' : '普通用户'}</div>
+        </div>
+      </div>
+      <div class="user-dropdown-divider"></div>
+      <button class="user-dropdown-item" onclick="showChangePasswordModal()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        修改密码
+      </button>
+      <button class="user-dropdown-item" onclick="showAISettingsModal()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        模型与 API 配置
+      </button>
+      ${user.role === 'admin' ? `<button class="user-dropdown-item" onclick="showAdminPanel()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        管理面板
+      </button>` : ''}
+      <div class="user-dropdown-divider"></div>
+      <button class="user-dropdown-item danger" onclick="handleLogout()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        退出登录
+      </button>
+    </div>
+  `;
+}
+
+function showUserMenu() {
+  const dd = document.getElementById('user-dropdown');
+  if (!dd) return;
+  dd.classList.toggle('hidden');
+  // Close on outside click
+  setTimeout(() => {
+    document.addEventListener('click', function closeMenu(e) {
+      if (!dd.contains(e.target) && !e.target.closest('.user-avatar')) {
+        dd.classList.add('hidden');
+        document.removeEventListener('click', closeMenu);
+      }
+    });
+  }, 10);
+}
+
+function showAuthModal(defaultTab = 'login') {
+  const overlay = document.getElementById('modal-overlay');
+  overlay.classList.remove('hidden');
+  overlay.innerHTML = `
+    <div class="modal auth-modal">
+      <div class="auth-modal-logo">
+        <div class="header-logo" style="width:48px;height:48px;font-size:20px;">A</div>
+        <h2 style="color:var(--text-primary);font-size:20px;font-weight:700;margin-top:12px;">AudioNotes AI</h2>
+        <p style="color:var(--text-muted);font-size:13px;margin-top:4px;">智能音频学习助手</p>
+      </div>
+      <div class="auth-tabs">
+        <button class="auth-tab ${defaultTab==='login'?'active':''}" id="tab-login" onclick="switchAuthTab('login')">登录</button>
+        <button class="auth-tab ${defaultTab==='register'?'active':''}" id="tab-register" onclick="switchAuthTab('register')">注册</button>
+      </div>
+      <div id="auth-form-container">
+        ${renderLoginForm()}
+      </div>
+    </div>`;
+  if (defaultTab === 'register') switchAuthTab('register');
+}
+
+function renderLoginForm() {
+  return `
+    <form id="login-form" onsubmit="handleLogin(event)" style="display:flex;flex-direction:column;gap:14px;">
+      <div>
+        <label class="auth-label">用户名</label>
+        <input type="text" id="login-username" class="input" placeholder="请输入用户名" autocomplete="username" required style="width:100%;">
+      </div>
+      <div>
+        <label class="auth-label">密码</label>
+        <input type="password" id="login-password" class="input" placeholder="请输入密码" autocomplete="current-password" required style="width:100%;">
+      </div>
+      <div id="auth-error" class="auth-error hidden"></div>
+      <button type="submit" class="btn btn-primary" id="login-submit-btn" style="width:100%;justify-content:center;height:40px;font-size:14px;">登录</button>
+    </form>`;
+}
+
+function renderRegisterForm() {
+  return `
+    <form id="register-form" onsubmit="handleRegister(event)" style="display:flex;flex-direction:column;gap:14px;">
+      <div>
+        <label class="auth-label">用户名 <span style="color:var(--danger)">*</span></label>
+        <input type="text" id="reg-username" class="input" placeholder="2-32 个字符" autocomplete="username" required style="width:100%;">
+      </div>
+      <div>
+        <label class="auth-label">邮箱 <span style="color:var(--text-muted);font-size:11px;">(可选)</span></label>
+        <input type="email" id="reg-email" class="input" placeholder="your@email.com" autocomplete="email" style="width:100%;">
+      </div>
+      <div>
+        <label class="auth-label">密码 <span style="color:var(--danger)">*</span></label>
+        <input type="password" id="reg-password" class="input" placeholder="至少 6 位" autocomplete="new-password" required style="width:100%;">
+      </div>
+      <div>
+        <label class="auth-label">邀请码 <span style="color:var(--text-muted);font-size:11px;">(如需)</span></label>
+        <input type="text" id="reg-invite" class="input" placeholder="没有可留空" style="width:100%;">
+      </div>
+      <div id="auth-error" class="auth-error hidden"></div>
+      <button type="submit" class="btn btn-primary" id="register-submit-btn" style="width:100%;justify-content:center;height:40px;font-size:14px;">创建账号</button>
+    </form>`;
+}
+
+function switchAuthTab(tab) {
+  document.getElementById('tab-login')?.classList.toggle('active', tab === 'login');
+  document.getElementById('tab-register')?.classList.toggle('active', tab === 'register');
+  const container = document.getElementById('auth-form-container');
+  if (container) container.innerHTML = tab === 'login' ? renderLoginForm() : renderRegisterForm();
+}
+
+async function handleLogin(e) {
+  e.preventDefault();
+  const username = document.getElementById('login-username').value.trim();
+  const password = document.getElementById('login-password').value;
+  const btn = document.getElementById('login-submit-btn');
+  const errEl = document.getElementById('auth-error');
+
+  btn.disabled = true;
+  btn.textContent = '登录中...';
+  errEl.classList.add('hidden');
+
+  try {
+    const data = await API.login(username, password);
+    saveAuth(data.access_token, data.user);
+    document.getElementById('modal-overlay').classList.add('hidden');
+    document.getElementById('modal-overlay').innerHTML = '';
+    renderUserHeader(data.user);
+    await initApp();
+    showToast(`欢迎回来，${data.user.username}！`, 'success');
+  } catch (err) {
+    errEl.textContent = err.message || '登录失败，请重试';
+    errEl.classList.remove('hidden');
+    btn.disabled = false;
+    btn.textContent = '登录';
+  }
+}
+
+async function handleRegister(e) {
+  e.preventDefault();
+  const username = document.getElementById('reg-username').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const password = document.getElementById('reg-password').value;
+  const invite_code = document.getElementById('reg-invite').value.trim();
+  const btn = document.getElementById('register-submit-btn');
+  const errEl = document.getElementById('auth-error');
+
+  btn.disabled = true;
+  btn.textContent = '注册中...';
+  errEl.classList.add('hidden');
+
+  try {
+    const data = await API.register({ username, password, email, invite_code });
+    saveAuth(data.access_token, data.user);
+    document.getElementById('modal-overlay').classList.add('hidden');
+    document.getElementById('modal-overlay').innerHTML = '';
+    renderUserHeader(data.user);
+    await initApp();
+    showToast(`账号创建成功，欢迎 ${data.user.username}！`, 'success');
+  } catch (err) {
+    errEl.textContent = err.message || '注册失败，请重试';
+    errEl.classList.remove('hidden');
+    btn.disabled = false;
+    btn.textContent = '创建账号';
+  }
+}
+
+function handleLogout() {
+  showCustomConfirm('退出登录', '确定要退出当前账号吗？', () => {
+    clearAuth();
+    state.files = [];
+    state.tasks = [];
+    document.getElementById('user-header-info').innerHTML = '';
+    showAuthModal('login');
+  });
+}
+
+function showChangePasswordModal() {
+  document.getElementById('user-dropdown')?.classList.add('hidden');
+  showCustomModal({
+    title: '修改密码',
+    contentHtml: `
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div>
+          <label class="auth-label">原密码</label>
+          <input type="password" id="old-pwd" class="input" style="width:100%;" placeholder="请输入原密码">
+        </div>
+        <div>
+          <label class="auth-label">新密码</label>
+          <input type="password" id="new-pwd" class="input" style="width:100%;" placeholder="至少 6 位">
+        </div>
+      </div>`,
+    confirmText: '确认修改',
+    onConfirm: async (close) => {
+      const oldPwd = document.getElementById('old-pwd')?.value;
+      const newPwd = document.getElementById('new-pwd')?.value;
+      if (!oldPwd || !newPwd) return;
+      try {
+        await API.changePassword(oldPwd, newPwd);
+        showToast('密码修改成功', 'success');
+        close();
+      } catch (e) {
+        showToast(e.message || '修改失败', 'error');
+      }
+    }
+  });
+}
+
+function showAISettingsModal() {
+  document.getElementById('user-dropdown')?.classList.add('hidden');
+  
+  const PROVIDER_MODELS = {
+    gemini: [
+      { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash' },
+      { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro' },
+      { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash' },
+      { id: 'gemini-1.5-pro', name: 'Gemini 1.5 Pro' }
+    ],
+    openai: [
+      { id: 'gpt-4o-mini', name: 'GPT-4o Mini' },
+      { id: 'gpt-4o', name: 'GPT-4o' },
+      { id: 'gpt-4-turbo', name: 'GPT-4 Turbo' }
+    ],
+    anthropic: [
+      { id: 'claude-3-7-sonnet-20250219', name: 'Claude 3.7 Sonnet' },
+      { id: 'claude-3-5-sonnet-20241022', name: 'Claude 3.5 Sonnet' },
+      { id: 'claude-3-5-haiku-20241022', name: 'Claude 3.5 Haiku' },
+      { id: 'claude-3-opus-20240229', name: 'Claude 3 Opus' }
+    ],
+    deepseek: [
+      { id: 'deepseek-v4-pro', name: 'DeepSeek-V4-Pro (最新旗舰版)' },
+      { id: 'deepseek-v4-flash', name: 'DeepSeek-V4-Flash (极速超轻量)' },
+      { id: 'deepseek-chat', name: 'DeepSeek-V3 (即将弃用)' },
+      { id: 'deepseek-reasoner', name: 'DeepSeek-R1 (即将弃用)' }
+    ],
+    qwen: [
+      { id: 'qwen-max', name: 'Qwen Max' },
+      { id: 'qwen-plus', name: 'Qwen Plus' },
+      { id: 'qwen-turbo', name: 'Qwen Turbo' }
+    ],
+    glm: [
+      { id: 'glm-4-plus', name: 'GLM-4-Plus' },
+      { id: 'glm-4-air', name: 'GLM-4-Air' },
+      { id: 'glm-4-flash', name: 'GLM-4-Flash' }
+    ]
+  };
+
+  let currentProvider = localStorage.getItem('provider') || 'deepseek';
+
+  showCustomModal({
+    title: '模型与 API 配置',
+    contentHtml: `
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+        <div>
+          <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">AI 服务商</label>
+          <select class="input" id="modal-provider-select" style="width: 100%;">
+            <option value="gemini">Gemini (谷歌)</option>
+            <option value="openai">OpenAI</option>
+            <option value="anthropic">Anthropic (Claude)</option>
+            <option value="deepseek">DeepSeek (深度求索)</option>
+            <option value="qwen">Qwen (通义千问)</option>
+            <option value="glm">GLM (智谱清言)</option>
+          </select>
+        </div>
+        <div>
+          <label id="modal-api-key-label" style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">API Key (默认使用项目配置的默认Key)</label>
+          <input type="password" class="input" id="modal-api-key-input" style="width: 100%;" placeholder="输入你自己的 API Key (可选)">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">模型选择</label>
+          <select class="input" id="modal-model-select" style="width: 100%;">
+          </select>
+        </div>
+      </div>
+    `,
+    confirmText: '保存并关闭',
+    onConfirm: (close) => {
+      close();
+    }
+  });
+
+  const providerSelect = document.getElementById('modal-provider-select');
+  const apiKeyLabel = document.getElementById('modal-api-key-label');
+  const apiKeyInput = document.getElementById('modal-api-key-input');
+  const modelSelect = document.getElementById('modal-model-select');
+
+  function updateProviderUI() {
+    if (!apiKeyLabel || !apiKeyInput || !modelSelect) return;
+    const providerNames = { gemini: 'Gemini', openai: 'OpenAI', anthropic: 'Anthropic', deepseek: 'DeepSeek', qwen: 'Qwen', glm: 'GLM' };
+    const pName = providerNames[currentProvider] || currentProvider;
+    apiKeyLabel.textContent = `${pName} API Key (默认使用项目配置的默认Key)`;
+    apiKeyInput.placeholder = `输入你自己的 ${pName} API Key (可选)`;
+
+    const savedKey = localStorage.getItem(`api_key_enc_${currentProvider}`) || '';
+    apiKeyInput.value = decryptKey(savedKey);
+
+    populateModels();
+  }
+
+  function populateModels() {
+    if (!modelSelect) return;
+    modelSelect.innerHTML = '';
+    const models = PROVIDER_MODELS[currentProvider] || [];
+    models.forEach(m => {
+      const opt = document.createElement('option');
+      opt.value = m.id;
+      opt.textContent = m.name;
+      modelSelect.appendChild(opt);
+    });
+
+    const savedModel = localStorage.getItem(`model_name_${currentProvider}`);
+    if (savedModel && models.find(m => m.id === savedModel)) {
+      modelSelect.value = savedModel;
+    } else if (models.length > 0) {
+      modelSelect.value = currentProvider === 'deepseek' ? 'deepseek-v4-flash' : models[0].id;
+      localStorage.setItem(`model_name_${currentProvider}`, modelSelect.value);
+    }
+  }
+
+  if (providerSelect) {
+    providerSelect.value = currentProvider;
+    providerSelect.addEventListener('change', e => {
+      currentProvider = e.target.value;
+      localStorage.setItem('provider', currentProvider);
+      updateProviderUI();
+    });
+  }
+
+  if (apiKeyInput) {
+    apiKeyInput.addEventListener('input', e => {
+      const val = e.target.value.trim();
+      localStorage.setItem(`api_key_enc_${currentProvider}`, encryptKey(val));
+    });
+  }
+
+  if (modelSelect) {
+    modelSelect.addEventListener('change', e => {
+      localStorage.setItem(`model_name_${currentProvider}`, e.target.value);
+    });
+  }
+
+  updateProviderUI();
+}
+
+async function showAdminPanel() {
+  document.getElementById('user-dropdown')?.classList.add('hidden');
+  try {
+    const [users, stats] = await Promise.all([API.adminListUsers(), API.adminGetStats()]);
+    showCustomModal({
+      title: '管理面板',
+      contentHtml: `
+        <div style="margin-bottom:16px;display:flex;gap:16px;">
+          <div class="admin-stat-card"><div class="admin-stat-num">${stats.users.total}</div><div class="admin-stat-label">总用户</div></div>
+          <div class="admin-stat-card"><div class="admin-stat-num">${stats.files.total}</div><div class="admin-stat-label">总文件</div></div>
+          <div class="admin-stat-card"><div class="admin-stat-num">${stats.storage.used_mb} MB</div><div class="admin-stat-label">磁盘占用</div></div>
+          <div class="admin-stat-card"><div class="admin-stat-num">${stats.files.completed}</div><div class="admin-stat-label">已完成笔记</div></div>
+        </div>
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">用户列表</div>
+        <div style="display:flex;flex-direction:column;gap:6px;max-height:280px;overflow-y:auto;">
+          ${users.map(u => `
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg-tertiary);border-radius:6px;border:1px solid var(--border);">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--accent-glow);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--accent);flex-shrink:0;">${(u.username||'?')[0].toUpperCase()}</div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:13px;font-weight:600;color:var(--text-primary);">${u.username}</div>
+                <div style="font-size:11px;color:var(--text-muted);">${u.role} · ${u.file_count} 个文件 · ${u.is_active ? '正常' : '<span style="color:var(--danger)">已禁用</span>'}</div>
+              </div>
+              ${u.id !== state.currentUser?.id ? `
+                <button class="btn btn-secondary" style="padding:4px 8px;font-size:11px;height:26px;" onclick="adminToggleUser('${u.id}', ${!u.is_active})">${u.is_active ? '禁用' : '启用'}</button>
+              ` : '<span style="font-size:11px;color:var(--accent);">（当前）</span>'}
+            </div>
+          `).join('')}
+        </div>`,
+      hideCancel: true,
+      confirmText: '关闭',
+    });
+  } catch (e) {
+    showToast('加载管理数据失败', 'error');
+  }
+}
+
+async function adminToggleUser(userId, activate) {
+  try {
+    await API.adminUpdateUser(userId, { is_active: activate });
+    showToast(activate ? '用户已启用' : '用户已禁用', 'success');
+    showAdminPanel(); // refresh
+  } catch (e) {
+    showToast('操作失败', 'error');
+  }
+}
+
 function navigate(view, fileId = null) {
   state.currentView = view;
   if (fileId) state.selectedFileId = fileId;
@@ -213,6 +640,7 @@ function renderWorkspace() {
         <div class="label">${f.progress}%</div>
       </div>
       <div class="file-actions">
+        <button class="btn-icon" title="移动到场景" onclick="event.stopPropagation();handleMoveFile('${f.id}')">${ICONS.folder}</button>
         ${f.status === 'completed' ? `<button class="btn-icon" title="查看笔记" onclick="event.stopPropagation();navigate('detail','${f.id}')">${ICONS.eye}</button>` : ''}
         <button class="btn-icon" title="删除" onclick="event.stopPropagation();handleDelete('${f.id}')">${ICONS.trash}</button>
       </div>
@@ -264,13 +692,136 @@ function renderDetail() {
   const exportBtn = document.getElementById('detail-export-btn');
   if (f.status === 'completed') {
     exportBtn.classList.remove('hidden');
-    exportBtn.onclick = () => window.open(API.exportSingleUrl(f.id), '_blank');
+    exportBtn.onclick = () => {
+      showCustomModal({
+        title: '导出笔记',
+        contentHtml: `
+          <div style="margin-top: 8px; margin-bottom: 8px;">
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+              <input type="checkbox" id="export-include-trans" class="checkbox" style="width: 16px; height: 16px;">
+              <span style="font-size: 14px; color: var(--text-main);">同时导出原始录音文字</span>
+            </label>
+          </div>
+        `,
+        confirmText: '开始导出',
+        onConfirm: (close) => {
+          const includeTrans = document.getElementById('export-include-trans')?.checked || false;
+          window.open(API.exportSingleUrl(f.id, includeTrans), '_blank');
+          close();
+        }
+      });
+    };
   } else {
     exportBtn.classList.add('hidden');
+  }
+
+  // Update move button
+  const detailMoveBtn = document.getElementById('detail-move-btn');
+  if (detailMoveBtn) {
+    detailMoveBtn.onclick = () => handleMoveFile(f.id);
   }
 }
 
 // ===== Handlers =====
+async function handleWorkspaceAddTask() {
+  let targetTaskId = state.workspaceTaskFilterId;
+  if (targetTaskId === 'all') {
+    targetTaskId = state.activeTaskId;
+  }
+
+  const options = [
+    { id: 'default', name: '默认任务' },
+    ...state.tasks.filter(t => t.id !== 'default')
+  ];
+
+  const selectHtml = `
+    <select id="modal-target-task" class="input" style="width: 100%; margin-bottom: 16px; background: var(--bg-card); color: var(--text-primary); border-color: rgba(255,255,255,0.1);">
+      ${options.map(t => `<option value="${t.id}" ${t.id === targetTaskId ? 'selected' : ''}>${t.name}</option>`).join('')}
+    </select>
+  `;
+
+  showCustomModal({
+    title: '新增任务内容',
+    subtitle: '快捷上传本地音频文件或直接导入 B站视频',
+    contentHtml: `
+      <div style="margin-top: 12px;">
+        <label style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px; display: block;">🎯 目标归属场景：</label>
+        ${selectHtml}
+        
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <button class="btn btn-secondary" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 20px 12px; height: auto; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); cursor: pointer;" onclick="triggerModalUpload()">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);">上传本地音频</span>
+          </button>
+          
+          <button class="btn btn-secondary" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 20px 12px; height: auto; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); cursor: pointer;" onclick="toggleModalBiliImport(true)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="8" width="20" height="14" rx="2"/><path d="M6 2L3 5"/><path d="M18 2l3 3"/><path d="M2 8h20"/><path d="M8 14v4"/><path d="M16 14v4"/></svg>
+            <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);">导入 B站视频</span>
+          </button>
+        </div>
+
+        <div id="modal-bili-box" style="display: none; border: 1px solid var(--border); border-radius: 8px; padding: 16px; background: rgba(255,255,255,0.01);">
+          <label style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px; display: block;">🔗 请输入 B站视频链接或 BV 号：</label>
+          <div style="display: flex; gap: 8px;">
+            <input type="text" id="modal-bili-input" class="input" placeholder="BV... 或 视频地址" style="flex: 1;">
+            <button class="btn btn-primary" id="modal-bili-btn" onclick="executeModalBiliImport()">导入</button>
+          </div>
+        </div>
+      </div>
+    `,
+    confirmText: '', 
+    onConfirm: (close) => close()
+  });
+}
+
+window.triggerModalUpload = function() {
+  const sel = document.getElementById('modal-target-task');
+  if (sel) {
+    state.activeTaskId = sel.value;
+    const topSel = document.getElementById('active-task-select');
+    if (topSel) topSel.value = sel.value;
+  }
+  const modalOverlay = document.getElementById('modal-overlay');
+  if (modalOverlay) {
+    modalOverlay.classList.add('hidden');
+    modalOverlay.innerHTML = '';
+  }
+  document.getElementById('file-input').click();
+};
+
+window.toggleModalBiliImport = function(show) {
+  const box = document.getElementById('modal-bili-box');
+  if (box) {
+    box.style.display = show ? 'block' : 'none';
+    if (show) document.getElementById('modal-bili-input')?.focus();
+  }
+};
+
+window.executeModalBiliImport = async function() {
+  const sel = document.getElementById('modal-target-task');
+  const inp = document.getElementById('modal-bili-input');
+  if (!inp || !inp.value.trim()) {
+    showToast('请输入视频链接', 'warning');
+    return;
+  }
+  
+  if (sel) {
+    state.activeTaskId = sel.value;
+    const topSel = document.getElementById('active-task-select');
+    if (topSel) topSel.value = sel.value;
+  }
+
+  const modalOverlay = document.getElementById('modal-overlay');
+  if (modalOverlay) {
+    modalOverlay.classList.add('hidden');
+    modalOverlay.innerHTML = '';
+  }
+
+  // Mirror to background element and trigger the import system
+  document.getElementById('bili-url-input').value = inp.value.trim();
+  await handleBiliImport();
+};
+
 async function handleFileUpload(fileList) {
   const files = Array.from(fileList);
   if (!files.length) return;
@@ -323,11 +874,25 @@ async function handleBiliImport() {
   }
 }
 
+// ===== Bili Multi-P Modal State =====
+let biliModalState = {
+  data: null,
+  url: null,
+  selectedCids: new Set(),
+  currentPage: 1,
+  pageSize: 20,
+};
+
 function showBiliMultiPModal(data, originalUrl) {
+  biliModalState.data = data;
+  biliModalState.url = originalUrl;
+  biliModalState.selectedCids = new Set();
+  biliModalState.currentPage = 1;
+
   const overlay = document.getElementById('modal-overlay');
   overlay.classList.remove('hidden');
   overlay.innerHTML = `
-    <div class="modal">
+    <div class="modal bili-dual-modal">
       <div class="modal-header">
         <div>
           <h3>多分P视频</h3>
@@ -335,21 +900,180 @@ function showBiliMultiPModal(data, originalUrl) {
         </div>
         <button class="btn-icon" onclick="document.getElementById('modal-overlay').classList.add('hidden')">${ICONS.x}</button>
       </div>
-      <div class="modal-body">
-        ${data.pages.map(p => `
-          <div class="page-item" onclick="handleBiliPageSelect(${p.cid}, '${originalUrl}')">
-            <div class="page-badge">P${p.page}</div>
-            <span class="name">${p.part}</span>
+      <div class="bili-dual-body">
+        <!-- Left: Page list -->
+        <div class="bili-list-panel">
+          <div class="bili-list-toolbar">
+            <label class="bili-select-all-label">
+              <input type="checkbox" id="bili-select-all-cb" onchange="handleBiliSelectAll(this.checked)">
+              <span>全选当前页</span>
+            </label>
+            <span id="bili-list-counter" class="bili-counter">共 ${data.pages.length} 个分P</span>
           </div>
-        `).join('')}
+          <div class="modal-body" id="bili-page-list" style="max-height:360px;"></div>
+          <div class="bili-pagination" id="bili-pagination"></div>
+        </div>
+        <!-- Right: Selected panel -->
+        <div class="bili-selected-panel">
+          <div class="bili-panel-header">
+            <span>已选视频</span>
+            <span id="bili-selected-count" class="bili-selected-badge">0</span>
+          </div>
+          <div id="bili-selected-list" class="bili-selected-list"></div>
+          <div class="bili-selected-empty" id="bili-selected-empty">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+            <p>点击左侧视频选择</p>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" onclick="document.getElementById('modal-overlay').classList.add('hidden')">取消</button>
-        <button class="btn btn-primary" onclick="handleBiliImportAll(${JSON.stringify(data.pages).replace(/"/g, '&quot;')}, '${originalUrl}')">
-          全部导入 (${data.pages.length}P)
+        <button class="btn btn-primary" id="bili-import-selected-btn" onclick="handleBiliImportSelected()" disabled>
+          导入已选 (0 P)
         </button>
       </div>
     </div>`;
+
+  renderBiliPageList();
+}
+
+function renderBiliPageList() {
+  const { data, currentPage, pageSize, selectedCids } = biliModalState;
+  const pages = data.pages;
+  const totalPages = Math.max(1, Math.ceil(pages.length / pageSize));
+  const start = (currentPage - 1) * pageSize;
+  const end = Math.min(start + pageSize, pages.length);
+  const currentPageItems = pages.slice(start, end);
+
+  // Render page items
+  const listEl = document.getElementById('bili-page-list');
+  if (listEl) {
+    listEl.innerHTML = currentPageItems.map(p => `
+      <div class="page-item bili-page-item ${selectedCids.has(p.cid) ? 'selected' : ''}" 
+           id="bili-item-${p.cid}"
+           onclick="handleBiliItemToggle(${p.cid}, ${p.page}, ${JSON.stringify(p.part).replace(/"/g, '&quot;')})">
+        <div class="page-badge" style="${selectedCids.has(p.cid) ? 'background:var(--accent);color:white;' : ''}">P${p.page}</div>
+        <span class="name">${p.part}</span>
+        <div class="bili-check-icon" style="opacity:${selectedCids.has(p.cid) ? '1' : '0'}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Update select-all checkbox
+  const selectAllCb = document.getElementById('bili-select-all-cb');
+  if (selectAllCb) {
+    const allCurrentSelected = currentPageItems.every(p => selectedCids.has(p.cid));
+    const someSelected = currentPageItems.some(p => selectedCids.has(p.cid));
+    selectAllCb.checked = allCurrentSelected && currentPageItems.length > 0;
+    selectAllCb.indeterminate = someSelected && !allCurrentSelected;
+  }
+
+  // Render pagination
+  const paginationEl = document.getElementById('bili-pagination');
+  if (paginationEl) {
+    if (totalPages <= 1) {
+      paginationEl.innerHTML = '';
+    } else {
+      paginationEl.innerHTML = `
+        <button class="btn btn-secondary" style="padding:4px 10px;font-size:12px;height:28px;" 
+                onclick="biliModalGoPage(${currentPage - 1})" ${currentPage <= 1 ? 'disabled' : ''}>上一页</button>
+        <span style="font-size:12px;color:var(--text-muted);">第 ${currentPage} / ${totalPages} 页</span>
+        <button class="btn btn-secondary" style="padding:4px 10px;font-size:12px;height:28px;"
+                onclick="biliModalGoPage(${currentPage + 1})" ${currentPage >= totalPages ? 'disabled' : ''}>下一页</button>
+      `;
+    }
+  }
+}
+
+function biliModalGoPage(page) {
+  const totalPages = Math.max(1, Math.ceil(biliModalState.data.pages.length / biliModalState.pageSize));
+  if (page < 1 || page > totalPages) return;
+  biliModalState.currentPage = page;
+  renderBiliPageList();
+}
+
+function handleBiliItemToggle(cid, pageNum, partName) {
+  const { selectedCids } = biliModalState;
+  if (selectedCids.has(cid)) {
+    selectedCids.delete(cid);
+  } else {
+    selectedCids.add(cid);
+  }
+  renderBiliPageList();
+  renderBiliSelectedPanel();
+}
+
+function handleBiliSelectAll(checked) {
+  const { data, currentPage, pageSize, selectedCids } = biliModalState;
+  const start = (currentPage - 1) * pageSize;
+  const end = Math.min(start + pageSize, data.pages.length);
+  const currentPageItems = data.pages.slice(start, end);
+
+  currentPageItems.forEach(p => {
+    if (checked) selectedCids.add(p.cid);
+    else selectedCids.delete(p.cid);
+  });
+
+  renderBiliPageList();
+  renderBiliSelectedPanel();
+}
+
+function renderBiliSelectedPanel() {
+  const { data, selectedCids } = biliModalState;
+  const selectedList = document.getElementById('bili-selected-list');
+  const emptyEl = document.getElementById('bili-selected-empty');
+  const countEl = document.getElementById('bili-selected-count');
+  const importBtn = document.getElementById('bili-import-selected-btn');
+
+  const selectedPages = data.pages.filter(p => selectedCids.has(p.cid));
+
+  if (countEl) countEl.textContent = selectedPages.length;
+  if (importBtn) {
+    importBtn.textContent = `导入已选 (${selectedPages.length} P)`;
+    importBtn.disabled = selectedPages.length === 0;
+  }
+
+  if (!selectedList) return;
+
+  if (selectedPages.length === 0) {
+    selectedList.innerHTML = '';
+    if (emptyEl) emptyEl.style.display = 'flex';
+    return;
+  }
+
+  if (emptyEl) emptyEl.style.display = 'none';
+  selectedList.innerHTML = selectedPages.map(p => `
+    <div class="bili-selected-item" id="bili-sel-${p.cid}">
+      <div class="page-badge" style="background:var(--accent-glow);color:var(--accent);font-size:10px;">P${p.page}</div>
+      <span class="name">${p.part}</span>
+      <button class="btn-icon bili-remove-btn" title="移除" onclick="handleBiliItemToggle(${p.cid}, ${p.page}, '')">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+  `).join('');
+}
+
+async function handleBiliImportSelected() {
+  const { data, url, selectedCids } = biliModalState;
+  const selectedPages = data.pages.filter(p => selectedCids.has(p.cid));
+  if (selectedPages.length === 0) return;
+
+  document.getElementById('modal-overlay').classList.add('hidden');
+  showToast(`正在导入 ${selectedPages.length} 个分P...`);
+  for (const p of selectedPages) {
+    try {
+      await API.importBilibili(url, p.cid, state.activeTaskId);
+    } catch (e) {
+      showToast(`P${p.page} 导入失败`, 'error');
+    }
+  }
+  await loadFiles();
+  renderHome();
+  document.getElementById('bili-url-input').value = '';
+  showToast('批量导入完成', 'success');
+  navigate('workspace');
 }
 
 async function handleBiliPageSelect(cid, url) {
@@ -405,10 +1129,10 @@ async function handleProcessSingle(id) {
       } catch (e) {}
     }, 2000);
 
-    const provider = localStorage.getItem('provider') || 'gemini';
+    const provider = localStorage.getItem('provider') || 'deepseek';
     const promptTemplate = localStorage.getItem('prompt_template') || '';
     const apiKey = decryptKey(localStorage.getItem(`api_key_enc_${provider}`) || localStorage.getItem('api_key_enc') || localStorage.getItem('api_key'));
-    const modelName = localStorage.getItem(`model_name_${provider}`) || localStorage.getItem('model_name') || '';
+    const modelName = localStorage.getItem(`model_name_${provider}`) || localStorage.getItem('model_name') || (provider === 'deepseek' ? 'deepseek-v4-flash' : '');
 
     await API.processFile(id, promptTemplate, apiKey, modelName, provider);
     await loadFiles();
@@ -444,10 +1168,10 @@ async function handleBatchProcess() {
       } catch (e) {}
     }, 2000);
 
-    const provider = localStorage.getItem('provider') || 'gemini';
+    const provider = localStorage.getItem('provider') || 'deepseek';
     const promptTemplate = localStorage.getItem('prompt_template') || '';
     const apiKey = decryptKey(localStorage.getItem(`api_key_enc_${provider}`) || localStorage.getItem('api_key_enc') || localStorage.getItem('api_key'));
-    const modelName = localStorage.getItem(`model_name_${provider}`) || localStorage.getItem('model_name') || '';
+    const modelName = localStorage.getItem(`model_name_${provider}`) || localStorage.getItem('model_name') || (provider === 'deepseek' ? 'deepseek-v4-flash' : '');
 
     await API.batchProcess(promptTemplate, apiKey, modelName, provider);
     await loadFiles();
@@ -480,6 +1204,117 @@ async function handleDelete(id) {
     }
   });
 }
+
+async function handleMoveFile(fileId) {
+  const f = state.files.find(x => x.id === fileId);
+  if (!f) return;
+
+  const currentTaskId = f.task_id || 'default';
+  
+  // Generate the list of options
+  const options = [
+    { id: 'default', name: '默认任务' },
+    ...state.tasks.filter(t => t.id !== 'default')
+  ];
+
+  let listHtml = options.map(t => `
+    <div class="page-item" onclick="confirmMoveFile('${fileId}', '${t.id}', '${t.name}')" 
+         style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border-radius: 8px; margin-bottom: 8px; cursor: pointer; background: ${t.id === currentTaskId ? 'var(--accent-glow)' : 'var(--bg-primary)'}; border: 1px solid ${t.id === currentTaskId ? 'var(--accent)' : 'var(--border)'}; transition: all 0.2s;">
+      <span style="font-size: 14px; color: ${t.id === currentTaskId ? 'var(--accent)' : 'var(--text-primary)'}; font-weight: 600;">📂 ${t.name}</span>
+      ${t.id === currentTaskId ? '<span style="font-size: 11px; color: var(--accent); font-weight: bold;">当前场景</span>' : '<span style="font-size:11px;color:var(--text-muted)">点击移动到此场景</span>'}
+    </div>
+  `).join('');
+
+  showCustomModal({
+    title: '移动任务场景',
+    subtitle: `将《${f.name}》移动至其他任务分类`,
+    contentHtml: `
+      <div style="margin-top: 12px; margin-bottom: 4px; max-height: 300px; overflow-y: auto;">
+        ${listHtml}
+      </div>
+    `,
+    confirmText: '', // Hide default confirm
+    onConfirm: (close) => close()
+  });
+}
+
+window.confirmMoveFile = async function(fileId, targetTaskId, targetTaskName) {
+  try {
+    await API.moveFile(fileId, targetTaskId);
+    showToast(`成功移动到“${targetTaskName}”场景`, 'success');
+    
+    // Close modal
+    const modalOverlay = document.getElementById('modal-overlay');
+    if (modalOverlay) {
+      modalOverlay.classList.add('hidden');
+      modalOverlay.innerHTML = '';
+    }
+    
+    // Reload and render
+    await loadFiles();
+    if (state.currentView === 'workspace') renderWorkspace();
+    else if (state.currentView === 'detail') renderDetail();
+    else renderHome();
+  } catch (e) {
+    showToast(e.message, 'error');
+  }
+};
+
+async function handleBatchMoveFiles() {
+  const selectedCheckboxes = document.querySelectorAll('.workspace-list .checkbox:checked');
+  const selectedIds = Array.from(selectedCheckboxes).map(cb => cb.dataset.id);
+
+  if (selectedIds.length === 0) {
+    showToast('请先勾选需要批量移动的任务', 'warning');
+    return;
+  }
+
+  const options = [
+    { id: 'default', name: '默认任务' },
+    ...state.tasks.filter(t => t.id !== 'default')
+  ];
+
+  let listHtml = options.map(t => `
+    <div class="page-item" onclick="confirmBatchMoveFiles('${selectedIds.join(',')}', '${t.id}', '${t.name}')" 
+         style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border-radius: 8px; margin-bottom: 8px; cursor: pointer; background: var(--bg-primary); border: 1px solid var(--border); transition: all 0.2s;">
+      <span style="font-size: 14px; color: var(--text-primary); font-weight: 600;">📂 ${t.name}</span>
+      <span style="font-size:11px;color:var(--accent);font-weight:bold;">点击批量归类</span>
+    </div>
+  `).join('');
+
+  showCustomModal({
+    title: '批量移动场景',
+    subtitle: `将已勾选的 ${selectedIds.length} 个音频/笔记移至以下任务分类：`,
+    contentHtml: `
+      <div style="margin-top: 12px; margin-bottom: 4px; max-height: 300px; overflow-y: auto;">
+        ${listHtml}
+      </div>
+    `,
+    confirmText: '', 
+    onConfirm: (close) => close()
+  });
+}
+
+window.confirmBatchMoveFiles = async function(idsStr, targetTaskId, targetTaskName) {
+  const ids = idsStr.split(',');
+  try {
+    await API.batchMoveFiles(ids, targetTaskId);
+    showToast(`批量移动完成，${ids.length} 项任务已转至“${targetTaskName}”`, 'success');
+    
+    const modalOverlay = document.getElementById('modal-overlay');
+    if (modalOverlay) {
+      modalOverlay.classList.add('hidden');
+      modalOverlay.innerHTML = '';
+    }
+    
+    await loadFiles();
+    if (state.currentView === 'workspace') renderWorkspace();
+    else if (state.currentView === 'detail') renderDetail();
+    else renderHome();
+  } catch (e) {
+    showToast(e.message, 'error');
+  }
+};
 
 async function handleDeleteAll() {
   const selectedCheckboxes = document.querySelectorAll('.workspace-list .checkbox:checked');
@@ -515,7 +1350,23 @@ async function handleDeleteAll() {
 }
 
 function handleBatchExport() {
-  window.open(API.exportBatchUrl(), '_blank');
+  showCustomModal({
+    title: '批量导出选项',
+    contentHtml: `
+      <div style="margin-top: 8px; margin-bottom: 8px;">
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+          <input type="checkbox" id="export-include-trans-batch" class="checkbox" style="width: 16px; height: 16px;">
+          <span style="font-size: 14px; color: var(--text-main);">同时导出原始录音文字</span>
+        </label>
+      </div>
+    `,
+    confirmText: '开始导出',
+    onConfirm: (close) => {
+      const includeTrans = document.getElementById('export-include-trans-batch')?.checked || false;
+      window.open(API.exportBatchUrl(includeTrans), '_blank');
+      close();
+    }
+  });
 }
 
 // ===== Custom Modals =====
@@ -605,160 +1456,99 @@ function showCustomConfirm(title, messageHtml, onConfirm) {
 }
 
 // ===== Init =====
+async function initApp() {
+  // Load data
+  await loadFiles();
+
+  // Load tasks and update UI dropdowns
+  await loadTasks();
+
+  navigate('home');
+}
+
+async function loadTasks() {
+  try {
+    const tasks = await API.listTasks();
+    state.tasks = tasks;
+    renderTaskSelects();
+  } catch (e) {
+    console.error('Failed to load tasks:', e);
+  }
+}
+
+function triggerDeleteActiveTask() {
+  if (state.activeTaskId === 'default') return;
+  showCustomConfirm('删除当前场景', '确定删除当前任务场景？<br><br>该场景下的所有音频和笔记将会被重置为“默认任务”。此操作无法撤销。', async () => {
+    try {
+      await API.deleteTask(state.activeTaskId);
+      showToast('任务场景已成功删除', 'success');
+      state.activeTaskId = 'default';
+      await loadTasks();
+      await loadFiles();
+      if (state.currentView === 'workspace') renderWorkspace();
+      else renderHome();
+    } catch (e) {
+      showToast(e.message, 'error');
+      const activeTaskSelect = document.getElementById('active-task-select');
+      if (activeTaskSelect) activeTaskSelect.value = state.activeTaskId;
+    }
+  });
+}
+
+function renderTaskSelects() {
+  const activeTaskSelect = document.getElementById('active-task-select');
+  const workspaceTaskFilter = document.getElementById('workspace-task-filter');
+  const deleteTaskBtn = document.getElementById('delete-task-btn');
+
+  if (activeTaskSelect) {
+    let optionsHtml = `<option value="default">默认任务</option>` + state.tasks.filter(t => t.id !== 'default').map(t => `
+      <option value="${t.id}">${t.name}</option>
+    `).join('');
+    if (state.activeTaskId !== 'default') {
+      optionsHtml += `<option value="__delete_active__" style="color:var(--danger); background-color: var(--bg-card);">❌ 删除当前场景</option>`;
+    }
+    activeTaskSelect.innerHTML = optionsHtml;
+    activeTaskSelect.value = state.activeTaskId;
+  }
+
+  if (workspaceTaskFilter) {
+    workspaceTaskFilter.innerHTML = `
+      <option value="all">全部场景</option>
+      <option value="default">默认任务</option>
+      ` + state.tasks.filter(t => t.id !== 'default').map(t => `
+      <option value="${t.id}">${t.name}</option>
+    `).join('');
+    workspaceTaskFilter.value = state.workspaceTaskFilterId;
+  }
+
+  if (deleteTaskBtn) {
+    deleteTaskBtn.style.display = 'none';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-  // Settings initialization (with multi-provider and preset prompt dropdown support)
-  const providerSelect = document.getElementById('provider-select');
-  const apiKeyLabel = document.getElementById('api-key-label');
-  const apiKeyInput = document.getElementById('api-key-input');
-  const modelSelect = document.getElementById('model-select');
+  // ===== Auth Guard =====
+  const savedToken = getToken();
+  const savedUser = localStorage.getItem('auth_user');
+
+  if (savedToken && savedUser) {
+    try {
+      // Verify token is still valid
+      const user = await API.getMe();
+      saveAuth(savedToken, user);
+      renderUserHeader(user);
+    } catch (e) {
+      // Token expired or invalid
+      clearAuth();
+      showAuthModal('login');
+      return;
+    }
+  } else {
+    showAuthModal('login');
+    return;
+  }
   const templateSelect = document.getElementById('template-select');
   const promptInput = document.getElementById('custom-prompt');
-
-  const PROVIDER_MODELS = {
-    gemini: [
-      { id: 'gemini-3.1-flash', name: 'Gemini 3.1 Flash (谷歌最新推荐/极速版)' },
-      { id: 'gemini-3.1-pro', name: 'Gemini 3.1 Pro (谷歌最新最强旗舰版)' },
-      { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash' },
-      { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro' }
-    ],
-    openai: [
-      { id: 'gpt-5.5-instant', name: 'GPT-5.5 Instant (最新推荐默认版)' },
-      { id: 'gpt-5.5-pro', name: 'GPT-5.5 Pro (最新多模态旗舰)' },
-      { id: 'gpt-5.5-thinking', name: 'GPT-5.5 Thinking (深度推理大模型)' },
-      { id: 'gpt-4o', name: 'GPT-4o (经典多模态模型)' }
-    ],
-    anthropic: [
-      { id: 'claude-4-7-opus', name: 'Claude 4.7 Opus (Anthropic 最新顶尖旗舰)' },
-      { id: 'claude-4-6-sonnet', name: 'Claude 4.6 Sonnet (最新高性价比主流)' },
-      { id: 'claude-4-5-haiku', name: 'Claude 4.5 Haiku (轻量极速版)' },
-      { id: 'claude-3-7-sonnet-20250219', name: 'Claude 3.7 Sonnet (经典推理版)' }
-    ],
-    deepseek: [
-      { id: 'deepseek-v4pro', name: 'DeepSeek-V4Pro (最新旗舰版)' },
-      { id: 'deepseek-flash', name: 'DeepSeek-Flash (极速超轻量)' },
-      { id: 'deepseek-chat', name: 'DeepSeek-V3 (主流/性价比)' },
-      { id: 'deepseek-reasoner', name: 'DeepSeek-R1 (深度推理/思考)' }
-    ],
-    qwen: [
-      { id: 'qwen-3.6-max', name: 'Qwen-3.6 Max (阿里最新最强旗舰)' },
-      { id: 'qwen-3.6-plus', name: 'Qwen-3.6 Plus (最新推荐主流)' },
-      { id: 'qwen-2.5-72b-instruct', name: 'Qwen-2.5-72B (经典大模型)' },
-      { id: 'qwen-max', name: 'Qwen Max (高效商用版)' },
-      { id: 'qwen-plus', name: 'Qwen Plus (高效版)' }
-    ],
-    glm: [
-      { id: 'glm-4-plus', name: 'GLM-4-Plus (最新最强旗舰)' },
-      { id: 'glm-4-air', name: 'GLM-4-Air (高速低时延)' },
-      { id: 'glm-4-flash', name: 'GLM-4-Flash (免费极速)' }
-    ]
-  };
-
-  const TEMPLATES = {
-    default: '你是一位专业的学术助理。请根据以下转录文本，整理出一份极其详实、结构清晰的学习笔记。\n\n笔记必须使用中文编写，包含以下部分：\n- # [主题名称]（根据内容自动提取）\n- ## 核心摘要（用3-5句话概括全部内容）\n- ## 详细知识点（分章节深入细节，不要遗漏要点，使用 bullet points）\n- ## 关键概念解析（解释专业术语和核心概念）\n- ## 行动建议或结论\n\n转录文本：\n{text}',
-    academic: '你是一位资深的学术研究员。请用严谨、客观的学术风格对以下转录内容进行精深整理。\n\n要求：\n1. 重点提炼核心论点、研究方法、实验数据或实证支撑。\n2. 使用学术规范术语，保持中立客观的第三方叙述视角。\n3. 梳理其理论脉络、对前人研究的继承或突破。\n4. 指出其在学术界或行业研究中的应用价值。\n\n转录文本：\n{text}',
-    business: '你是一位世界顶尖的商业咨询顾问。请从商业可行性、市场竞争和商业模式创新的角度分析以下内容。\n\n请整理出：\n1. **核心商业价值**：该内容解决的痛点和独特卖点。\n2. **落地可行性路径**：具体的商业执行、技术落地或运营步骤。\n3. **潜在商业风险**：财务、竞争和市场层面的关键风险点及应对措施。\n4. **商业落地建议**：给决策者的关键行动建议。\n\n转录文本：\n{text}',
-    meeting: '你是一位极其高效的会议秘书。请将以下对话/会议转录文本整理成专业的会议纪要。\n\n请包含以下清晰板块：\n1. **会议主题与背景概述**：简明扼要介绍讨论核心背景。\n2. **核心议题与决策结论**：逐条记录讨论过的关键议题，以及达成共识的决策（注明谁同意了什么）。\n3. **任务清单与负责人 (Action Items)**：清晰列出待办任务、对应执行人以及预计完成时限。\n4. **遗留未决议题**：记录本次会议未达成共识、需会后跟进或下次讨论的要点。\n\n转录文本：\n{text}',
-    concept: '你是一位擅长将复杂技术简单化的金牌科普导师。请对以下转录内容进行细粒度的概念拆解 and 术语普及。\n\n要求：\n1. **核心思维导图概览**：用文本层级结构（Markdown 树状图）勾勒出整体知识框架。\n2. **关键术语深度拆解**：列出文本中出现的所有专业词汇、前沿概念，用极其白话（并配以生活中的类比）解释其含义。\n3. **底层原理透视**：说明这些概念是如何配合运行的，背后的工作原理是什么。\n4. **一句话金句总结**：用一句话精辟概括该主题最精髓的内涵。\n\n转录文本：\n{text}'
-  };
-
-  // Populate provider from localStorage
-  let currentProvider = localStorage.getItem('provider') || 'gemini';
-  if (providerSelect) {
-    providerSelect.value = currentProvider;
-    providerSelect.addEventListener('change', e => {
-      currentProvider = e.target.value;
-      localStorage.setItem('provider', currentProvider);
-      updateProviderUI();
-    });
-  }
-
-  // Backwards compatibility for old API key
-  if (localStorage.getItem('api_key') || localStorage.getItem('api_key_enc')) {
-    const oldKey = decryptKey(localStorage.getItem('api_key_enc') || localStorage.getItem('api_key'));
-    if (oldKey && !localStorage.getItem('api_key_enc_gemini')) {
-      localStorage.setItem('api_key_enc_gemini', encryptKey(oldKey));
-    }
-  }
-
-  function updateProviderUI() {
-    if (!apiKeyLabel || !apiKeyInput || !modelSelect) return;
-
-    // 1. Update Labels and inputs
-    const providerNames = { gemini: 'Gemini', openai: 'OpenAI', anthropic: 'Anthropic', deepseek: 'DeepSeek', qwen: 'Qwen', glm: 'GLM' };
-    const pName = providerNames[currentProvider] || currentProvider;
-    apiKeyLabel.textContent = `${pName} API Key (默认使用服务端配置)`;
-    apiKeyInput.placeholder = `输入你自己的 ${pName} API Key (可选)`;
-
-    // 2. Load decrypted key for current provider
-    const savedKey = localStorage.getItem(`api_key_enc_${currentProvider}`) || '';
-    apiKeyInput.value = decryptKey(savedKey);
-
-    // 3. Populate model selection options
-    populateModels();
-  }
-
-  function populateModels() {
-    if (!modelSelect) return;
-    modelSelect.innerHTML = '';
-    const models = PROVIDER_MODELS[currentProvider] || [];
-    models.forEach(m => {
-      const opt = document.createElement('option');
-      opt.value = m.id;
-      opt.textContent = m.name;
-      modelSelect.appendChild(opt);
-    });
-
-    const savedModel = localStorage.getItem(`model_name_${currentProvider}`);
-    if (savedModel && models.find(m => m.id === savedModel)) {
-      modelSelect.value = savedModel;
-    } else if (models.length > 0) {
-      modelSelect.value = models[0].id;
-      localStorage.setItem(`model_name_${currentProvider}`, modelSelect.value);
-    }
-  }
-
-  if (apiKeyInput) {
-    apiKeyInput.addEventListener('input', e => {
-      const val = e.target.value.trim();
-      localStorage.setItem(`api_key_enc_${currentProvider}`, encryptKey(val));
-      if (currentProvider === 'gemini') {
-        clearTimeout(apiKeyInput.timeoutId);
-        apiKeyInput.timeoutId = setTimeout(() => loadGeminiModelsDynamically(val), 800);
-      }
-    });
-  }
-
-  async function loadGeminiModelsDynamically(apiKey) {
-    if (currentProvider !== 'gemini' || !modelSelect) return;
-    try {
-      const data = await API.listModels(apiKey);
-      if (data.models && data.models.length > 0) {
-        modelSelect.innerHTML = '';
-        data.models.forEach(m => {
-          const opt = document.createElement('option');
-          opt.value = m.id;
-          opt.textContent = m.name;
-          modelSelect.appendChild(opt);
-        });
-        const saved = localStorage.getItem('model_name_gemini') || localStorage.getItem('model_name');
-        if (saved && data.models.find(m => m.id === saved)) {
-          modelSelect.value = saved;
-        } else {
-          const has25Flash = data.models.find(m => m.id === 'gemini-2.5-flash');
-          modelSelect.value = has25Flash ? 'gemini-2.5-flash' : data.models[0].id;
-          localStorage.setItem('model_name_gemini', modelSelect.value);
-        }
-      }
-    } catch (e) {
-      console.warn('Failed to fetch dynamic Gemini models:', e);
-    }
-  }
-
-  if (modelSelect) {
-    modelSelect.addEventListener('change', e => {
-      localStorage.setItem(`model_name_${currentProvider}`, e.target.value);
-    });
-  }
 
   // Template select dropdown initialization
   if (templateSelect && promptInput) {
@@ -780,12 +1570,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     promptInput.addEventListener('input', e => {
       localStorage.setItem('prompt_template', e.target.value);
     });
-  }
-
-  // Initial update
-  updateProviderUI();
-  if (currentProvider === 'gemini' && apiKeyInput) {
-    loadGeminiModelsDynamically(apiKeyInput.value);
   }
 
   // Load data
@@ -841,6 +1625,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('batch-process-btn')?.addEventListener('click', handleBatchProcess);
   document.getElementById('batch-export-btn')?.addEventListener('click', handleBatchExport);
   document.getElementById('clear-all-btn')?.addEventListener('click', handleDeleteAll);
+  document.getElementById('batch-move-btn')?.addEventListener('click', handleBatchMoveFiles);
+  document.getElementById('workspace-add-task-btn')?.addEventListener('click', handleWorkspaceAddTask);
   document.getElementById('select-all-btn')?.addEventListener('click', () => {
     const checkboxes = document.querySelectorAll('.workspace-list .checkbox');
     if (checkboxes.length === 0) return;
@@ -994,60 +1780,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const pageNextBtn = document.getElementById('page-next-btn');
   const pageSizeSelect = document.getElementById('page-size-select');
 
-  async function loadTasks() {
-    try {
-      const tasks = await API.listTasks();
-      state.tasks = tasks;
-      renderTaskSelects();
-    } catch (e) {
-      console.error('Failed to load tasks:', e);
-    }
-  }
 
-  function triggerDeleteActiveTask() {
-    if (state.activeTaskId === 'default') return;
-    showCustomConfirm('删除当前场景', '确定删除当前任务场景？<br><br>该场景下的所有音频和笔记将会被重置为“默认任务”。此操作无法撤销。', async () => {
-      try {
-        await API.deleteTask(state.activeTaskId);
-        showToast('任务场景已成功删除', 'success');
-        state.activeTaskId = 'default';
-        await loadTasks();
-        await loadFiles();
-        if (state.currentView === 'workspace') renderWorkspace();
-        else renderHome();
-      } catch (e) {
-        showToast(e.message, 'error');
-        if (activeTaskSelect) activeTaskSelect.value = state.activeTaskId;
-      }
-    });
-  }
-
-  function renderTaskSelects() {
-    if (activeTaskSelect) {
-      let optionsHtml = state.tasks.map(t => `
-        <option value="${t.id}">${t.name}</option>
-      `).join('');
-      if (state.activeTaskId !== 'default') {
-        optionsHtml += `<option value="__delete_active__" style="color:var(--danger); background-color: var(--bg-card);">❌ 删除当前场景</option>`;
-      }
-      activeTaskSelect.innerHTML = optionsHtml;
-      activeTaskSelect.value = state.activeTaskId;
-    }
-
-    if (workspaceTaskFilter) {
-      workspaceTaskFilter.innerHTML = `
-        <option value="all">全部场景</option>
-        ` + state.tasks.map(t => `
-        <option value="${t.id}">${t.name}</option>
-      `).join('');
-      workspaceTaskFilter.value = state.workspaceTaskFilterId;
-    }
-
-    // Toggle delete button visibility
-    if (deleteTaskBtn) {
-      deleteTaskBtn.style.display = 'none';
-    }
-  }
 
   if (activeTaskSelect) {
     activeTaskSelect.addEventListener('change', e => {
@@ -1114,9 +1847,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // Load tasks on init
-  await loadTasks();
-
-  // Initial render
-  navigate('home');
+  // Load tasks on init and initial render
+  await initApp();
 });

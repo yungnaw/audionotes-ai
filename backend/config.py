@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     # DeepSeek 云端配置
     DEEPSEEK_API_KEY: str = ""
     DEEPSEEK_BASE_URL: str = "https://api.deepseek.com"
-    DEEPSEEK_MODEL: str = "deepseek-chat"
+    DEEPSEEK_MODEL: str = "deepseek-v4-flash"
 
     # Qwen 云端配置
     QWEN_API_KEY: str = ""
@@ -35,6 +35,17 @@ class Settings(BaseSettings):
     # 服务
     HOST: str = "0.0.0.0"
     PORT: int = 3000
+
+    # ===== 用户认证 =====
+    # 生产环境务必在 .env 中设置一个随机长字符串！
+    JWT_SECRET_KEY: str = "CHANGE-ME-IN-PRODUCTION-use-openssl-rand-hex-32"
+    JWT_ALGORITHM: str = "HS256"
+    JWT_EXPIRE_MINUTES: int = 60 * 24 * 7   # 7 天
+
+    # 是否开放公开注册（False 则需要 INVITE_CODE 才能注册）
+    ALLOW_REGISTRATION: bool = True
+    # 邀请码（ALLOW_REGISTRATION=False 时生效，为空则不校验）
+    INVITE_CODE: str = ""
 
     model_config = {"env_file": str(Path(__file__).parent.parent.parent / ".env"), "env_file_encoding": "utf-8"}
 

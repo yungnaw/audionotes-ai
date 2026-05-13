@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AudioNotes AI - 智能音频学习助手。本地转录 + AI笔记生成，支持B站视频导入。">
   <title>AudioNotes AI - 智能音频学习助手</title>
-  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/styles.css?v=5">
 </head>
 <body>
 
@@ -34,6 +34,9 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         工作台
       </button>
+
+      <!-- User info injected by JS -->
+      <div id="user-header-info" style="position:relative;"></div>
     </div>
   </header>
 
@@ -69,31 +72,7 @@
 
         <!-- Model Settings -->
         <div class="settings-section" style="margin-top: 32px; width: 100%;">
-          <h3>⚙️ 模型与参数设置</h3>
-          
-          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
-            <div>
-              <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">AI 服务商</label>
-              <select class="input" id="provider-select" style="width: 100%;">
-                <option value="gemini">Gemini (谷歌)</option>
-                <option value="openai">OpenAI</option>
-                <option value="anthropic">Anthropic (Claude)</option>
-                <option value="deepseek">DeepSeek (深度求索)</option>
-                <option value="qwen">Qwen (通义千问)</option>
-                <option value="glm">GLM (智谱清言)</option>
-              </select>
-            </div>
-            <div>
-              <label id="api-key-label" style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">Gemini API Key (默认使用服务端配置)</label>
-              <input type="password" class="input" id="api-key-input" style="width: 100%;" placeholder="输入你自己的 Gemini API Key (可选)">
-            </div>
-            <div>
-              <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">模型选择</label>
-              <select class="input" id="model-select" style="width: 100%;">
-                <!-- Will be dynamically populated or fall back -->
-              </select>
-            </div>
-          </div>
+          <h3>⚙️ 笔记提示词配置</h3>
 
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
             <label style="font-size:14px; color:var(--text-muted)">📝 提示词模板选单 (支持 <code>{text}</code> 占位符)</label>
@@ -157,6 +136,9 @@
             <option value="all" style="background: #1e1e2e;">全部场景</option>
             <option value="default" style="background: #1e1e2e;">默认任务</option>
           </select>
+          <button class="btn-icon" id="batch-move-btn" title="批量移动选中项到场景" style="width: 24px; height: 24px; min-width:24px; border-radius: 4px; color: var(--accent); display: flex; align-items: center; justify-content: center; padding: 0; border: 1px solid rgba(129, 140, 248, 0.3); background: rgba(129, 140, 248, 0.08); transition: all 0.2s;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+          </button>
         </div>
         <div class="filter-tabs">
           <button class="filter-tab active" data-filter="all">全部</button>
@@ -165,6 +147,10 @@
           <button class="filter-tab" data-filter="completed">已完成</button>
           <button class="filter-tab" data-filter="failed">失败</button>
         </div>
+        <button class="btn btn-primary" id="workspace-add-task-btn" style="height: 32px; border-radius: 6px; display: flex; align-items: center; gap: 6px; padding: 0 12px; font-size:13px; font-weight:bold; margin-left: 8px;" title="新增任务场景内容 (上传音频或导入 Bilibili)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          新增任务
+        </button>
         <div style="flex:1"></div>
         <button class="btn btn-secondary" id="select-all-btn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
@@ -187,6 +173,7 @@
           清空
         </button>
       </div>
+
       <div class="workspace-list" id="workspace-list"></div>
 
       <!-- Workspace Pagination -->
@@ -216,6 +203,10 @@
           返回列表
         </button>
         <span class="file-title" id="detail-file-title"></span>
+        <button class="btn btn-secondary" id="detail-move-btn" style="margin-right: 8px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+          移动场景
+        </button>
         <button class="btn btn-secondary hidden" id="detail-export-btn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           导出笔记
@@ -255,7 +246,7 @@
 <!-- Toast container -->
 <div id="toast-container" class="toast-container"></div>
 
-<script src="/js/api.js?v=8"></script>
-<script src="/js/app.js?v=8"></script>
+<script src="/js/api.js?v=10"></script>
+<script src="/js/app.js?v=10"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ from fastapi.staticfiles import StaticFiles
 
 from .config import settings
 from .models.database import init_db
-from .routers import audio, process, bilibili, export, models
+from .routers import audio, process, bilibili, export, models, auth, admin
 
 # Logging
 logging.basicConfig(
@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(
     title="AudioNotes AI",
     description="智能音频学习助手 - 本地转录 + 云端笔记生成",
-    version="2.0.0",
+    version="3.0.0",
 )
 
 # CORS
@@ -38,32 +38,40 @@ app.add_middleware(
 )
 
 # Register routers
+app.include_router(auth.router)
 app.include_router(audio.router)
 app.include_router(process.router)
 app.include_router(bilibili.router)
 app.include_router(export.router)
 app.include_router(models.router)
+app.include_router(admin.router)
 
 
 
 @app.on_event("startup")
 def on_startup():
-    """Initialize database on startup."""
+    """Initialize database and run lightweight migrations on startup."""
     init_db()
-    # Create default TaskGroup if it doesn't exist
-    from .models.database import SessionLocal
-    from .models.orm import TaskGroup
-    db = SessionLocal()
-    try:
-        default_group = db.query(TaskGroup).filter(TaskGroup.id == "default").first()
-        if not default_group:
-            default_group = TaskGroup(id="default", name="默认任务")
-            db.add(default_group)
-            db.commit()
-    except Exception as e:
-        logger.error(f"Failed to create default task group: {e}")
-    finally:
-        db.close()
+
+    # Run lightweight migrations for any missing columns
+    from .models.database import engine
+    import sqlalchemy as sa
+    with engine.connect() as conn:
+        # audio_files: ensure user_id column exists
+        try:
+            conn.execute(sa.text("ALTER TABLE audio_files ADD COLUMN user_id TEXT"))
+            conn.commit()
+            logger.info("Migration: added user_id to audio_files")
+        except Exception:
+            pass  # Column already exists
+
+        # task_groups: ensure user_id column exists
+        try:
+            conn.execute(sa.text("ALTER TABLE task_groups ADD COLUMN user_id TEXT"))
+            conn.commit()
+            logger.info("Migration: added user_id to task_groups")
+        except Exception:
+            pass  # Column already exists
 
     logger.info(f"Database initialized: {settings.DATABASE_URL}")
     logger.info(f"Upload directory: {Path(settings.UPLOAD_DIR).resolve()}")
@@ -75,7 +83,7 @@ def on_startup():
 @app.get("/api/health")
 def health():
     """Health check endpoint."""
-    return {"status": "ok", "version": "2.0.0"}
+    return {"status": "ok", "version": "3.0.0"}
 
 
 # Serve frontend static files (must be last)

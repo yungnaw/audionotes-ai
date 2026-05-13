@@ -6,9 +6,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from ..models.database import get_db
-from ..models.orm import AudioFile, ProcessStatus
+from ..models.orm import AudioFile, ProcessStatus, User
 from ..models.schemas import BilibiliImportRequest
 from ..services import bilibili_service
+from ..services.auth_service import get_current_user
 from ..config import settings
 
 logger = logging.getLogger(__name__)
@@ -18,6 +19,7 @@ router = APIRouter(prefix="/api/bilibili", tags=["bilibili"])
 @router.post("/import")
 async def import_bilibili(
     request: BilibiliImportRequest,
+    current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     """Import content from a Bilibili video URL."""
@@ -44,6 +46,7 @@ async def import_bilibili(
             status=ProcessStatus.IDLE,
             transcription=data["content"],
             task_id=request.task_id,
+            user_id=current_user.id,
         )
         db.add(db_file)
         db.commit()
@@ -52,7 +55,10 @@ async def import_bilibili(
 
     elif data["type"] == "audio":
         # Slow path: save audio for local transcription
-        save_path = Path(settings.UPLOAD_DIR) / f"{file_id}.mp4"
+        user_dir = Path(settings.UPLOAD_DIR) / current_user.id
+        user_dir.mkdir(parents=True, exist_ok=True)
+        save_path = user_dir / f"{file_id}.mp4"
+
         with open(save_path, "wb") as f:
             f.write(data["data"])
 
@@ -65,6 +71,7 @@ async def import_bilibili(
             source_type="bili_audio",
             status=ProcessStatus.IDLE,
             task_id=request.task_id,
+            user_id=current_user.id,
         )
         db.add(db_file)
         db.commit()

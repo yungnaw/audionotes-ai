@@ -2,7 +2,7 @@
 import uuid
 import enum
 from datetime import datetime
-from sqlalchemy import Column, String, Integer, Text, Enum, DateTime, Float
+from sqlalchemy import Column, String, Integer, Text, Enum, DateTime, Float, Boolean
 from .database import Base
 
 
@@ -12,6 +12,38 @@ class ProcessStatus(str, enum.Enum):
     SUMMARIZING = "summarizing"
     COMPLETED = "completed"
     FAILED = "failed"
+
+
+class UserRole(str, enum.Enum):
+    ADMIN = "admin"
+    USER = "user"
+
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(String, primary_key=True, default=lambda: uuid.uuid4().hex[:12])
+    username = Column(String(64), unique=True, nullable=False, index=True)
+    email = Column(String(256), unique=True, nullable=True, index=True)
+    password_hash = Column(String(256), nullable=False)
+    role = Column(Enum(UserRole), default=UserRole.USER)
+    is_active = Column(Boolean, default=True)
+    avatar_url = Column(String, default="")
+    storage_quota_mb = Column(Integer, default=5120)  # 5 GB default
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "username": self.username,
+            "email": self.email,
+            "role": self.role.value if self.role else "user",
+            "is_active": self.is_active,
+            "avatar_url": self.avatar_url,
+            "storage_quota_mb": self.storage_quota_mb,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+        }
 
 
 class AudioFile(Base):
@@ -33,6 +65,7 @@ class AudioFile(Base):
     duration = Column(Float, default=0.0)
     language = Column(String, default="")
     task_id = Column(String, default="default")
+    user_id = Column(String, nullable=True, index=True)  # nullable for legacy data
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
@@ -53,6 +86,7 @@ class AudioFile(Base):
             "duration": self.duration,
             "language": self.language,
             "task_id": self.task_id,
+            "user_id": self.user_id,
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "updated_at": self.updated_at.isoformat() if self.updated_at else None,
         }
@@ -62,13 +96,14 @@ class TaskGroup(Base):
     __tablename__ = "task_groups"
 
     id = Column(String, primary_key=True, default=lambda: uuid.uuid4().hex[:12])
-    name = Column(String, unique=True, nullable=False)
+    name = Column(String, nullable=False)
+    user_id = Column(String, nullable=True, index=True)  # nullable for legacy data
     created_at = Column(DateTime, default=datetime.utcnow)
 
     def to_dict(self):
         return {
             "id": self.id,
             "name": self.name,
+            "user_id": self.user_id,
             "created_at": self.created_at.isoformat() if self.created_at else None,
         }
-

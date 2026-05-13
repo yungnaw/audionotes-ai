@@ -1,9 +1,11 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from typing import Optional
 from google import genai
 import logging
 from ..config import settings
+from ..models.orm import User
+from ..services.auth_service import get_current_user, require_admin
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/models", tags=["models"])
@@ -12,7 +14,10 @@ class ModelsRequest(BaseModel):
     api_key: Optional[str] = None
 
 @router.post("/gemini")
-def list_gemini_models(request: ModelsRequest):
+def list_gemini_models(
+    request: ModelsRequest,
+    current_user: User = Depends(get_current_user),
+):
     """List available Gemini models for the given API key."""
     final_api_key = request.api_key if request.api_key else settings.GEMINI_API_KEY
     if not final_api_key:
@@ -45,7 +50,7 @@ class SystemConfigRequest(BaseModel):
 
 
 @router.get("/system")
-def get_system_config():
+def get_system_config(current_user: User = Depends(get_current_user)):
     """Get current SenseVoice device and thread configuration."""
     cuda_available = False
     try:
@@ -62,8 +67,11 @@ def get_system_config():
 
 
 @router.post("/system")
-def update_system_config(config: SystemConfigRequest):
-    """Update SenseVoice device and thread configuration, resetting the model."""
+def update_system_config(
+    config: SystemConfigRequest,
+    admin: User = Depends(require_admin),
+):
+    """Update SenseVoice device and thread configuration (admin only)."""
     from ..services import sensevoice_service
     from . import process
     settings.SENSEVOICE_DEVICE = config.device
