@@ -5,6 +5,18 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "passlib[bcrypt]>=1.7.4",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "funasr>=1.1.0",
+    "torch>=2.0.0,<2.6.0",
+    "torchaudio>=2.0.0,<2.6.0",
+    "modelscope",
+    "google-genai>=1.0.0",
+    "sqlalchemy>=2.0.0",
+    "httpx>=0.28.0",
+    "python-multipart>=0.0.20",
+    "pydantic-settings>=2.0.0",
+    "aiofiles>=24.0.0",
     "python-jose[cryptography]>=3.5.0",
+    "passlib[bcrypt]>=1.7.4",
 ]

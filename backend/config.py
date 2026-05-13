@@ -47,7 +47,14 @@ class Settings(BaseSettings):
     # 邀请码（ALLOW_REGISTRATION=False 时生效，为空则不校验）
     INVITE_CODE: str = ""
 
-    model_config = {"env_file": str(Path(__file__).parent.parent.parent / ".env"), "env_file_encoding": "utf-8"}
+    model_config = {
+        "env_file": (
+            str(Path(__file__).parent.parent / ".env"),
+            str(Path(__file__).parent / ".env")
+        ),
+        "env_file_encoding": "utf-8",
+        "extra": "ignore"
+    }
 
     def __init__(self, **values):
         super().__init__(**values)
