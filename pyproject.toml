@@ -8,8 +8,8 @@ dependencies = [
     "fastapi>=0.115.0",
     "uvicorn[standard]>=0.30.0",
     "funasr>=1.1.0",
-    "torch>=2.0.0,<2.6.0",
-    "torchaudio>=2.0.0,<2.6.0",
+    "torch>=2.6.0",
+    "torchaudio>=2.6.0",
     "modelscope",
     "google-genai>=1.0.0",
     "sqlalchemy>=2.0.0",
@@ -19,4 +19,6 @@ dependencies = [
     "aiofiles>=24.0.0",
     "python-jose[cryptography]>=3.5.0",
     "passlib[bcrypt]>=1.7.4",
+    "transformers",
+    "sacremoses",
 ]
