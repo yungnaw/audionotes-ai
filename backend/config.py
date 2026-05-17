@@ -23,10 +23,18 @@ class Settings(BaseSettings):
     GLM_BASE_URL: str = "https://open.bigmodel.cn/api/paas/v4"
     GLM_MODEL: str = "glm-4-flash"
 
+    # 本地大模型 (LM Studio / Ollama / 自定义 OpenAI 兼容接口)
+    LOCAL_LLM_API_KEY: str = "lm-studio"
+    LOCAL_LLM_BASE_URL: str = "http://localhost:1234/v1"
+    LOCAL_LLM_MODEL: str = "qwen2.5-7b-instruct"
+
     # SenseVoice 本地转录配置
     SENSEVOICE_MODEL: str = "iic/SenseVoiceSmall"
     SENSEVOICE_DEVICE: str = "cpu"
     SENSEVOICE_NCPU: int = 8
+
+    # 大模型笔记生成并发调度配置
+    SUMMARY_CONCURRENCY: int = 4
 
     # 存储
     DATABASE_URL: str = "sqlite:///./audionotes.db"

@@ -67,6 +67,16 @@ const API = {
     return res.json();
   },
 
+  async updateProfile(profileData) {
+    const res = await this._fetch('/api/auth/me/profile', {
+      method: 'PUT',
+      headers: this._authHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(profileData),
+    });
+    if (!res.ok) throw new Error((await res.json()).detail || '更新资料失败');
+    return res.json();
+  },
+
   // ===== Audio =====
   async uploadAudio(file, taskId = 'default') {
     const form = new FormData();
@@ -105,6 +115,16 @@ const API = {
     return res.json();
   },
 
+  async updateFilePrompt(id, customPrompt) {
+    const res = await this._fetch(`/api/audio/${id}/prompt`, {
+      method: 'PUT',
+      headers: this._authHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ custom_prompt: customPrompt }),
+    });
+    if (!res.ok) throw new Error((await res.json()).detail || '更新提示词失败');
+    return res.json();
+  },
+
   async batchMoveFiles(ids, taskId) {
     const res = await this._fetch('/api/audio/batch/move', {
       method: 'POST',
@@ -139,7 +159,7 @@ const API = {
   },
 
   // ===== Process =====
-  async processFile(id, promptTemplate = '', apiKey = '', modelName = '', provider = 'gemini') {
+  async processFile(id, promptTemplate = '', apiKey = '', modelName = '', provider = 'gemini', baseUrl = '') {
     const res = await this._fetch(`/api/process/${id}`, {
       method: 'POST',
       headers: this._authHeaders({ 'Content-Type': 'application/json' }),
@@ -148,13 +168,14 @@ const API = {
         provider: provider,
         api_key: apiKey || null,
         model_name: modelName || null,
+        base_url: baseUrl || null,
       }),
     });
     if (!res.ok) throw new Error((await res.json()).detail || '处理失败');
     return res.json();
   },
 
-  async batchProcess(promptTemplate = '', apiKey = '', modelName = '', provider = 'gemini') {
+  async batchProcess(promptTemplate = '', apiKey = '', modelName = '', provider = 'gemini', baseUrl = '') {
     const res = await this._fetch('/api/process/batch', {
       method: 'POST',
       headers: this._authHeaders({ 'Content-Type': 'application/json' }),
@@ -163,6 +184,7 @@ const API = {
         provider: provider,
         api_key: apiKey || null,
         model_name: modelName || null,
+        base_url: baseUrl || null,
       }),
     });
     if (!res.ok) throw new Error((await res.json()).detail || '批量处理失败');
@@ -187,11 +209,11 @@ const API = {
     return res.json();
   },
 
-  async updateSystemConfig(device, ncpu) {
+  async updateSystemConfig(device, ncpu, summaryConcurrency = null) {
     const res = await this._fetch('/api/models/system', {
       method: 'POST',
       headers: this._authHeaders({ 'Content-Type': 'application/json' }),
-      body: JSON.stringify({ device, ncpu }),
+      body: JSON.stringify({ device, ncpu, summary_concurrency: summaryConcurrency }),
     });
     if (!res.ok) throw new Error('更新系统配置失败');
     return res.json();
@@ -268,6 +290,42 @@ const API = {
       headers: this._authHeaders(),
     });
     if (!res.ok) throw new Error((await res.json()).detail || '删除任务分类失败');
+    return res.json();
+  },
+
+  // ===== Prompt Templates =====
+  async listPromptTemplates() {
+    const res = await this._fetch('/api/prompts', { headers: this._authHeaders() });
+    if (!res.ok) throw new Error('获取提示词模板失败');
+    return res.json();
+  },
+
+  async createPromptTemplate(name, content) {
+    const res = await this._fetch('/api/prompts', {
+      method: 'POST',
+      headers: this._authHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ name, content }),
+    });
+    if (!res.ok) throw new Error((await res.json()).detail || '保存模板失败');
+    return res.json();
+  },
+
+  async updatePromptTemplate(id, data) {
+    const res = await this._fetch(`/api/prompts/${id}`, {
+      method: 'PUT',
+      headers: this._authHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error((await res.json()).detail || '更新模板失败');
+    return res.json();
+  },
+
+  async deletePromptTemplate(id) {
+    const res = await this._fetch(`/api/prompts/${id}`, {
+      method: 'DELETE',
+      headers: this._authHeaders(),
+    });
+    if (!res.ok) throw new Error((await res.json()).detail || '删除模板失败');
     return res.json();
   },
 

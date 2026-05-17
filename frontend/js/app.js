@@ -18,6 +18,7 @@ const state = {
   filterStatus: 'all',      // 'all' | 'idle' | 'processing' | 'completed' | 'failed'
   customPrompt: '',
   isProcessing: false,
+  customTemplates: [],
 };
 
 // ===== Preset Prompt Templates =====
@@ -265,6 +266,7 @@ async function handleLogin(e) {
   try {
     const data = await API.login(username, password);
     saveAuth(data.access_token, data.user);
+    syncDefaultPrompt(data.user);
     document.getElementById('modal-overlay').classList.add('hidden');
     document.getElementById('modal-overlay').innerHTML = '';
     renderUserHeader(data.user);
@@ -294,6 +296,7 @@ async function handleRegister(e) {
   try {
     const data = await API.register({ username, password, email, invite_code });
     saveAuth(data.access_token, data.user);
+    syncDefaultPrompt(data.user);
     document.getElementById('modal-overlay').classList.add('hidden');
     document.getElementById('modal-overlay').innerHTML = '';
     renderUserHeader(data.user);
@@ -402,16 +405,23 @@ function showAISettingsModal() {
             <option value="deepseek">DeepSeek (深度求索)</option>
             <option value="qwen">Qwen (通义千问)</option>
             <option value="glm">GLM (智谱清言)</option>
+            <option value="local">本地大模型 (LM Studio / Ollama)</option>
           </select>
+        </div>
+        <div id="modal-base-url-container" style="display: none;">
+          <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">API 接口地址 (Base URL)</label>
+          <input type="text" class="input" id="modal-base-url-input" style="width: 100%;" placeholder="http://localhost:1234/v1">
         </div>
         <div>
           <label id="modal-api-key-label" style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">API Key (默认使用项目配置的默认Key)</label>
           <input type="password" class="input" id="modal-api-key-input" style="width: 100%;" placeholder="输入你自己的 API Key (可选)">
         </div>
         <div>
-          <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">模型选择</label>
-          <select class="input" id="modal-model-select" style="width: 100%;">
-          </select>
+          <label style="display:block; margin-bottom:6px; font-size:13px; color:var(--text-muted); font-weight: 600;">模型选择 / 自定义模型名</label>
+          <div id="modal-model-container">
+            <select class="input" id="modal-model-select" style="width: 100%;">
+            </select>
+          </div>
         </div>
       </div>
     `,
@@ -424,38 +434,80 @@ function showAISettingsModal() {
   const providerSelect = document.getElementById('modal-provider-select');
   const apiKeyLabel = document.getElementById('modal-api-key-label');
   const apiKeyInput = document.getElementById('modal-api-key-input');
-  const modelSelect = document.getElementById('modal-model-select');
 
   function updateProviderUI() {
-    if (!apiKeyLabel || !apiKeyInput || !modelSelect) return;
-    const providerNames = { gemini: 'Gemini', openai: 'OpenAI', anthropic: 'Anthropic', deepseek: 'DeepSeek', qwen: 'Qwen', glm: 'GLM' };
+    if (!apiKeyLabel || !apiKeyInput) return;
+    const providerNames = { 
+      gemini: 'Gemini', 
+      openai: 'OpenAI', 
+      anthropic: 'Anthropic', 
+      deepseek: 'DeepSeek', 
+      qwen: 'Qwen', 
+      glm: 'GLM',
+      local: '本地大模型'
+    };
     const pName = providerNames[currentProvider] || currentProvider;
     apiKeyLabel.textContent = `${pName} API Key (默认使用项目配置的默认Key)`;
-    apiKeyInput.placeholder = `输入你自己的 ${pName} API Key (可选)`;
+    apiKeyInput.placeholder = currentProvider === 'local' 
+      ? '本地服务通常无需 Key，如有请填写' 
+      : `输入你自己的 ${pName} API Key (可选)`;
 
     const savedKey = localStorage.getItem(`api_key_enc_${currentProvider}`) || '';
     apiKeyInput.value = decryptKey(savedKey);
+
+    const baseUrlContainer = document.getElementById('modal-base-url-container');
+    const baseUrlInput = document.getElementById('modal-base-url-input');
+    if (baseUrlContainer && baseUrlInput) {
+      if (currentProvider === 'local') {
+        baseUrlContainer.style.display = 'block';
+        baseUrlInput.value = localStorage.getItem('local_base_url') || 'http://localhost:1234/v1';
+      } else {
+        baseUrlContainer.style.display = 'none';
+      }
+    }
 
     populateModels();
   }
 
   function populateModels() {
-    if (!modelSelect) return;
-    modelSelect.innerHTML = '';
-    const models = PROVIDER_MODELS[currentProvider] || [];
-    models.forEach(m => {
-      const opt = document.createElement('option');
-      opt.value = m.id;
-      opt.textContent = m.name;
-      modelSelect.appendChild(opt);
-    });
+    const container = document.getElementById('modal-model-container');
+    if (!container) return;
 
-    const savedModel = localStorage.getItem(`model_name_${currentProvider}`);
-    if (savedModel && models.find(m => m.id === savedModel)) {
-      modelSelect.value = savedModel;
-    } else if (models.length > 0) {
-      modelSelect.value = currentProvider === 'deepseek' ? 'deepseek-v4-flash' : models[0].id;
-      localStorage.setItem(`model_name_${currentProvider}`, modelSelect.value);
+    if (currentProvider === 'local') {
+      const savedModel = localStorage.getItem('local_model_name') || 'qwen2.5-7b-instruct';
+      container.innerHTML = `<input type="text" class="input" id="modal-model-input" style="width: 100%;" placeholder="例如: qwen2.5-7b-instruct 或 llama3">`;
+      const modelInput = document.getElementById('modal-model-input');
+      if (modelInput) {
+        modelInput.value = savedModel;
+        modelInput.addEventListener('input', e => {
+          localStorage.setItem('local_model_name', e.target.value.trim());
+          localStorage.setItem(`model_name_${currentProvider}`, e.target.value.trim());
+        });
+      }
+    } else {
+      container.innerHTML = `<select class="input" id="modal-model-select" style="width: 100%;"></select>`;
+      const modelSelect = document.getElementById('modal-model-select');
+      if (modelSelect) {
+        const models = PROVIDER_MODELS[currentProvider] || [];
+        models.forEach(m => {
+          const opt = document.createElement('option');
+          opt.value = m.id;
+          opt.textContent = m.name;
+          modelSelect.appendChild(opt);
+        });
+
+        const savedModel = localStorage.getItem(`model_name_${currentProvider}`);
+        if (savedModel && models.find(m => m.id === savedModel)) {
+          modelSelect.value = savedModel;
+        } else if (models.length > 0) {
+          modelSelect.value = currentProvider === 'deepseek' ? 'deepseek-v4-flash' : models[0].id;
+          localStorage.setItem(`model_name_${currentProvider}`, modelSelect.value);
+        }
+
+        modelSelect.addEventListener('change', e => {
+          localStorage.setItem(`model_name_${currentProvider}`, e.target.value);
+        });
+      }
     }
   }
 
@@ -475,9 +527,10 @@ function showAISettingsModal() {
     });
   }
 
-  if (modelSelect) {
-    modelSelect.addEventListener('change', e => {
-      localStorage.setItem(`model_name_${currentProvider}`, e.target.value);
+  const baseUrlInput = document.getElementById('modal-base-url-input');
+  if (baseUrlInput) {
+    baseUrlInput.addEventListener('input', e => {
+      localStorage.setItem('local_base_url', e.target.value.trim());
     });
   }
 
@@ -573,6 +626,7 @@ function renderHome() {
 
 // ===== Render: Workspace =====
 function renderWorkspace() {
+  renderTaskSelects();
   const listEl = document.getElementById('workspace-list');
   if (!listEl) return;
 
@@ -640,6 +694,7 @@ function renderWorkspace() {
         <div class="label">${f.progress}%</div>
       </div>
       <div class="file-actions">
+        <button class="btn-icon" title="编辑提示词" onclick="event.stopPropagation();editFilePrompt('${f.id}')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
         <button class="btn-icon" title="移动到场景" onclick="event.stopPropagation();handleMoveFile('${f.id}')">${ICONS.folder}</button>
         ${f.status === 'completed' ? `<button class="btn-icon" title="查看笔记" onclick="event.stopPropagation();navigate('detail','${f.id}')">${ICONS.eye}</button>` : ''}
         <button class="btn-icon" title="删除" onclick="event.stopPropagation();handleDelete('${f.id}')">${ICONS.trash}</button>
@@ -661,15 +716,29 @@ function renderDetail() {
   const notesPane = document.getElementById('notes-content');
   const transPane = document.getElementById('trans-content');
 
+  // Build prompt editor section — always shown with editable textarea
+  const currentPrompt = f.custom_prompt || localStorage.getItem('prompt_template') || TEMPLATES.default;
+  const promptHtml = `
+    <div style="margin-top:16px;padding:12px;background:var(--bg-tertiary);border-radius:8px;border:1px solid var(--border);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:12px;font-weight:700;color:var(--text-muted);">📋 提示词编辑器</span>
+        <div style="display:flex;gap:6px;">
+          <button class="btn btn-secondary" style="padding:4px 10px;font-size:11px;height:26px;" onclick="event.stopPropagation();saveFilePrompt('${f.id}')">💾 保存提示词</button>
+          <button class="btn btn-primary" style="padding:4px 10px;font-size:11px;height:26px;background:var(--accent);border-color:var(--accent);" onclick="event.stopPropagation();reprocessFileWithPrompt('${f.id}')">🔄 重新应用生成</button>
+        </div>
+      </div>
+      <textarea id="detail-prompt-editor" style="width:100%;height:120px;font-size:11px;font-family:var(--font-mono);background:var(--bg-primary);color:var(--text-primary);border:1px solid var(--border);border-radius:6px;padding:10px;resize:vertical;line-height:1.5;white-space:pre-wrap;word-break:break-word;">${currentPrompt.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}</textarea>
+    </div>`;
+
   if (f.status === 'completed') {
-    notesPane.innerHTML = `<div class="markdown-body">${renderMarkdown(f.study_notes)}</div>`;
+    notesPane.innerHTML = `<div class="markdown-body">${renderMarkdown(f.study_notes)}</div>${promptHtml}`;
   } else if (f.status === 'failed') {
     notesPane.innerHTML = `
       <div class="status-message">
         <h3 style="color:var(--danger)">处理失败</h3>
         <p>${f.error_message || '未知错误'}</p>
         <button class="btn btn-primary" style="margin-top:16px" onclick="handleProcessSingle('${f.id}')">重试</button>
-      </div>`;
+      </div>${promptHtml}`;
   } else if (f.status === 'transcribing' || f.status === 'summarizing') {
     notesPane.innerHTML = `
       <div class="status-message">
@@ -683,7 +752,7 @@ function renderDetail() {
         <h3>等待处理</h3>
         <p>点击下方按钮开始转录和生成笔记</p>
         <button class="btn btn-primary" style="margin-top:16px" onclick="handleProcessSingle('${f.id}')">开始处理</button>
-      </div>`;
+      </div>${promptHtml}`;
   }
 
   transPane.textContent = f.transcription || '暂无转录文本';
@@ -720,6 +789,92 @@ function renderDetail() {
   if (detailMoveBtn) {
     detailMoveBtn.onclick = () => handleMoveFile(f.id);
   }
+}
+
+function loadPromptToEditor(fileId) {
+  const f = state.files.find(f => f.id === fileId);
+  if (!f || !f.custom_prompt) {
+    showToast('该任务没有保存的提示词', 'warning');
+    return;
+  }
+  navigate('home');
+  const promptInput = document.getElementById('custom-prompt');
+  if (promptInput) {
+    promptInput.value = f.custom_prompt;
+    localStorage.setItem('prompt_template', f.custom_prompt);
+  }
+  showToast('提示词已加载到编辑器，可微调后保存为模板', 'success');
+}
+
+async function saveFilePrompt(fileId) {
+  const editor = document.getElementById('detail-prompt-editor');
+  if (!editor) return;
+  const newPrompt = editor.value;
+  try {
+    const updated = await API.updateFilePrompt(fileId, newPrompt);
+    const f = state.files.find(f => f.id === fileId);
+    if (f) f.custom_prompt = updated.custom_prompt;
+    showToast('提示词已保存', 'success');
+  } catch (e) {
+    showToast(`保存失败: ${e.message}`, 'error');
+  }
+}
+
+async function reprocessFileWithPrompt(fileId) {
+  // First save the prompt
+  const editor = document.getElementById('detail-prompt-editor');
+  if (!editor) return;
+  const newPrompt = editor.value;
+  try {
+    await API.updateFilePrompt(fileId, newPrompt);
+    const f = state.files.find(f => f.id === fileId);
+    if (f) {
+      f.custom_prompt = newPrompt;
+      f.status = 'idle';
+      f.progress = 0;
+      f.study_notes = '';
+      f.error_message = '';
+    }
+    showToast('提示词已保存，正在重新生成笔记...');
+    // Re-run processing with the new prompt
+    const provider = localStorage.getItem('provider') || 'deepseek';
+    const apiKey = decryptKey(localStorage.getItem(`api_key_enc_${provider}`) || localStorage.getItem('api_key_enc') || localStorage.getItem('api_key'));
+    const modelName = localStorage.getItem(`model_name_${provider}`) || localStorage.getItem('model_name') || '';
+    const baseUrl = provider === 'local' ? (localStorage.getItem('local_base_url') || 'http://localhost:1234/v1') : '';
+    await API.processFile(fileId, newPrompt, apiKey, modelName, provider, baseUrl);
+    await loadFiles();
+    renderDetail();
+    showToast('笔记已重新生成！', 'success');
+  } catch (e) {
+    await loadFiles();
+    renderDetail();
+    showToast(`重新生成失败: ${e.message}`, 'error');
+  }
+}
+
+async function editFilePrompt(fileId) {
+  const f = state.files.find(f => f.id === fileId);
+  if (!f) return;
+  showCustomModal({
+    title: '编辑提示词',
+    subtitle: `为《${f.name}》设置自定义提示词`,
+    contentHtml: `
+      <textarea id="modal-prompt-editor" class="input" style="width:100%;height:200px;font-family:var(--font-mono);font-size:12px;line-height:1.5;resize:vertical;">${(f.custom_prompt || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}</textarea>
+    `,
+    confirmText: '保存并关闭',
+    onConfirm: async (close) => {
+      const val = document.getElementById('modal-prompt-editor')?.value;
+      if (val === undefined) return;
+      try {
+        const updated = await API.updateFilePrompt(fileId, val);
+        if (f) f.custom_prompt = updated.custom_prompt;
+        showToast('提示词已保存', 'success');
+        close();
+      } catch (e) {
+        showToast(`保存失败: ${e.message}`, 'error');
+      }
+    }
+  });
 }
 
 // ===== Handlers =====
@@ -1133,8 +1288,9 @@ async function handleProcessSingle(id) {
     const promptTemplate = localStorage.getItem('prompt_template') || '';
     const apiKey = decryptKey(localStorage.getItem(`api_key_enc_${provider}`) || localStorage.getItem('api_key_enc') || localStorage.getItem('api_key'));
     const modelName = localStorage.getItem(`model_name_${provider}`) || localStorage.getItem('model_name') || (provider === 'deepseek' ? 'deepseek-v4-flash' : '');
+    const baseUrl = provider === 'local' ? (localStorage.getItem('local_base_url') || 'http://localhost:1234/v1') : '';
 
-    await API.processFile(id, promptTemplate, apiKey, modelName, provider);
+    await API.processFile(id, promptTemplate, apiKey, modelName, provider, baseUrl);
     await loadFiles();
     renderDetail();
     showToast('处理完成！', 'success');
@@ -1172,8 +1328,9 @@ async function handleBatchProcess() {
     const promptTemplate = localStorage.getItem('prompt_template') || '';
     const apiKey = decryptKey(localStorage.getItem(`api_key_enc_${provider}`) || localStorage.getItem('api_key_enc') || localStorage.getItem('api_key'));
     const modelName = localStorage.getItem(`model_name_${provider}`) || localStorage.getItem('model_name') || (provider === 'deepseek' ? 'deepseek-v4-flash' : '');
+    const baseUrl = provider === 'local' ? (localStorage.getItem('local_base_url') || 'http://localhost:1234/v1') : '';
 
-    await API.batchProcess(promptTemplate, apiKey, modelName, provider);
+    await API.batchProcess(promptTemplate, apiKey, modelName, provider, baseUrl);
     await loadFiles();
     showToast('批量处理完成！', 'success');
   } catch (e) {
@@ -1476,6 +1633,59 @@ async function loadTasks() {
   }
 }
 
+async function loadCustomTemplates() {
+  try {
+    state.customTemplates = await API.listPromptTemplates();
+    renderPromptTemplateSelect();
+  } catch (e) {
+    console.error('Failed to load custom templates:', e);
+  }
+}
+
+function renderPromptTemplateSelect() {
+  const select = document.getElementById('template-select');
+  const promptInput = document.getElementById('custom-prompt');
+  if (!select || !promptInput) return;
+
+  const savedVal = localStorage.getItem('selected_template_type') || 'default';
+  const builtInOptions = [
+    { id: 'default', name: '默认核心学习笔记 (通用结构)' },
+    { id: 'academic', name: '学术论文与科研重难点梳理' },
+    { id: 'business', name: '商业模式与落地可行性分析' },
+    { id: 'meeting', name: '会议/访谈摘要与行动任务清单' },
+    { id: 'concept', name: '核心概念与关键术语深度拆解' },
+  ];
+
+  let html = '';
+  builtInOptions.forEach(o => {
+    html += `<option value="${o.id}">${o.name}</option>`;
+  });
+  if (state.customTemplates.length > 0) {
+    html += '<option disabled>──── 我的自定义模板 ────</option>';
+    state.customTemplates.forEach(t => {
+      html += `<option value="custom:${t.id}">📋 ${t.name}</option>`;
+    });
+  }
+  html += '<option disabled>──────────</option>';
+  html += '<option value="__delete_custom__" style="color:var(--danger);">🗑 删除当前自定义模板</option>';
+
+  select.innerHTML = html;
+
+  // Restore previous selection
+  if (savedVal.startsWith('custom:')) {
+    const tid = savedVal.slice(7);
+    if (state.customTemplates.find(t => t.id === tid)) {
+      select.value = savedVal;
+    } else {
+      select.value = 'default';
+    }
+  } else if (builtInOptions.find(o => o.id === savedVal)) {
+    select.value = savedVal;
+  } else {
+    select.value = 'default';
+  }
+}
+
 function triggerDeleteActiveTask() {
   if (state.activeTaskId === 'default') return;
   showCustomConfirm('删除当前场景', '确定删除当前任务场景？<br><br>该场景下的所有音频和笔记将会被重置为“默认任务”。此操作无法撤销。', async () => {
@@ -1495,10 +1705,35 @@ function triggerDeleteActiveTask() {
   });
 }
 
+function triggerDeleteWorkspaceTask() {
+  const currentFilterId = state.workspaceTaskFilterId;
+  if (currentFilterId === 'all' || currentFilterId === 'default') return;
+  
+  const task = state.tasks.find(t => t.id === currentFilterId);
+  const taskName = task ? task.name : '当前场景';
+
+  showCustomConfirm('删除当前场景', `确定删除场景“${taskName}”吗？<br><br>该场景下的所有音频和笔记将会被重置为“默认任务”。此操作无法撤销。`, async () => {
+    try {
+      await API.deleteTask(currentFilterId);
+      showToast('任务场景已成功删除', 'success');
+      state.workspaceTaskFilterId = 'all';
+      if (state.activeTaskId === currentFilterId) {
+        state.activeTaskId = 'default';
+      }
+      await loadTasks();
+      await loadFiles();
+      renderWorkspace();
+    } catch (e) {
+      showToast(e.message, 'error');
+    }
+  });
+}
+
 function renderTaskSelects() {
   const activeTaskSelect = document.getElementById('active-task-select');
   const workspaceTaskFilter = document.getElementById('workspace-task-filter');
   const deleteTaskBtn = document.getElementById('delete-task-btn');
+  const workspaceDeleteTaskBtn = document.getElementById('workspace-delete-task-btn');
 
   if (activeTaskSelect) {
     let optionsHtml = `<option value="default">默认任务</option>` + state.tasks.filter(t => t.id !== 'default').map(t => `
@@ -1522,7 +1757,27 @@ function renderTaskSelects() {
   }
 
   if (deleteTaskBtn) {
-    deleteTaskBtn.style.display = 'none';
+    if (state.activeTaskId !== 'default') {
+      deleteTaskBtn.style.display = 'flex';
+    } else {
+      deleteTaskBtn.style.display = 'none';
+    }
+  }
+
+  if (workspaceDeleteTaskBtn) {
+    if (state.workspaceTaskFilterId !== 'all' && state.workspaceTaskFilterId !== 'default') {
+      workspaceDeleteTaskBtn.style.display = 'flex';
+    } else {
+      workspaceDeleteTaskBtn.style.display = 'none';
+    }
+  }
+}
+
+function syncDefaultPrompt(user) {
+  const promptInput = document.getElementById('custom-prompt');
+  if (promptInput && user && user.default_prompt) {
+    promptInput.value = user.default_prompt;
+    localStorage.setItem('prompt_template', user.default_prompt);
   }
 }
 
@@ -1549,27 +1804,110 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   const templateSelect = document.getElementById('template-select');
   const promptInput = document.getElementById('custom-prompt');
+  const savePromptBtn = document.getElementById('save-prompt-btn');
+  const saveAsTemplateBtn = document.getElementById('save-as-template-btn');
 
   // Template select dropdown initialization
   if (templateSelect && promptInput) {
-    const savedTemplateVal = localStorage.getItem('selected_template_type') || 'default';
-    templateSelect.value = savedTemplateVal;
-
     promptInput.value = localStorage.getItem('prompt_template') || TEMPLATES.default;
     localStorage.setItem('prompt_template', promptInput.value);
 
     templateSelect.addEventListener('change', e => {
-      const type = e.target.value;
-      localStorage.setItem('selected_template_type', type);
-      const text = TEMPLATES[type] || TEMPLATES.default;
-      promptInput.value = text;
-      localStorage.setItem('prompt_template', text);
-      showToast('提示词模板已切换', 'success');
+      const val = e.target.value;
+      if (val === '__delete_custom__') {
+        // Reset to previous value, trigger delete flow
+        const savedVal = localStorage.getItem('selected_template_type') || 'default';
+        templateSelect.value = savedVal;
+        handleDeleteCustomTemplate();
+        return;
+      }
+      if (val.startsWith('custom:')) {
+        const tid = val.slice(7);
+        const tpl = state.customTemplates.find(t => t.id === tid);
+        if (tpl) {
+          localStorage.setItem('selected_template_type', val);
+          promptInput.value = tpl.content;
+          localStorage.setItem('prompt_template', tpl.content);
+          showToast(`已加载模板: ${tpl.name}`, 'success');
+        }
+      } else {
+        localStorage.setItem('selected_template_type', val);
+        const text = TEMPLATES[val] || TEMPLATES.default;
+        promptInput.value = text;
+        localStorage.setItem('prompt_template', text);
+        showToast('提示词模板已切换', 'success');
+      }
     });
 
     promptInput.addEventListener('input', e => {
       localStorage.setItem('prompt_template', e.target.value);
     });
+  }
+
+  if (savePromptBtn && promptInput) {
+    savePromptBtn.addEventListener('click', async () => {
+      try {
+        const customPromptVal = promptInput.value;
+        const res = await API.updateProfile({ default_prompt: customPromptVal });
+        if (state.currentUser) {
+          state.currentUser.default_prompt = res.default_prompt;
+          localStorage.setItem('auth_user', JSON.stringify(state.currentUser));
+        }
+        showToast('自定义提示词已成功保存为默认配置！', 'success');
+      } catch (e) {
+        showToast(`保存失败: ${e.message}`, 'error');
+      }
+    });
+  }
+
+  if (saveAsTemplateBtn && promptInput) {
+    saveAsTemplateBtn.addEventListener('click', () => {
+      showCustomPrompt('保存为提示词模板', '请输入模板名称（如：深度学习笔记、周报摘要...）', async (tplName) => {
+        try {
+          const content = promptInput.value;
+          const tpl = await API.createPromptTemplate(tplName, content);
+          state.customTemplates.unshift(tpl);
+          localStorage.setItem('selected_template_type', `custom:${tpl.id}`);
+          renderPromptTemplateSelect();
+          templateSelect.value = `custom:${tpl.id}`;
+          showToast(`模板"${tplName}"已保存`, 'success');
+        } catch (e) {
+          showToast(`保存模板失败: ${e.message}`, 'error');
+        }
+      });
+    });
+  }
+
+  async function handleDeleteCustomTemplate() {
+    const savedVal = localStorage.getItem('selected_template_type') || '';
+    if (!savedVal.startsWith('custom:')) {
+      showToast('请先在模板选单中选择一个你创建的自定义模板', 'warning');
+      return;
+    }
+    const tid = savedVal.slice(7);
+    const tpl = state.customTemplates.find(t => t.id === tid);
+    if (!tpl) return;
+    showCustomConfirm('删除模板', `确定删除自定义模板"${tpl.name}"吗？此操作无法撤销。`, async () => {
+      try {
+        await API.deletePromptTemplate(tid);
+        state.customTemplates = state.customTemplates.filter(t => t.id !== tid);
+        localStorage.setItem('selected_template_type', 'default');
+        if (promptInput) promptInput.value = TEMPLATES.default;
+        localStorage.setItem('prompt_template', TEMPLATES.default);
+        renderPromptTemplateSelect();
+        showToast(`模板"${tpl.name}"已删除`, 'success');
+      } catch (e) {
+        showToast(`删除失败: ${e.message}`, 'error');
+      }
+    });
+  }
+
+  // Load custom prompt templates from server
+  await loadCustomTemplates();
+
+  // Sync user custom default prompt if exists
+  if (state.currentUser) {
+    syncDefaultPrompt(state.currentUser);
   }
 
   // Load data
@@ -1643,9 +1981,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const cudaWarning = document.getElementById('cuda-warning');
   const threadsInput = document.getElementById('threads-input');
   const threadsVal = document.getElementById('threads-val');
+  const llmConcurrencyInput = document.getElementById('llm-concurrency-input');
+  const llmConcurrencyVal = document.getElementById('llm-concurrency-val');
 
   let currentDevice = 'cpu';
   let currentNcpu = 8;
+  let currentConcurrency = 4;
   let isCudaAvailable = false;
 
   async function initSystemConfig() {
@@ -1654,6 +1995,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const config = await API.getSystemConfig();
       currentDevice = config.device || 'cpu';
       currentNcpu = config.ncpu || 8;
+      currentConcurrency = config.summary_concurrency || 4;
       isCudaAvailable = config.cuda_available || false;
 
       // Update UI
@@ -1661,6 +2003,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (threadsInput) {
         threadsInput.value = currentNcpu;
         threadsVal.textContent = currentNcpu;
+      }
+      if (llmConcurrencyInput) {
+        llmConcurrencyInput.value = currentConcurrency;
+        llmConcurrencyVal.textContent = currentConcurrency;
       }
       if (!isCudaAvailable && cudaWarning) {
         cudaWarning.style.display = 'block';
@@ -1680,11 +2026,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  async function handleUpdateSystem(device, ncpu) {
+  async function handleUpdateSystem(device, ncpu, concurrency = currentConcurrency) {
     try {
-      await API.updateSystemConfig(device, ncpu);
+      await API.updateSystemConfig(device, ncpu, concurrency);
       currentDevice = device;
       currentNcpu = ncpu;
+      currentConcurrency = concurrency;
       updateDeviceUI(device);
       showToast('系统配置已更新并应用', 'success');
     } catch (e) {
@@ -1717,6 +2064,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     threadsInput.addEventListener('change', e => {
       handleUpdateSystem(currentDevice, parseInt(e.target.value));
+    });
+  }
+
+  if (llmConcurrencyInput) {
+    llmConcurrencyInput.addEventListener('input', e => {
+      if (llmConcurrencyVal) llmConcurrencyVal.textContent = e.target.value;
+    });
+
+    llmConcurrencyInput.addEventListener('change', e => {
+      handleUpdateSystem(currentDevice, currentNcpu, parseInt(e.target.value));
     });
   }
 
@@ -1775,6 +2132,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const createTaskBtn = document.getElementById('create-task-btn');
   const deleteTaskBtn = document.getElementById('delete-task-btn');
   const workspaceTaskFilter = document.getElementById('workspace-task-filter');
+  const workspaceDeleteTaskBtn = document.getElementById('workspace-delete-task-btn');
 
   const pagePrevBtn = document.getElementById('page-prev-btn');
   const pageNextBtn = document.getElementById('page-next-btn');
@@ -1810,12 +2168,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // deleteTaskBtn is integrated in the dropdown
+  if (deleteTaskBtn) {
+    deleteTaskBtn.addEventListener('click', () => {
+      triggerDeleteActiveTask();
+    });
+  }
+
+  if (workspaceDeleteTaskBtn) {
+    workspaceDeleteTaskBtn.addEventListener('click', () => {
+      triggerDeleteWorkspaceTask();
+    });
+  }
 
   if (workspaceTaskFilter) {
     workspaceTaskFilter.addEventListener('change', e => {
       state.workspaceTaskFilterId = e.target.value;
       state.currentPage = 1;
+      renderTaskSelects();
       renderWorkspace();
     });
   }

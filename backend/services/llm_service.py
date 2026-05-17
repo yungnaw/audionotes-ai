@@ -1,6 +1,7 @@
-"""Unified LLM service supporting Gemini, DeepSeek, Qwen, and GLM."""
+"""Unified LLM service supporting Gemini, DeepSeek, Qwen, GLM, and Local LLM (LM Studio / Ollama)."""
 import logging
 import httpx
+import asyncio
 from ..config import settings
 from . import gemini_service
 
@@ -13,6 +14,7 @@ async def generate_notes(
     provider: str = "gemini",
     api_key: str | None = None,
     model_name: str | None = None,
+    base_url: str | None = None,
 ) -> str:
     """Generate structured study notes from transcription text using chosen provider."""
     provider = provider.lower()
@@ -27,25 +29,38 @@ async def generate_notes(
 
     # Resolve settings for OpenAI-compatible providers
     if provider == "deepseek":
-        base_url = settings.DEEPSEEK_BASE_URL
+        target_base_url = settings.DEEPSEEK_BASE_URL
         default_key = settings.DEEPSEEK_API_KEY
         default_model = settings.DEEPSEEK_MODEL
     elif provider == "qwen":
-        base_url = settings.QWEN_BASE_URL
+        target_base_url = settings.QWEN_BASE_URL
         default_key = settings.QWEN_API_KEY
         default_model = settings.QWEN_MODEL
     elif provider == "glm":
-        base_url = settings.GLM_BASE_URL
+        target_base_url = settings.GLM_BASE_URL
         default_key = settings.GLM_API_KEY
         default_model = settings.GLM_MODEL
+    elif provider in ("local", "local_llm", "lmstudio", "ollama", "custom"):
+        target_base_url = base_url if base_url else settings.LOCAL_LLM_BASE_URL
+        default_key = settings.LOCAL_LLM_API_KEY
+        default_model = settings.LOCAL_LLM_MODEL
     else:
         raise ValueError(f"不支持的 LLM 提供商: {provider}")
 
+    # Use custom base URL if provided (for DeepSeek custom endpoints, etc.)
+    if provider not in ("local", "local_llm", "lmstudio", "ollama", "custom") and base_url:
+        target_base_url = base_url
+
     final_api_key = api_key if api_key else default_key
-    if not final_api_key:
+    
+    # Local LLMs (LM Studio/Ollama) do not strictly require an API key
+    if not final_api_key and provider not in ("local", "local_llm", "lmstudio", "ollama", "custom"):
         raise ValueError(
             f"未提供 {provider.upper()} API Key，请在前端设置中填写，或在环境变量中配置对应 API_KEY。"
         )
+    
+    if not final_api_key:
+        final_api_key = "lm-studio-key"
 
     final_model = model_name if model_name else default_model
 
@@ -76,11 +91,11 @@ async def generate_notes(
         "messages": [{"role": "user", "content": prompt}],
     }
 
-    async with httpx.AsyncClient(timeout=120) as client:
+    async with httpx.AsyncClient(timeout=180) as client:
         try:
-            logger.info(f"Sending request to {provider.upper()} API using model {final_model}...")
+            logger.info(f"Sending request to {provider.upper()} API ({target_base_url}) using model {final_model}...")
             response = await client.post(
-                f"{base_url.rstrip('/')}/chat/completions",
+                f"{target_base_url.rstrip('/')}/chat/completions",
                 headers=headers,
                 json=payload,
             )
@@ -90,3 +105,31 @@ async def generate_notes(
         except Exception as e:
             logger.exception(f"{provider.upper()} API request failed")
             raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+
+
+async def generate_notes_stream(
+    text: str,
+    prompt_template: str = "",
+    provider: str = "gemini",
+    api_key: str | None = None,
+    model_name: str | None = None,
+    base_url: str | None = None,
+):
+    """Async generator that yields note generation progress in chunks."""
+    try:
+        notes = await generate_notes(
+            text=text,
+            prompt_template=prompt_template,
+            provider=provider,
+            api_key=api_key,
+            model_name=model_name,
+            base_url=base_url,
+        )
+        # Yield notes in small chunks to simulate streaming
+        chunk_size = 64
+        for i in range(0, len(notes), chunk_size):
+            yield notes[i:i+chunk_size]
+            await asyncio.sleep(0.01)
+    except Exception as e:
+        logger.exception("generate_notes_stream failed")
+        raise e

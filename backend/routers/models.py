@@ -47,11 +47,12 @@ def list_gemini_models(
 class SystemConfigRequest(BaseModel):
     device: str
     ncpu: int
+    summary_concurrency: Optional[int] = None
 
 
 @router.get("/system")
 def get_system_config(current_user: User = Depends(get_current_user)):
-    """Get current SenseVoice device and thread configuration."""
+    """Get current SenseVoice device, thread, and LLM concurrency configuration."""
     cuda_available = False
     try:
         import torch
@@ -62,6 +63,7 @@ def get_system_config(current_user: User = Depends(get_current_user)):
     return {
         "device": settings.SENSEVOICE_DEVICE,
         "ncpu": settings.SENSEVOICE_NCPU,
+        "summary_concurrency": settings.SUMMARY_CONCURRENCY,
         "cuda_available": cuda_available
     }
 
@@ -71,16 +73,21 @@ def update_system_config(
     config: SystemConfigRequest,
     admin: User = Depends(require_admin),
 ):
-    """Update SenseVoice device and thread configuration (admin only)."""
+    """Update SenseVoice device, thread, and LLM concurrency configuration (admin only)."""
     from ..services import sensevoice_service
     from . import process
     settings.SENSEVOICE_DEVICE = config.device
     settings.SENSEVOICE_NCPU = config.ncpu
+    if config.summary_concurrency is not None:
+        settings.SUMMARY_CONCURRENCY = config.summary_concurrency
+        process.reset_summary_semaphore(config.summary_concurrency)
+        
     sensevoice_service.reset_sensevoice()
     process.reset_transcribe_semaphore(config.ncpu)
     
     return {
         "status": "ok",
         "device": settings.SENSEVOICE_DEVICE,
-        "ncpu": settings.SENSEVOICE_NCPU
+        "ncpu": settings.SENSEVOICE_NCPU,
+        "summary_concurrency": settings.SUMMARY_CONCURRENCY,
     }

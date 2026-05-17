@@ -12,13 +12,34 @@ from fastapi.staticfiles import StaticFiles
 
 from .config import settings
 from .models.database import init_db
-from .routers import audio, process, bilibili, export, models, auth, admin
+from .routers import audio, process, bilibili, export, models, auth, admin, prompts
 
-# Logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+# Logging — output to both terminal and file
+LOG_DIR = Path(__file__).parent.parent / "logs"
+LOG_DIR.mkdir(exist_ok=True)
+
+log_format = logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+
+# File handler (with rotation — max 10 MB, keeps 3 backups)
+from logging.handlers import RotatingFileHandler
+file_handler = RotatingFileHandler(
+    LOG_DIR / "app.log", maxBytes=10 * 1024 * 1024, backupCount=3, encoding="utf-8"
 )
+file_handler.setFormatter(log_format)
+file_handler.setLevel(logging.INFO)
+
+# Stream handler (terminal)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(log_format)
+stream_handler.setLevel(logging.INFO)
+
+# Apply to root logger so all modules inherit
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.INFO)
+root_logger.handlers.clear()  # remove basicConfig defaults
+root_logger.addHandler(file_handler)
+root_logger.addHandler(stream_handler)
+
 logger = logging.getLogger(__name__)
 
 # Create app
@@ -45,6 +66,7 @@ app.include_router(bilibili.router)
 app.include_router(export.router)
 app.include_router(models.router)
 app.include_router(admin.router)
+app.include_router(prompts.router)
 
 
 
@@ -73,6 +95,13 @@ def on_startup():
         except Exception:
             pass  # Column already exists
 
+        # users: ensure default_prompt column exists
+        try:
+            conn.execute(sa.text("ALTER TABLE users ADD COLUMN default_prompt TEXT"))
+            conn.commit()
+            logger.info("Migration: added default_prompt to users")
+        except Exception:
+            pass  # Column already exists
     logger.info(f"Database initialized: {settings.DATABASE_URL}")
     logger.info(f"Upload directory: {Path(settings.UPLOAD_DIR).resolve()}")
     logger.info(f"Gemini model: {settings.GEMINI_MODEL}")

@@ -1,0 +1,1 @@
+Error running git diff: 'gbk' codec can't decode byte 0xaf in position 1501: illegal multibyte sequence

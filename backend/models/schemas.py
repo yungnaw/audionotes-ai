@@ -9,6 +9,7 @@ class ProcessRequest(BaseModel):
     provider: str = "gemini"
     api_key: Optional[str] = None
     model_name: Optional[str] = None
+    base_url: Optional[str] = None
 
 
 # ===== Bilibili =====
@@ -74,6 +75,7 @@ class ChangePasswordRequest(BaseModel):
 class UpdateProfileRequest(BaseModel):
     email: Optional[str] = None
     avatar_url: Optional[str] = None
+    default_prompt: Optional[str] = None
 
 
 class TokenResponse(BaseModel):
@@ -89,11 +91,32 @@ class UserResponse(BaseModel):
     role: str = "user"
     is_active: bool = True
     avatar_url: str = ""
+    default_prompt: str = ""
     storage_quota_mb: int = 5120
     created_at: Optional[str] = None
 
 
 # ===== Admin =====
+# ===== Prompt Templates =====
+class PromptTemplateCreate(BaseModel):
+    name: str
+    content: str
+
+
+class PromptTemplateUpdate(BaseModel):
+    name: Optional[str] = None
+    content: Optional[str] = None
+
+
+class PromptTemplateResponse(BaseModel):
+    id: str
+    user_id: str
+    name: str
+    content: str
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+
+
 class AdminUpdateUserRequest(BaseModel):
     is_active: Optional[bool] = None
     role: Optional[str] = None

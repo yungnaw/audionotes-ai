@@ -1,0 +1,2018 @@
+2026-05-17 12:38:33,949 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:38:33,950 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:38:33,950 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:38:33,950 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:38:33,951 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:41:20,829 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:41:20,830 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:41:20,830 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:41:20,830 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:41:20,831 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:41:37,844 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:41:37,845 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:41:37,845 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:41:37,845 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:41:37,846 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:42:34,671 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:42:34,672 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:42:34,672 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:42:34,672 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:42:34,672 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:43:53,485 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:43:53,486 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:43:53,486 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:43:53,486 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:43:53,487 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:47:05,058 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:47:05,059 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:47:05,059 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:47:05,059 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:47:05,059 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:47:22,372 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:47:22,373 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:47:22,373 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:47:22,373 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:47:22,373 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:47:59,071 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:47:59,072 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:47:59,072 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:47:59,072 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:47:59,072 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:48:28,808 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:48:28,808 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:48:28,808 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:48:28,808 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:48:28,809 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:49:16,669 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:49:16,669 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:49:16,669 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:49:16,670 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:49:16,670 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:58:21,590 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:58:21,590 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:58:21,590 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:58:21,591 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:58:21,591 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:58:30,332 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:58:30,333 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:58:30,333 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:58:30,333 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:58:30,333 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 12:59:07,925 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 12:59:07,926 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 12:59:07,926 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 12:59:07,926 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 12:59:07,926 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 13:18:56,449 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 13:18:56,450 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 13:18:56,450 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 13:18:56,450 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 13:18:56,450 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 13:19:19,567 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 13:19:19,568 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 13:19:19,568 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 13:19:19,568 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 13:19:19,568 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 13:31:57,299 [INFO] backend.services.sensevoice_service: Loading SenseVoice model (first time, may take 30-60s)...
+2026-05-17 13:31:58,897 [INFO] root: download models from model hub: ms
+2026-05-17 13:32:03,062 [WARNING] root: trust_remote_code: False
+2026-05-17 13:32:04,509 [INFO] root: Loading pretrained params from C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt
+2026-05-17 13:32:04,514 [INFO] root: ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt
+2026-05-17 13:32:05,632 [INFO] root: scope_map: ['module.', 'None']
+2026-05-17 13:32:05,632 [INFO] root: excludes: None
+2026-05-17 13:32:05,748 [INFO] root: Loading ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt, status: <All keys matched successfully>
+2026-05-17 13:32:05,760 [INFO] root: Building VAD model.
+2026-05-17 13:32:05,760 [INFO] root: download models from model hub: ms
+2026-05-17 13:32:09,949 [WARNING] root: trust_remote_code: False
+2026-05-17 13:32:09,958 [INFO] root: Loading pretrained params from C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt
+2026-05-17 13:32:09,958 [INFO] root: ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt
+2026-05-17 13:32:09,968 [INFO] root: scope_map: ['module.', 'None']
+2026-05-17 13:32:09,968 [INFO] root: excludes: None
+2026-05-17 13:32:09,969 [INFO] root: Loading ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt, status: <All keys matched successfully>
+2026-05-17 13:32:10,034 [INFO] backend.services.sensevoice_service: SenseVoice model loaded successfully.
+2026-05-17 13:32:39,282 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 8
+2026-05-17 13:33:05,759 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 13:33:05,767 [INFO] httpx: HTTP Request: POST http://127.0.0.1:1234/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 13:54:55,370 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 13:54:55,371 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 13:54:55,371 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 13:54:55,371 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 13:54:55,371 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 13:56:40,950 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 13:56:40,951 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 13:56:40,951 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 13:56:40,951 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 13:56:40,951 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 14:03:42,807 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 8
+2026-05-17 14:07:56,900 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 14:07:56,901 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 14:07:56,901 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 14:07:56,901 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 14:07:56,901 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 14:08:06,383 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 8
+2026-05-17 14:09:17,895 [INFO] backend.services.sensevoice_service: Loading SenseVoice model (first time, may take 30-60s)...
+2026-05-17 14:09:19,429 [INFO] root: download models from model hub: ms
+2026-05-17 14:09:23,505 [WARNING] root: trust_remote_code: False
+2026-05-17 14:09:25,171 [INFO] root: Loading pretrained params from C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt
+2026-05-17 14:09:25,175 [INFO] root: ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt
+2026-05-17 14:09:26,476 [INFO] root: scope_map: ['module.', 'None']
+2026-05-17 14:09:26,477 [INFO] root: excludes: None
+2026-05-17 14:09:26,585 [INFO] root: Loading ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt, status: <All keys matched successfully>
+2026-05-17 14:09:26,596 [INFO] root: Building VAD model.
+2026-05-17 14:09:26,596 [INFO] root: download models from model hub: ms
+2026-05-17 14:09:30,910 [WARNING] root: trust_remote_code: False
+2026-05-17 14:09:30,919 [INFO] root: Loading pretrained params from C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt
+2026-05-17 14:09:30,919 [INFO] root: ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt
+2026-05-17 14:09:30,925 [INFO] root: scope_map: ['module.', 'None']
+2026-05-17 14:09:30,925 [INFO] root: excludes: None
+2026-05-17 14:09:30,926 [INFO] root: Loading ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt, status: <All keys matched successfully>
+2026-05-17 14:09:30,980 [INFO] backend.services.sensevoice_service: SenseVoice model loaded successfully.
+2026-05-17 14:10:23,312 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 14:11:31,276 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 14:51:19,879 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 14:51:19,880 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 14:51:19,880 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 14:51:19,880 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 14:51:19,880 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 15:26:27,573 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 15:26:27,574 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 15:26:27,574 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 15:26:27,574 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 15:26:27,574 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 15:27:16,045 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 4
+2026-05-17 15:27:17,031 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 4
+2026-05-17 15:27:18,346 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 6
+2026-05-17 15:27:19,203 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 7
+2026-05-17 15:27:21,192 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 8
+2026-05-17 15:46:47,358 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 15:46:47,359 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 15:46:47,359 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 15:46:47,359 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 15:46:47,359 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 15:47:04,726 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 15:47:04,727 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 15:47:04,727 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 15:47:04,727 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 15:47:04,727 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 15:55:00,086 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 15:55:00,087 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 15:55:00,087 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 15:55:00,087 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 15:55:00,088 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 15:57:33,981 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:44,371 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:44,463 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585572440&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:44,556 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585572440&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:44,557 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:44,557 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/40/24/29585572440/29585572440-1-...
+2026-05-17 15:57:44,955 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/40/24/29585572440/29585572440-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&oi=0x240e03b42cf103b0e19f33799a52f82d&gen=playurlv3&os=estgoss&og=cos&nbs=1&trid=7d5c9a2095984a3488163b8dfaa69ffu&deadline=1779011870&platform=pc&mid=0&uipk=5&upsig=142a76ea89c7ae18ef0568cf9e809893&uparams=e,oi,gen,os,og,nbs,trid,deadline,platform,mid,uipk&bvc=vod&nettype=0&bw=36575&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=2a2cfe562c6c256400e334ce6a0974fe&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:45,246 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3172947 bytes
+2026-05-17 15:57:45,382 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:45,452 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585637928&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:45,572 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585637928&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:45,574 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:45,574 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/28/79/29585637928/29585637928-...
+2026-05-17 15:57:46,108 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/28/79/29585637928/29585637928-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&os=cosbv&uipk=5&nbs=1&oi=0x240e03b42cf103b0e19f33799a52f82d&gen=playurlv3&og=hw&mid=0&deadline=1779011871&trid=df751d45053a40a48ec228fa0a7f632u&platform=pc&upsig=812eb0c9fc61d66b706d15b0c3fd10a9&uparams=e,os,uipk,nbs,oi,gen,og,mid,deadline,trid,platform&bvc=vod&nettype=0&bw=37064&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=b67374fb38884dda009513b16a0974ff&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:47,358 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3159762 bytes
+2026-05-17 15:57:47,491 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:47,591 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638248&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:47,664 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638248&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:47,665 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:47,665 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/48/82/29585638248/29585638248-1-...
+2026-05-17 15:57:47,882 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/48/82/29585638248/29585638248-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&og=cos&oi=0x240e03b42cf103b0e19f33799a52f82d&trid=181b7f826fa84c528ea5195a636c55au&deadline=1779011873&nbs=1&uipk=5&gen=playurlv3&os=estgcos&platform=pc&upsig=5272d86e03a376354e69719c16c35ccc&uparams=e,mid,og,oi,trid,deadline,nbs,uipk,gen,os,platform&bvc=vod&nettype=0&bw=37338&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=a3a58f0f544a211600f23f856a097501&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:48,063 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3593818 bytes
+2026-05-17 15:57:48,163 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:48,242 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638126&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:48,328 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638126&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:48,329 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:48,329 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/26/81/29585638126/29585638126-1-...
+2026-05-17 15:57:48,516 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/26/81/29585638126/29585638126-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=830f52422a084e608d77f39e6ac76c9u&gen=playurlv3&os=estgoss&og=ali&uipk=5&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011873&nbs=1&platform=pc&mid=0&upsig=345eae512fa45690b6ca835986c7c6bb&uparams=e,trid,gen,os,og,uipk,oi,deadline,nbs,platform,mid&bvc=vod&nettype=0&bw=37654&f=u_0_0&qn_dyeid=b1dcfe13bf4284a5002b3f346a097502&agrr=1&buvid=&build=0&dl=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:48,841 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3440683 bytes
+2026-05-17 15:57:48,963 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:49,082 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638225&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:49,161 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638225&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:49,162 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:49,163 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirror08c.bilivideo.com/upgcxcode/25/82/29585638225/29585638225-...
+2026-05-17 15:57:49,276 [INFO] httpx: HTTP Request: GET https://upos-sz-mirror08c.bilivideo.com/upgcxcode/25/82/29585638225/29585638225-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&oi=0x240e03b42cf103b0e19f33799a52f82d&platform=pc&deadline=1779011874&uipk=5&gen=playurlv3&og=hw&trid=7eeb40f059414bc69dda5f781022476u&nbs=1&os=08cbv&upsig=d72bcdeffc2582571fdbaf1972379af5&uparams=e,mid,oi,platform,deadline,uipk,gen,og,trid,nbs,os&bvc=vod&nettype=0&bw=37576&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=549f14dd74e2c67900c8911c6a097502&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:49,752 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2672610 bytes
+2026-05-17 15:57:49,887 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:50,029 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638387&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:50,205 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638387&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:50,207 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:50,207 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estghw.bilivideo.com/upgcxcode/87/83/29585638387/29585638387-1-3...
+2026-05-17 15:57:50,376 [INFO] httpx: HTTP Request: GET https://upos-sz-estghw.bilivideo.com/upgcxcode/87/83/29585638387/29585638387-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&platform=pc&nbs=1&oi=0x240e03b42cf103b0e19f33799a52f82d&gen=playurlv3&os=estghw&og=hw&deadline=1779011875&uipk=5&trid=04e2e514a19e4f6eab1e62f72d88d28u&upsig=6a7b7f2d1fbb93e73a6a563702d205de&uparams=e,mid,platform,nbs,oi,gen,os,og,deadline,uipk,trid&bvc=vod&nettype=0&bw=37369&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=07ecb4fab5334cbc00231ed46a097503&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:50,752 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2559813 bytes
+2026-05-17 15:57:50,855 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:50,924 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638570&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:50,998 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638570&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:50,999 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:51,000 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/70/85/29585638570/29585638570-1-...
+2026-05-17 15:57:51,223 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/70/85/29585638570/29585638570-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&nbs=1&oi=0x240e03b42cf103b0e19f33799a52f82d&trid=211123aec7ca4c3dbf684baaf44df6eu&mid=0&os=estgcos&og=cos&deadline=1779011876&platform=pc&uipk=5&gen=playurlv3&upsig=e3479ad5c9b45ff40daeb649e23142e7&uparams=e,nbs,oi,trid,mid,os,og,deadline,platform,uipk,gen&bvc=vod&nettype=0&bw=37219&f=u_0_0&qn_dyeid=bd1801c394870f3300f89a996a097504&agrr=1&buvid=&build=0&dl=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:51,378 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2740294 bytes
+2026-05-17 15:57:51,509 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:51,608 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638530&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:51,742 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638530&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:51,743 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:51,743 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estghw.bilivideo.com/upgcxcode/30/85/29585638530/29585638530-1-3...
+2026-05-17 15:57:51,954 [INFO] httpx: HTTP Request: GET https://upos-sz-estghw.bilivideo.com/upgcxcode/30/85/29585638530/29585638530-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&nbs=1&platform=pc&deadline=1779011877&trid=41bbf9913c904279900544b8f1e7bffu&mid=0&gen=playurlv3&os=estghw&og=hw&uipk=5&oi=0x240e03b42cf103b0e19f33799a52f82d&upsig=7f62574f05c2eb783e29920cbe1f01e9&uparams=e,nbs,platform,deadline,trid,mid,gen,os,og,uipk,oi&bvc=vod&nettype=0&bw=37255&f=u_0_0&qn_dyeid=f2093e1968ed44ba00657e636a097505&agrr=1&buvid=&build=0&dl=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:52,570 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3469414 bytes
+2026-05-17 15:57:52,675 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:52,778 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638636&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:52,883 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638636&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:52,885 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:52,885 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorbd.bilivideo.com/upgcxcode/36/86/29585638636/29585638636-1...
+2026-05-17 15:57:53,057 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorbd.bilivideo.com/upgcxcode/36/86/29585638636/29585638636-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&platform=pc&trid=87e7ab0e2c4b4e768f7ddcf04c7e5cau&deadline=1779011878&gen=playurlv3&os=bdbv&uipk=5&nbs=1&mid=0&og=hw&oi=0x240e03b42cf103b0e19f33799a52f82d&upsig=156d96b8bda20fa6e50f52da24288548&uparams=e,platform,trid,deadline,gen,os,uipk,nbs,mid,og,oi&bvc=vod&nettype=0&bw=37463&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=c884bee89982be5d001e64dc6a097506&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:53,452 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2519418 bytes
+2026-05-17 15:57:53,578 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:53,679 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638867&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:53,799 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638867&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:53,800 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:53,800 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estghw.bilivideo.com/upgcxcode/67/88/29585638867/29585638867-1-3...
+2026-05-17 15:57:54,018 [INFO] httpx: HTTP Request: GET https://upos-sz-estghw.bilivideo.com/upgcxcode/67/88/29585638867/29585638867-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&deadline=1779011879&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&gen=playurlv3&og=hw&uipk=5&os=estghw&nbs=1&trid=889d078315184876aee9669a5c6c6ccu&mid=0&upsig=9d1f1a4d688194fa503b7c0216b75901&uparams=e,deadline,platform,oi,gen,og,uipk,os,nbs,trid,mid&bvc=vod&nettype=0&bw=37569&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=aca3a5200dea550000e8af9a6a097507&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:54,563 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3132321 bytes
+2026-05-17 15:57:54,688 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:54,769 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638907&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:54,883 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638907&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:54,884 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:54,884 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorzos.bilivideo.com/upgcxcode/07/89/29585638907/29585638907-...
+2026-05-17 15:57:55,052 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorzos.bilivideo.com/upgcxcode/07/89/29585638907/29585638907-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&gen=playurlv3&os=zosbv&og=hw&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011880&nbs=1&uipk=5&trid=9333d40932f04ff3a4c320115749011u&upsig=8025280d51aff26cacd4453c77211a90&uparams=e,mid,gen,os,og,platform,oi,deadline,nbs,uipk,trid&bvc=vod&nettype=0&bw=37641&build=0&dl=0&f=u_0_0&qn_dyeid=4f41f589913b11e4007c3c596a097508&agrr=1&buvid=&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:55,461 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2785460 bytes
+2026-05-17 15:57:55,883 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:55,955 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585638999&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:56,104 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585638999&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:56,105 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:56,105 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/99/89/29585638999/29585638999-1-...
+2026-05-17 15:57:56,359 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/99/89/29585638999/29585638999-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&deadline=1779011881&uipk=5&platform=pc&nbs=1&trid=3ea9dbc373b84dc68c33c212f050a85u&oi=0x240e03b42cf103b0e19f33799a52f82d&og=cos&mid=0&gen=playurlv3&os=estgcos&upsig=891d90c8f5d43e1fd4936016608ac9bb&uparams=e,deadline,uipk,platform,nbs,trid,oi,og,mid,gen,os&bvc=vod&nettype=0&bw=37372&f=u_0_0&qn_dyeid=4600659408eee4c000d965796a097509&agrr=1&buvid=&build=0&dl=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:56,535 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3340152 bytes
+2026-05-17 15:57:56,660 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:56,755 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585639177&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:56,843 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585639177&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:56,844 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:56,845 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/77/91/29585639177/29585639177-1-...
+2026-05-17 15:57:57,060 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/77/91/29585639177/29585639177-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=c50e9fb04e064d2b8ca61229bc36545u&deadline=1779011882&nbs=1&platform=pc&gen=playurlv3&og=cos&oi=0x240e03b42cf103b0e19f33799a52f82d&mid=0&uipk=5&os=estgcos&upsig=ca040ccfe3b538c20619678701ddba51&uparams=e,trid,deadline,nbs,platform,gen,og,oi,mid,uipk,os&bvc=vod&nettype=0&bw=37507&qn_dyeid=9dbf3c6a8607249a00512b8b6a09750a&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:57,243 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3319455 bytes
+2026-05-17 15:57:57,383 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:57,480 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585639208&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:57,602 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585639208&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:57,604 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:57,604 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/08/92/29585639208/29585639208-1-...
+2026-05-17 15:57:58,045 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/08/92/29585639208/29585639208-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&platform=pc&mid=0&os=estgoss&nbs=1&trid=ee0a15335d8c4420a2d4714cd9e8ee8u&gen=playurlv3&og=cos&uipk=5&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011883&upsig=533f4e095d28d994111b6789415f2083&uparams=e,platform,mid,os,nbs,trid,gen,og,uipk,oi,deadline&bvc=vod&nettype=0&bw=37529&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=6d4685bd12feade80044c4336a09750b&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:58,355 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3630950 bytes
+2026-05-17 15:57:58,477 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:58,578 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585639447&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:58,706 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585639447&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:58,707 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:58,707 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/47/94/29585639447/29585639447-1-...
+2026-05-17 15:57:58,927 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/47/94/29585639447/29585639447-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&gen=playurlv3&os=estgcos&og=cos&mid=0&uipk=5&nbs=1&platform=pc&trid=747fed28fce24a9c8f5ae055e52c769u&deadline=1779011884&oi=0x240e03b42cf103b0e19f33799a52f82d&upsig=05fad6df7aa7bb8bd2c1c159eead1b58&uparams=e,gen,os,og,mid,uipk,nbs,platform,trid,deadline,oi&bvc=vod&nettype=0&bw=37170&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=b06420e42d31dae90071ca7c6a09750c&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:59,125 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3828586 bytes
+2026-05-17 15:57:59,251 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:59,365 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585639582&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:57:59,487 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585639582&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:57:59,488 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:57:59,488 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/82/95/29585639582/29585639582-1-...
+2026-05-17 15:57:59,696 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/82/95/29585639582/29585639582-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&uipk=5&deadline=1779011885&oi=0x240e03b42cf103b0e19f33799a52f82d&mid=0&gen=playurlv3&og=cos&platform=pc&trid=99e8aa75c8d448c7b86bff4340ca267u&nbs=1&os=estgcos&upsig=278ea2b952bb6a347048b3bf940c8e35&uparams=e,uipk,deadline,oi,mid,gen,og,platform,trid,nbs,os&bvc=vod&nettype=0&bw=37496&dl=0&f=u_0_0&qn_dyeid=dd052fd1ac30cd9900cd76636a09750d&agrr=1&buvid=&build=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:57:59,907 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3805923 bytes
+2026-05-17 15:58:00,059 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:00,180 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585639523&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:00,254 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585639523&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:00,255 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:00,256 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/23/95/29585639523/29585639523-1-...
+2026-05-17 15:58:00,527 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/23/95/29585639523/29585639523-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&og=hw&deadline=1779011885&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&mid=0&uipk=5&gen=playurlv3&os=estgcos&nbs=1&trid=34bc8bbe10ab455e9de1697dc5b1894u&upsig=40b342be8f7a07c6d019e1ab607dbd95&uparams=e,og,deadline,platform,oi,mid,uipk,gen,os,nbs,trid&bvc=vod&nettype=0&bw=38079&qn_dyeid=157bf25f7cb4bcb90097fcd16a09750d&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:00,665 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2160995 bytes
+2026-05-17 15:58:00,782 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:00,887 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585639882&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:00,990 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585639882&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:00,991 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:00,991 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/82/98/29585639882/29585639882-1-...
+2026-05-17 15:58:01,236 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/82/98/29585639882/29585639882-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&oi=0x240e03b42cf103b0e19f33799a52f82d&platform=pc&deadline=1779011886&og=cos&nbs=1&gen=playurlv3&os=estgcos&trid=db06033c9d33470eb663e7f2af65ed8u&mid=0&uipk=5&upsig=aa29a2cabe7eb5d5298bf6a0552550cb&uparams=e,oi,platform,deadline,og,nbs,gen,os,trid,mid,uipk&bvc=vod&nettype=0&bw=37655&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=c3bb2ef2af4dbc870016bbef6a09750e&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:01,407 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3323105 bytes
+2026-05-17 15:58:01,529 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:01,632 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585639909&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:01,703 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585639909&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:01,704 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:01,704 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/09/99/29585639909/29585639909-...
+2026-05-17 15:58:02,295 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/09/99/29585639909/29585639909-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=6a4b91850595408d8c6a382081872f3u&deadline=1779011887&gen=playurlv3&os=cosbv&og=cos&oi=0x240e03b42cf103b0e19f33799a52f82d&uipk=5&mid=0&nbs=1&platform=pc&upsig=7866168bd4f1cca61ae6713be7cd4536&uparams=e,trid,deadline,gen,os,og,oi,uipk,mid,nbs,platform&bvc=vod&nettype=0&bw=37793&qn_dyeid=b07e7afa5694495c00647cd26a09750f&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:03,055 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2295926 bytes
+2026-05-17 15:58:03,177 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:03,281 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640009&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:03,397 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640009&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:03,398 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:03,398 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/09/00/29585640009/29585640009-...
+2026-05-17 15:58:03,811 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/09/00/29585640009/29585640009-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=b601e70476444c69b81e8caeae23f52u&mid=0&platform=pc&uipk=5&oi=0x240e03b42cf103b0e19f33799a52f82d&gen=playurlv3&os=cosbv&deadline=1779011888&nbs=1&og=cos&upsig=577d6704386f83b1c34b45b0e753e725&uparams=e,trid,mid,platform,uipk,oi,gen,os,deadline,nbs,og&bvc=vod&nettype=0&bw=39677&build=0&dl=0&f=u_0_0&qn_dyeid=a3461157bc394e4200a519696a097511&agrr=1&buvid=&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:04,753 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3536284 bytes
+2026-05-17 15:58:04,881 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:04,955 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640253&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:05,024 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640253&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:05,025 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:05,025 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/53/02/29585640253/29585640253-...
+2026-05-17 15:58:05,427 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/53/02/29585640253/29585640253-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&uipk=5&oi=0x240e03b42cf103b0e19f33799a52f82d&nbs=1&os=cosbv&platform=pc&trid=99851db36a934cdf82e4113a8a0140du&gen=playurlv3&og=cos&mid=0&deadline=1779011890&upsig=03147f55971354b00dfc9302d04134ec&uparams=e,uipk,oi,nbs,os,platform,trid,gen,og,mid,deadline&bvc=vod&nettype=0&bw=40000&qn_dyeid=c5dcac6dd3902e4700ff93026a097512&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:06,450 [INFO] backend.services.bilibili_service: Audio downloaded OK: 4000044 bytes
+2026-05-17 15:58:06,556 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:06,635 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640302&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:06,719 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640302&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:06,720 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:06,720 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/02/03/29585640302/29585640302-1-...
+2026-05-17 15:58:07,103 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/02/03/29585640302/29585640302-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&nbs=1&platform=pc&mid=0&gen=playurlv3&os=estgoss&deadline=1779011892&uipk=5&oi=0x240e03b42cf103b0e19f33799a52f82d&trid=4aa2012207874ae3a183938791f9152u&og=cos&upsig=e586fb4f7ec406639025215c50f623f3&uparams=e,nbs,platform,mid,gen,os,deadline,uipk,oi,trid,og&bvc=vod&nettype=0&bw=39922&dl=0&f=u_0_0&qn_dyeid=4d2ae1d1c9f695c1005661b06a097514&agrr=1&buvid=&build=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:07,337 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2904379 bytes
+2026-05-17 15:58:07,442 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:07,514 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640324&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:07,594 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640324&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:07,596 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:07,596 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirror08c.bilivideo.com/upgcxcode/24/03/29585640324/29585640324-...
+2026-05-17 15:58:07,801 [INFO] httpx: HTTP Request: GET https://upos-sz-mirror08c.bilivideo.com/upgcxcode/24/03/29585640324/29585640324-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&os=08cbv&og=hw&trid=f717318b430c4906b14a86f69b048c7u&nbs=1&oi=0x240e03b42cf103b0e19f33799a52f82d&platform=pc&mid=0&uipk=5&deadline=1779011893&gen=playurlv3&upsig=3a67467c1dd702ea609c8ce5d9789417&uparams=e,os,og,trid,nbs,oi,platform,mid,uipk,deadline,gen&bvc=vod&nettype=0&bw=39706&qn_dyeid=a8d64b90d19f7997001d170a6a097515&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:08,213 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2471739 bytes
+2026-05-17 15:58:08,344 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:08,432 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640541&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:08,553 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640541&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:08,554 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:08,554 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/41/05/29585640541/29585640541-1-...
+2026-05-17 15:58:08,987 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/41/05/29585640541/29585640541-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&uipk=5&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011894&nbs=1&og=ali&trid=040dfa49fe8146128d55b5582f50432u&gen=playurlv3&os=estgoss&upsig=714ae6a11186db52f0c09fb75a738329&uparams=e,mid,uipk,platform,oi,deadline,nbs,og,trid,gen,os&bvc=vod&nettype=0&bw=39585&build=0&dl=0&f=u_0_0&qn_dyeid=c672da7d72c3fe3d0044a1cb6a097516&agrr=1&buvid=&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:09,535 [INFO] backend.services.bilibili_service: Audio downloaded OK: 5730013 bytes
+2026-05-17 15:58:09,662 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:09,730 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640535&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:09,834 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640535&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:09,834 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:09,835 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/35/05/29585640535/29585640535-1-...
+2026-05-17 15:58:10,232 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/35/05/29585640535/29585640535-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&deadline=1779011895&trid=8cc65311ed4e4ae0afc2434b206461eu&oi=0x240e03b42cf103b0e19f33799a52f82d&os=estgoss&nbs=1&gen=playurlv3&og=ali&uipk=5&platform=pc&upsig=04f247eb9323e2cc3c2908909a21c15f&uparams=e,mid,deadline,trid,oi,os,nbs,gen,og,uipk,platform&bvc=vod&nettype=0&bw=39873&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=5d84954a3edfcf4b00f6e19a6a097517&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:10,826 [INFO] backend.services.bilibili_service: Audio downloaded OK: 6280130 bytes
+2026-05-17 15:58:10,966 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:11,038 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640769&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:11,159 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640769&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:11,160 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:11,160 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/69/07/29585640769/29585640769-1-...
+2026-05-17 15:58:11,379 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/69/07/29585640769/29585640769-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&nbs=1&gen=playurlv3&os=estgcos&og=cos&trid=8e3d752281ec4096a82ee3c97bab208u&deadline=1779011896&uipk=5&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&upsig=0173e851e011e483aea014cba9d2262b&uparams=e,mid,nbs,gen,os,og,trid,deadline,uipk,platform,oi&bvc=vod&nettype=0&bw=37381&dl=0&f=u_0_0&qn_dyeid=92d5e3e495326755001dba006a097518&agrr=1&buvid=&build=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:11,600 [INFO] backend.services.bilibili_service: Audio downloaded OK: 5317511 bytes
+2026-05-17 15:58:11,730 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:11,827 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640901&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:11,939 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640901&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:11,940 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:11,940 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estghw.bilivideo.com/upgcxcode/01/09/29585640901/29585640901-1-3...
+2026-05-17 15:58:12,074 [INFO] httpx: HTTP Request: GET https://upos-sz-estghw.bilivideo.com/upgcxcode/01/09/29585640901/29585640901-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=09949e1c669e4068ad201fe6453e6aeu&gen=playurlv3&os=estghw&deadline=1779011897&og=hw&uipk=5&oi=0x240e03b42cf103b0e19f33799a52f82d&mid=0&nbs=1&platform=pc&upsig=2555023fd7081173924687dc0b04ad68&uparams=e,trid,gen,os,deadline,og,uipk,oi,mid,nbs,platform&bvc=vod&nettype=0&bw=37633&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=dbf7eac3ec3e904200fe40ce6a097519&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:12,538 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2827184 bytes
+2026-05-17 15:58:12,641 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:12,707 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585640930&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:12,831 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585640930&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:12,832 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:12,832 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorzos.bilivideo.com/upgcxcode/30/09/29585640930/29585640930-...
+2026-05-17 15:58:13,150 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorzos.bilivideo.com/upgcxcode/30/09/29585640930/29585640930-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&gen=playurlv3&og=hw&oi=0x240e03b42cf103b0e19f33799a52f82d&trid=7c73ed99d82e4ac6bc3ae8ad2c244e8u&uipk=5&os=zosbv&deadline=1779011898&nbs=1&platform=pc&upsig=13d420f58f2e3187d05bf1af17ef20bb&uparams=e,mid,gen,og,oi,trid,uipk,os,deadline,nbs,platform&bvc=vod&nettype=0&bw=38305&qn_dyeid=53449da9b8d144b600e5aae86a09751a&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:14,382 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3409194 bytes
+2026-05-17 15:58:14,504 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:14,605 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585641170&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:14,718 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585641170&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:14,719 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:14,720 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirror08c.bilivideo.com/upgcxcode/70/11/29585641170/29585641170-...
+2026-05-17 15:58:14,831 [INFO] httpx: HTTP Request: GET https://upos-sz-mirror08c.bilivideo.com/upgcxcode/70/11/29585641170/29585641170-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=5fa4a384fd0c47ecb69885b1c1fd513u&gen=playurlv3&og=hw&nbs=1&mid=0&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011900&os=08cbv&uipk=5&platform=pc&upsig=51ccb401107a591ffe7fac5023f2aa1b&uparams=e,trid,gen,og,nbs,mid,oi,deadline,os,uipk,platform&bvc=vod&nettype=0&bw=38920&dl=0&f=u_0_0&qn_dyeid=bb2aba3cd9fbc07b000cc07c6a09751c&agrr=1&buvid=&build=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:15,165 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2014157 bytes
+2026-05-17 15:58:15,269 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:15,390 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585641253&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:15,471 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585641253&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:15,472 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:15,472 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/53/12/29585641253/29585641253-1-...
+2026-05-17 15:58:15,698 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/53/12/29585641253/29585641253-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&uipk=5&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&trid=c8c8a3a4f6b34c1ab39827f42506b50u&gen=playurlv3&og=cos&mid=0&deadline=1779011901&nbs=1&os=estgcos&upsig=f63ccddef71020989ce1a0996eeaf18e&uparams=e,uipk,platform,oi,trid,gen,og,mid,deadline,nbs,os&bvc=vod&nettype=0&bw=39025&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=c87bb368ad8db9dc00f8cd316a09751c&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:15,860 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2136628 bytes
+2026-05-17 15:58:15,991 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:16,077 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585641214&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:16,148 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585641214&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:16,149 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:16,149 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirror08c.bilivideo.com/upgcxcode/14/12/29585641214/29585641214-...
+2026-05-17 15:58:16,266 [INFO] httpx: HTTP Request: GET https://upos-sz-mirror08c.bilivideo.com/upgcxcode/14/12/29585641214/29585641214-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&gen=playurlv3&oi=0x240e03b42cf103b0e19f33799a52f82d&platform=pc&trid=f7fe889a89d54520a56eaa707dcbd4bu&nbs=1&os=08cbv&og=hw&mid=0&deadline=1779011901&uipk=5&upsig=cf14e55adef5fce38b310cdec7e038c2&uparams=e,gen,oi,platform,trid,nbs,os,og,mid,deadline,uipk&bvc=vod&nettype=0&bw=36044&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=4492d873189bec9300cc41dc6a09751d&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:17,163 [INFO] backend.services.bilibili_service: Audio downloaded OK: 5023676 bytes
+2026-05-17 15:58:17,294 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:17,384 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585641465&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:17,496 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585641465&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:17,497 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:17,498 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/65/14/29585641465/29585641465-1-...
+2026-05-17 15:58:17,928 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/65/14/29585641465/29585641465-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&uipk=5&gen=playurlv3&os=estgoss&og=ali&nbs=1&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011903&platform=pc&mid=0&trid=14091535c1974eb687dc76a1f28303au&upsig=0a16f2d9d6c0b18fb6c9f2293422e671&uparams=e,uipk,gen,os,og,nbs,oi,deadline,platform,mid,trid&bvc=vod&nettype=0&bw=35964&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=9b4d28211446d9e2000748096a09751f&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:18,286 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3744777 bytes
+2026-05-17 15:58:18,408 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:18,515 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703004&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:18,645 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703004&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:18,646 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:18,646 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/04/30/29585703004/29585703004-1-...
+2026-05-17 15:58:19,003 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/04/30/29585703004/29585703004-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&deadline=1779011904&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&gen=playurlv3&os=estgoss&og=ali&trid=707375b389f84453b490dd9f9e296bau&mid=0&nbs=1&uipk=5&upsig=fe5ec109b14958de354d2c8331458395&uparams=e,deadline,platform,oi,gen,os,og,trid,mid,nbs,uipk&bvc=vod&nettype=0&bw=36264&qn_dyeid=b9c977f23072e97e00f5602f6a097520&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:19,272 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3223001 bytes
+2026-05-17 15:58:19,415 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:19,512 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703182&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:19,617 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703182&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:19,618 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:19,618 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorzos.bilivideo.com/upgcxcode/82/31/29585703182/29585703182-...
+2026-05-17 15:58:19,801 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorzos.bilivideo.com/upgcxcode/82/31/29585703182/29585703182-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&platform=pc&mid=0&deadline=1779011905&uipk=5&trid=449b939bea604f1dac03b8a8c0972fcu&oi=0x240e03b42cf103b0e19f33799a52f82d&gen=playurlv3&og=hw&nbs=1&os=zosbv&upsig=d109055c4d3232e5c08b08c635438401&uparams=e,platform,mid,deadline,uipk,trid,oi,gen,og,nbs,os&bvc=vod&nettype=0&bw=36717&build=0&dl=0&f=u_0_0&qn_dyeid=8c2a61244cd51d0d00b938c76a097521&agrr=1&buvid=&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:20,322 [INFO] backend.services.bilibili_service: Audio downloaded OK: 2478460 bytes
+2026-05-17 15:58:20,426 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:20,490 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703210&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:20,603 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703210&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:20,604 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:20,604 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/10/32/29585703210/29585703210-1-...
+2026-05-17 15:58:20,826 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/10/32/29585703210/29585703210-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&trid=8e8276b94c0149d2aa4f16c6957ebffu&deadline=1779011906&platform=pc&nbs=1&oi=0x240e03b42cf103b0e19f33799a52f82d&uipk=5&gen=playurlv3&os=estgcos&og=cos&upsig=6492347262eb12edf4191179e5dee480&uparams=e,mid,trid,deadline,platform,nbs,oi,uipk,gen,os,og&bvc=vod&nettype=0&bw=36377&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=0d508a2f28815253007168ef6a097522&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:21,050 [INFO] backend.services.bilibili_service: Audio downloaded OK: 4324354 bytes
+2026-05-17 15:58:21,154 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:21,252 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703246&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:21,369 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703246&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:21,370 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:21,370 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/46/32/29585703246/29585703246-1-...
+2026-05-17 15:58:21,788 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/46/32/29585703246/29585703246-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&trid=af63c2e29bcd430785147b572a8019au&gen=playurlv3&og=ali&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011907&nbs=1&uipk=5&platform=pc&os=estgoss&upsig=9400e19881527252fd132ed025acc0be&uparams=e,mid,trid,gen,og,oi,deadline,nbs,uipk,platform,os&bvc=vod&nettype=0&bw=39628&build=0&dl=0&f=u_0_0&qn_dyeid=d5830227b0757cbd00b3fc686a097522&agrr=1&buvid=&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:22,231 [INFO] backend.services.bilibili_service: Audio downloaded OK: 4908989 bytes
+2026-05-17 15:58:22,342 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:22,446 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703417&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:22,534 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703417&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:22,535 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:22,535 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/17/34/29585703417/29585703417-1-...
+2026-05-17 15:58:22,896 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/17/34/29585703417/29585703417-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&deadline=1779011908&uipk=5&platform=pc&trid=c3b530b2ca0b477881cbb52f597e314u&os=estgoss&og=cos&oi=0x240e03b42cf103b0e19f33799a52f82d&nbs=1&gen=playurlv3&mid=0&upsig=4ab3cdf536681faf45063f95050a11a6&uparams=e,deadline,uipk,platform,trid,os,og,oi,nbs,gen,mid&bvc=vod&nettype=0&bw=37322&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=9160208d364c735200a9be596a097524&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:23,248 [INFO] backend.services.bilibili_service: Audio downloaded OK: 4124082 bytes
+2026-05-17 15:58:23,346 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:23,431 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703538&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:23,541 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703538&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:23,542 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:23,542 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/38/35/29585703538/29585703538-1-...
+2026-05-17 15:58:23,940 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/38/35/29585703538/29585703538-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=4e1d77ded7dc42088b968dc99983431u&gen=playurlv3&os=estgoss&og=cos&nbs=1&platform=pc&deadline=1779011909&oi=0x240e03b42cf103b0e19f33799a52f82d&uipk=5&mid=0&upsig=e47c866555bd7700ed1c095521337ecd&uparams=e,trid,gen,os,og,nbs,platform,deadline,oi,uipk,mid&bvc=vod&nettype=0&bw=37633&agrr=1&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=3e67d76e7920efed0036f3d16a097525&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:24,182 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3118898 bytes
+2026-05-17 15:58:24,330 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:24,446 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703651&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:24,563 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703651&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:24,564 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:24,564 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/51/36/29585703651/29585703651-1-...
+2026-05-17 15:58:24,778 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/51/36/29585703651/29585703651-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&og=cos&trid=76c2bad62f64481d803877a526d1defu&nbs=1&uipk=5&platform=pc&mid=0&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011910&gen=playurlv3&os=estgcos&upsig=e23583f56c84e0bf02db9cc8b64a5a30&uparams=e,og,trid,nbs,uipk,platform,mid,oi,deadline,gen,os&bvc=vod&nettype=0&bw=37492&qn_dyeid=bcde55bc5cff0be200df55766a097526&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:25,012 [INFO] backend.services.bilibili_service: Audio downloaded OK: 4274103 bytes
+2026-05-17 15:58:25,114 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:25,228 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703891&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:25,329 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703891&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:25,330 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:25,330 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/91/38/29585703891/29585703891-...
+2026-05-17 15:58:25,893 [INFO] httpx: HTTP Request: GET https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/91/38/29585703891/29585703891-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&gen=playurlv3&os=cosbv&oi=0x240e03b42cf103b0e19f33799a52f82d&uipk=5&deadline=1779011911&nbs=1&trid=e146aa99de904ff98ae244aa21b71e1u&mid=0&og=hw&platform=pc&upsig=4368279c16e8a9c1fc9c5411984ac2a2&uparams=e,gen,os,oi,uipk,deadline,nbs,trid,mid,og,platform&bvc=vod&nettype=0&bw=37761&dl=0&f=u_0_0&qn_dyeid=fb70fd1c08dcfd09008cdc026a097526&agrr=1&buvid=&build=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:27,700 [INFO] backend.services.bilibili_service: Audio downloaded OK: 4111236 bytes
+2026-05-17 15:58:27,835 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:27,912 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585703819&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:27,993 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585703819&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:27,994 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:27,994 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/19/38/29585703819/29585703819-1-...
+2026-05-17 15:58:28,210 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/19/38/29585703819/29585703819-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&deadline=1779011913&uipk=5&mid=0&oi=0x240e03b42cf103b0e19f33799a52f82d&os=estgcos&nbs=1&platform=pc&trid=9e772e0140dc457481b70e561ea5f1cu&gen=playurlv3&og=cos&upsig=13111475e2b4d7680edb678064fbba74&uparams=e,deadline,uipk,mid,oi,os,nbs,platform,trid,gen,og&bvc=vod&nettype=0&bw=36420&f=u_0_0&qn_dyeid=ca03ad93ab9a08e0000b39bb6a097529&agrr=1&buvid=&build=0&dl=0&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:28,449 [INFO] backend.services.bilibili_service: Audio downloaded OK: 5854635 bytes
+2026-05-17 15:58:28,591 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:28,665 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585704016&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:28,780 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585704016&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:28,781 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:28,781 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/16/40/29585704016/29585704016-1-...
+2026-05-17 15:58:29,145 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/16/40/29585704016/29585704016-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&gen=playurlv3&og=ali&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011914&uipk=5&trid=2bfedc3d5fc04b3db0594d97d534744u&platform=pc&os=estgoss&nbs=1&mid=0&upsig=eb90f422365f971066dc9fe4de5eae8a&uparams=e,gen,og,oi,deadline,uipk,trid,platform,os,nbs,mid&bvc=vod&nettype=0&bw=36624&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=a7017b9b554e444b009cb6096a09752a&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:29,491 [INFO] backend.services.bilibili_service: Audio downloaded OK: 3653274 bytes
+2026-05-17 15:58:29,618 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:29,721 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585704051&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:29,831 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585704051&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:29,832 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:29,832 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgcos.bilivideo.com/upgcxcode/51/40/29585704051/29585704051-1-...
+2026-05-17 15:58:30,047 [INFO] httpx: HTTP Request: GET https://upos-sz-estgcos.bilivideo.com/upgcxcode/51/40/29585704051/29585704051-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&uipk=5&trid=a485517c24614fac86bc6ad45016f93u&platform=pc&oi=0x240e03b42cf103b0e19f33799a52f82d&deadline=1779011915&nbs=1&gen=playurlv3&os=estgcos&og=cos&mid=0&upsig=6664858ea2bb3a7067a4e92e7fed8f89&uparams=e,uipk,trid,platform,oi,deadline,nbs,gen,os,og,mid&bvc=vod&nettype=0&bw=36591&build=0&dl=0&f=u_0_0&qn_dyeid=c25ccffa137f39ec00594d806a09752b&agrr=1&buvid=&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:30,239 [INFO] backend.services.bilibili_service: Audio downloaded OK: 4034196 bytes
+2026-05-17 15:58:30,354 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/web-interface/view?bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:30,432 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/v2?cid=29585704168&bvid=BV1okL3z7E4b "HTTP/1.1 200 OK"
+2026-05-17 15:58:30,515 [INFO] httpx: HTTP Request: GET https://api.bilibili.com/x/player/playurl?bvid=BV1okL3z7E4b&cid=29585704168&fnval=16 "HTTP/1.1 200 OK"
+2026-05-17 15:58:30,516 [INFO] backend.services.bilibili_service: Trying 9 audio CDN URLs...
+2026-05-17 15:58:30,516 [INFO] backend.services.bilibili_service: Trying audio CDN: https://upos-sz-estgoss.bilivideo.com/upgcxcode/68/41/29585704168/29585704168-1-...
+2026-05-17 15:58:30,913 [INFO] httpx: HTTP Request: GET https://upos-sz-estgoss.bilivideo.com/upgcxcode/68/41/29585704168/29585704168-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&mid=0&gen=playurlv3&trid=a97a879d7473470794380a0677b6f44u&uipk=5&deadline=1779011916&oi=0x240e03b42cf103b0e19f33799a52f82d&os=estgoss&og=ali&nbs=1&platform=pc&upsig=cb470a286032e39945fd6f9ab0bd2a50&uparams=e,mid,gen,trid,uipk,deadline,oi,os,og,nbs,platform&bvc=vod&nettype=0&bw=36732&buvid=&build=0&dl=0&f=u_0_0&qn_dyeid=27f261e490f16caf0079d26b6a09752c&agrr=1&orderid=0,3 "HTTP/1.1 206 Partial Content"
+2026-05-17 15:58:31,452 [INFO] backend.services.bilibili_service: Audio downloaded OK: 5418108 bytes
+2026-05-17 16:01:04,647 [INFO] backend.services.sensevoice_service: Loading SenseVoice model (first time, may take 30-60s)...
+2026-05-17 16:01:06,247 [INFO] root: download models from model hub: ms
+2026-05-17 16:01:10,388 [WARNING] root: trust_remote_code: False
+2026-05-17 16:01:11,772 [INFO] root: Loading pretrained params from C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt
+2026-05-17 16:01:11,779 [INFO] root: ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt
+2026-05-17 16:01:14,422 [INFO] root: scope_map: ['module.', 'None']
+2026-05-17 16:01:14,422 [INFO] root: excludes: None
+2026-05-17 16:01:14,535 [INFO] root: Loading ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\SenseVoiceSmall\model.pt, status: <All keys matched successfully>
+2026-05-17 16:01:14,928 [INFO] root: Building VAD model.
+2026-05-17 16:01:14,928 [INFO] root: download models from model hub: ms
+2026-05-17 16:01:19,198 [WARNING] root: trust_remote_code: False
+2026-05-17 16:01:19,294 [INFO] root: Loading pretrained params from C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt
+2026-05-17 16:01:19,294 [INFO] root: ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt
+2026-05-17 16:01:19,302 [INFO] root: scope_map: ['module.', 'None']
+2026-05-17 16:01:19,302 [INFO] root: excludes: None
+2026-05-17 16:01:19,304 [INFO] root: Loading ckpt: C:\Users\Yung\.cache\modelscope\hub\models\iic\speech_fsmn_vad_zh-cn-16k-common-pytorch\model.pt, status: <All keys matched successfully>
+2026-05-17 16:01:19,358 [INFO] backend.services.sensevoice_service: SenseVoice model loaded successfully.
+2026-05-17 16:01:41,454 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:01:43,153 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:01:44,738 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:03:45,124 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:03:45,217 [ERROR] backend.routers.process: Summary failed for ff76b0e61a77
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:03:46,899 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:03:46,902 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:03:46,910 [ERROR] backend.routers.process: Summary failed for bd5361829adb
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:03:46,927 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:03:46,938 [ERROR] backend.routers.process: Summary failed for 8e8e6a86a87b
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:03:48,708 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:03:50,495 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:05:50,751 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:05:50,757 [ERROR] backend.routers.process: Summary failed for a9d50cfac384
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:05:50,829 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:05:50,835 [ERROR] backend.routers.process: Summary failed for db0775cbfb27
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:05:50,849 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:05:50,854 [ERROR] backend.routers.process: Summary failed for 28856ef2d865
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:06:45,962 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:06:47,759 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:06:49,363 [INFO] backend.services.llm_service: Sending request to LMSTUDIO API using model qwen3.5-4b...
+2026-05-17 16:08:49,620 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:08:49,625 [ERROR] backend.routers.process: Summary failed for 780c009836c3
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:08:49,637 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:08:49,642 [ERROR] backend.routers.process: Summary failed for d1d0afdf242c
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:08:49,657 [ERROR] backend.services.llm_service: LMSTUDIO API request failed
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2026-05-17 16:08:49,662 [ERROR] backend.routers.process: Summary failed for dcae5f663ba2
+Traceback (most recent call last):
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 92, in generate_notes
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yung\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "G:\audionotes-ai\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\audionotes-ai\backend\routers\process.py", line 119, in process_task
+    notes = await llm_service.generate_notes(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\audionotes-ai\backend\services\llm_service.py", line 102, in generate_notes
+    raise ValueError(f"{provider.upper()} API 请求失败: {str(e)}")
+ValueError: LMSTUDIO API 请求失败: 
+2026-05-17 16:38:44,054 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 16:38:44,055 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 16:38:44,055 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 16:38:44,055 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 16:38:44,055 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 16:42:34,557 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 16:42:34,558 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 16:42:34,558 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 16:42:34,558 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 16:42:34,558 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 16:47:45,494 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 16:47:45,495 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 16:47:45,495 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 16:47:45,495 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 16:47:45,495 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 16:51:16,626 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 16:51:16,627 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 16:51:16,627 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 16:51:16,627 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 16:51:16,627 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 17:03:23,940 [INFO] backend.routers.process: 大模型并发数已联动更新为: 1
+2026-05-17 17:03:32,365 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 8
+2026-05-17 17:04:08,407 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:04:08,624 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:04:27,684 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:04:27,863 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:04:54,346 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:04:54,516 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:05:18,194 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:05:18,361 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:05:42,082 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:05:42,264 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:05:59,079 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:05:59,243 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:06:24,934 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:06:25,108 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:06:42,896 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:06:43,210 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:07:07,942 [INFO] backend.services.llm_service: Sending request to DEEPSEEK API using model deepseek-v4-flash...
+2026-05-17 17:07:08,109 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:09:56,756 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 17:09:56,757 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 17:09:56,757 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 17:09:56,757 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 17:09:56,757 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 17:10:06,578 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 17:10:06,579 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 17:10:06,579 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 17:10:06,580 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 17:10:06,580 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 17:10:17,778 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 17:10:17,779 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 17:10:17,779 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 17:10:17,780 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 17:10:17,780 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 17:10:23,213 [INFO] backend.main: Migration: added default_prompt to users
+2026-05-17 17:10:23,213 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 17:10:23,214 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 17:10:23,214 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 17:10:23,214 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 17:10:23,215 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 17:15:12,024 [INFO] backend.services.llm_service: Streaming from DEEPSEEK using model deepseek-v4-flash...
+2026-05-17 17:15:12,192 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:16:40,730 [INFO] backend.services.llm_service: Streaming complete from DEEPSEEK, received 2778 chunks
+2026-05-17 17:19:36,876 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 8
+2026-05-17 17:33:36,479 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 17:33:36,479 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 17:33:36,480 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 17:33:36,480 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 17:33:36,480 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 17:34:22,307 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 17:34:22,594 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:36:00,051 [INFO] backend.services.llm_service: Streaming complete from LMSTUDIO, received 1607 chunks
+2026-05-17 17:39:52,394 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 17:39:53,956 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 17:39:55,546 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 17:39:57,114 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 17:39:58,713 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 17:40:00,308 [INFO] backend.services.llm_service: Streaming from LMSTUDIO using model qwen3.5-4b...
+2026-05-17 17:40:00,317 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:40:00,324 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:40:00,593 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:40:00,599 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:40:00,604 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:40:00,608 [INFO] httpx: HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-17 17:41:37,056 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 17:41:37,057 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 17:41:37,057 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 17:41:37,057 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 17:41:37,057 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 18:00:37,588 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 18:00:37,590 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 18:00:37,590 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 18:00:37,590 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 18:00:37,590 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 18:00:49,622 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 18:00:49,623 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 18:00:49,623 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 18:00:49,623 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 18:00:49,623 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 18:01:03,370 [INFO] backend.main: Migration: added default_prompt to users
+2026-05-17 18:01:03,370 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 18:01:03,371 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 18:01:03,371 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 18:01:03,371 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 18:01:03,371 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 18:09:43,728 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 18:09:43,728 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 18:09:43,729 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 18:09:43,729 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 18:09:43,729 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 18:10:10,142 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 18:10:10,142 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 18:10:10,143 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 18:10:10,143 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 18:10:10,143 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 20:26:36,933 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 20:26:36,934 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 20:26:36,934 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 20:26:36,934 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 20:26:36,934 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 20:28:58,634 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 20:28:58,635 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 20:28:58,635 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 20:28:58,637 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 20:28:58,637 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 20:29:04,048 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 20:29:04,049 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 20:29:04,049 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 20:29:04,049 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 20:29:04,050 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 20:29:10,568 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 20:29:10,569 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 20:29:10,569 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 20:29:10,569 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 20:29:10,569 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:17:19,687 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:17:19,688 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:17:19,689 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:17:19,689 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 21:17:19,689 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:19:23,810 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:19:23,811 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:19:23,811 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:19:23,811 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 21:19:23,811 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:19:29,385 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:19:29,386 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:19:29,386 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:19:29,386 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 21:19:29,386 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:23:46,040 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:23:46,041 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:23:46,041 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:23:46,041 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 21:23:46,041 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:23:51,513 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:23:51,513 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:23:51,514 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:23:51,514 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 21:23:51,514 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:23:56,984 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:23:56,984 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:23:56,985 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:23:56,985 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 21:23:56,985 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:24:02,871 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:24:02,872 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:24:02,872 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:24:02,872 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cuda)
+2026-05-17 21:24:02,872 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:46:25,985 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:46:25,986 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:46:25,986 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:46:25,986 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 21:46:25,986 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:46:56,038 [INFO] backend.routers.process: 大模型并发数已联动更新为: 4
+2026-05-17 21:46:56,038 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 4
+2026-05-17 21:46:59,830 [INFO] backend.routers.process: 大模型并发数已联动更新为: 4
+2026-05-17 21:46:59,831 [INFO] backend.routers.process: 本地转录并发数已联动更新为: 4
+2026-05-17 21:56:11,778 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:56:11,778 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:56:11,779 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:56:11,779 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 21:56:11,779 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:56:52,526 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:56:52,527 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:56:52,527 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:56:52,527 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 21:56:52,527 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 21:58:43,724 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 21:58:43,725 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 21:58:43,725 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 21:58:43,725 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 21:58:43,725 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 22:00:27,150 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 22:00:27,151 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 22:00:27,151 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 22:00:27,151 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 22:00:27,151 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 22:01:16,117 [INFO] backend.routers.auth: New user registered: testuser (role=user)
+2026-05-17 22:03:34,142 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 22:03:34,143 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 22:03:34,143 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 22:03:34,143 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 22:03:34,143 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 22:07:05,601 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 22:07:05,602 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 22:07:05,602 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 22:07:05,602 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 22:07:05,602 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 22:07:17,241 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 22:07:17,242 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 22:07:17,242 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 22:07:17,243 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 22:07:17,243 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 22:10:09,038 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 22:10:09,039 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 22:10:09,039 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 22:10:09,039 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 22:10:09,039 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.
+2026-05-17 22:12:21,875 [INFO] backend.main: Database initialized: sqlite:///./audionotes.db
+2026-05-17 22:12:21,875 [INFO] backend.main: Upload directory: G:\audionotes-ai\uploads
+2026-05-17 22:12:21,876 [INFO] backend.main: Gemini model: gemini-2.5-flash
+2026-05-17 22:12:21,876 [INFO] backend.main: SenseVoice model: iic/SenseVoiceSmall (device: cpu)
+2026-05-17 22:12:21,876 [INFO] backend.main: SenseVoice model will load lazily on first transcription request.

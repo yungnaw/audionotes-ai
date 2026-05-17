@@ -12,6 +12,7 @@ venv/
 backend/uploads/
 backend/*.db
 backend/audionotes.db
+*.db
 
 # Environment
 backend/.env
@@ -33,9 +34,10 @@ Thumbs.db
 .cache/
 
 # Media
-.mp4
-.mp3
-.wav
+*.mp4
+*.mp3
+*.wav
+uploads/
 03fd6a861891.mp4
 16625f4364f7.mp4
 2d3aa3ab8f8d.mp4

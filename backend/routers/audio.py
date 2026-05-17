@@ -31,6 +31,10 @@ class BatchMoveRequest(BaseModel):
     task_id: str
 
 
+class UpdatePromptRequest(BaseModel):
+    custom_prompt: str
+
+
 # ===== Task Groups =====
 
 @router.get("/tasks")
@@ -246,6 +250,27 @@ def move_file(
             raise HTTPException(404, "目标任务场景不存在")
 
     f.task_id = req.task_id
+    db.commit()
+    db.refresh(f)
+    return f.to_dict()
+
+
+@router.put("/{file_id}/prompt")
+def update_file_prompt(
+    file_id: str,
+    req: UpdatePromptRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Update the custom prompt for a file. Enforces ownership."""
+    f = (
+        db.query(AudioFile)
+        .filter(AudioFile.id == file_id, AudioFile.user_id == current_user.id)
+        .first()
+    )
+    if not f:
+        raise HTTPException(404, "文件不存在")
+    f.custom_prompt = req.custom_prompt
     db.commit()
     db.refresh(f)
     return f.to_dict()

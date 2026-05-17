@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --check frontend/js/api.js)",
+      "Bash(node --check frontend/js/app.js)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('backend/routers/models.py', encoding='utf-8'\\).read\\(\\)\\); print\\('models.py OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('backend/routers/process.py', encoding='utf-8'\\).read\\(\\)\\); print\\('process.py OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('backend/config.py', encoding='utf-8'\\).read\\(\\)\\); print\\('config.py OK'\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" --connect-timeout 5 http://localhost:3000/api/health)",
+      "Bash(python *)",
+      "Bash(curl -s --connect-timeout 5 http://localhost:3000/api/health)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill *)",
+      "Bash(cmd *)",
+      "Bash(powershell *)",
+      "Bash(/c/Windows/System32/taskkill.exe *)",
+      "Bash(/c/Windows/System32/cmd.exe *)",
+      "Bash(MSYS_NO_PATHCONV=1 /c/Windows/System32/taskkill.exe *)",
+      "Bash(uv pip *)",
+      "Bash(MSYS_NO_PATHCONV=1 /c/Windows/System32/taskkill.exe /F /PID 2056)",
+      "Bash(MSYS_NO_PATHCONV=1 /c/Windows/System32/taskkill.exe /F /PID 25844)",
+      "Bash(timeout 6 uv run --no-sync run.py)",
+      "Bash(curl -s http://localhost:3000/api/prompts)",
+      "Bash(curl -s http://localhost:3000/api/health)",
+      "Bash(uv run *)",
+      "Bash(curl *)"
+    ]
+  }
+}

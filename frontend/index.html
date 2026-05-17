@@ -28,6 +28,9 @@
         <button class="btn-icon" id="create-task-btn" title="新建任务" style="width: 28px; height: 28px; padding: 0; background: var(--bg-tertiary); border-radius: 6px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-primary);">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
+        <button class="btn-icon" id="delete-task-btn" title="删除当前场景" style="width: 28px; height: 28px; padding: 0; background: var(--bg-tertiary); border-radius: 6px; border: 1px solid var(--border); display: none; align-items: center; justify-content: center; color: var(--danger); margin-left: -4px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+        </button>
       </div>
 
       <button class="btn btn-secondary" id="nav-workspace" style="height: 32px;">
@@ -90,9 +93,17 @@
             <button class="template-btn" id="tmpl-business">商业分析</button>
           </div>
           <textarea class="input" id="custom-prompt" style="height: 200px; font-family: monospace; line-height: 1.5;"></textarea>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px; gap: 8px;">
+            <button class="btn btn-secondary" id="save-as-template-btn" style="height: 32px; background: var(--bg-tertiary); border: 1px solid var(--border); font-size: 13px; display: flex; align-items: center; gap: 6px;">
+              📋 保存为命名模板
+            </button>
+            <button class="btn btn-secondary" id="save-prompt-btn" style="height: 32px; background: var(--bg-tertiary); border: 1px solid var(--border); font-size: 13px; display: flex; align-items: center; gap: 6px;">
+              💾 设为个人默认
+            </button>
+          </div>
         </div>
         <!-- Local Transcription Settings -->
-        <div class="settings-section" style="margin-top: 24px;">
+        <div class="settings-section" style="margin-top: 24px; width: 100%;">
           <h3>🎙️ 本地转录引擎设置 (SenseVoice)</h3>
           <div style="display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-end; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 200px;">
@@ -111,6 +122,20 @@
                 <span id="threads-val" style="font-size:14px; font-weight:bold; color:var(--text-main)">8</span>
               </div>
               <input type="range" id="threads-input" min="1" max="16" step="1" value="8" style="width: 100%; accent-color: var(--primary);">
+            </div>
+          </div>
+        </div>
+
+        <!-- LLM Concurrency Settings -->
+        <div class="settings-section" style="margin-top: 24px; width: 100%;">
+          <h3>📡 大模型并行调度设置</h3>
+          <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 200px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom:8px;">
+                <label style="font-size:14px; color:var(--text-muted)">📝 生成笔记时的 LLM 并行调度数 (LLM 并发)</label>
+                <span id="llm-concurrency-val" style="font-size:14px; font-weight:bold; color:var(--text-main)">4</span>
+              </div>
+              <input type="range" id="llm-concurrency-input" min="1" max="10" step="1" value="4" style="width: 100%; accent-color: var(--primary);">
             </div>
           </div>
         </div>
@@ -136,6 +161,9 @@
             <option value="all" style="background: #1e1e2e;">全部场景</option>
             <option value="default" style="background: #1e1e2e;">默认任务</option>
           </select>
+          <button class="btn-icon" id="workspace-delete-task-btn" title="删除当前场景" style="width: 24px; height: 24px; min-width: 24px; padding: 0; background: var(--bg-tertiary); border-radius: 4px; border: 1px solid var(--border); display: none; align-items: center; justify-content: center; color: var(--danger); margin-left: 2px; transition: all 0.2s;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </button>
           <button class="btn-icon" id="batch-move-btn" title="批量移动选中项到场景" style="width: 24px; height: 24px; min-width:24px; border-radius: 4px; color: var(--accent); display: flex; align-items: center; justify-content: center; padding: 0; border: 1px solid rgba(129, 140, 248, 0.3); background: rgba(129, 140, 248, 0.08); transition: all 0.2s;">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
           </button>

@@ -29,6 +29,7 @@ class User(Base):
     role = Column(Enum(UserRole), default=UserRole.USER)
     is_active = Column(Boolean, default=True)
     avatar_url = Column(String, default="")
+    default_prompt = Column(String, default="")
     storage_quota_mb = Column(Integer, default=5120)  # 5 GB default
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
@@ -41,6 +42,7 @@ class User(Base):
             "role": self.role.value if self.role else "user",
             "is_active": self.is_active,
             "avatar_url": self.avatar_url,
+            "default_prompt": self.default_prompt,
             "storage_quota_mb": self.storage_quota_mb,
             "created_at": self.created_at.isoformat() if self.created_at else None,
         }
@@ -87,6 +89,27 @@ class AudioFile(Base):
             "language": self.language,
             "task_id": self.task_id,
             "user_id": self.user_id,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "updated_at": self.updated_at.isoformat() if self.updated_at else None,
+        }
+
+
+class PromptTemplate(Base):
+    __tablename__ = "prompt_templates"
+
+    id = Column(String, primary_key=True, default=lambda: uuid.uuid4().hex[:12])
+    user_id = Column(String, nullable=False, index=True)
+    name = Column(String(128), nullable=False)
+    content = Column(Text, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "user_id": self.user_id,
+            "name": self.name,
+            "content": self.content,
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "updated_at": self.updated_at.isoformat() if self.updated_at else None,
         }

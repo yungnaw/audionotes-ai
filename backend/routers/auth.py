@@ -116,6 +116,8 @@ def update_profile(
         current_user.email = req.email
     if req.avatar_url is not None:
         current_user.avatar_url = req.avatar_url
+    if req.default_prompt is not None:
+        current_user.default_prompt = req.default_prompt
     db.commit()
     return current_user.to_dict()
 
