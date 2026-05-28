@@ -72,7 +72,7 @@ class Settings(BaseSettings):
                 import torch
                 if torch.cuda.is_available():
                     self.SENSEVOICE_DEVICE = "cuda"
-            except ImportError:
+            except Exception:
                 pass
 
 

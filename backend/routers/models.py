@@ -57,7 +57,7 @@ def get_system_config(current_user: User = Depends(get_current_user)):
     try:
         import torch
         cuda_available = torch.cuda.is_available()
-    except ImportError:
+    except Exception:
         pass
 
     return {
